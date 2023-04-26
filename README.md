@@ -1,27 +1,34 @@
-# TÍTULO DO PROJETO
 
-`CURSO`
+![ShapeUp-logomarca](https://user-images.githubusercontent.com/82043220/234642725-579c0ece-5bbb-4949-94f8-0a59ec4c37e9.png)
 
-`DISCIPLINA`
 
-`SEMESTRE`
+<h6 align="right">Criado em 26 de Abril de 2023<br><a href="https://www.pucminas.br/PucVirtual/Paginas/default.aspx">PUC Minas Virtual</a></h6>
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+`Análise e Desenvolvimento de Sistemas`
+
+`Projeto: Análise e Projeto de Sistemas de Software`
+
+`Terceiro Semestre`
+
+## Descrição
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+| [<img src="https://avatars.githubusercontent.com/u/82043220?v=4" width=115><br><sub>Raul Shinaede</sub>](https://github.com/RaulShinaede) | [<img src="https://avatars.githubusercontent.com/u/102563767?v=4" width=115><br><sub>Bruno Sellas</sub>](https://github.com/brunosellas) |
+| :---: | :---: |
 
 ## Orientador
 
-* Nome completo do professor 1
+| [<img src="https://avatars.githubusercontent.com/u/80125344?v=4" width=115><br><sub>Will Ricardo dos Santos Machado</sub>](https://github.com/willrsmachado) |
+| :---: |
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+// TODO:
+
+- ✅ Como baixar
+- 📦 Como compilar
+- 🚀 Como executar 
 
 # Documentação
 
