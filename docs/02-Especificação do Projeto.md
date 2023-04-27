@@ -257,18 +257,18 @@ A fim de buscar mais informações sobre os motivos e causas de uso dessas pesso
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Carlos Augusto Santos | Controlar melhor as atividades <br> pessoais/profissionais do meu dia a dia. | Evoluir na carreira e conseguir melhores oportunidades. |
-|Carlos Augusto Santos | Estabelecer com mais precisam prazos e metas. | Entregar com mais eficiência seus projetos acadêmicos e profissionais. |
-|Sandro Motta | Estabelecer uma rotina mais organizada. | Ter mais tempo de qualidade com a família. |
-|Sandro Motta | Reformular de forma organizada toda a sua vida profissional. | Ser mais notado, atingir mais resultados e consequentemente crescer na profissão. |
-|Dominique de Cuoco | Comprar um carro. | Atingir a realização pessoal de ter um veículo e não depender mais de aplicativos de corridas. |
-|Dominique de Cuoco | Organizar sua vida financeira. | Atingir o objetivo de comprar um carro. |
-|Elizabete Kim | Crescer sua imagem pública. | Atrair mais parceiros e patrocinadores. |
-|Elizabete Kim | Se tornar famosa. | Realização pessoal. |
-|Katarina Sanches | Organizar sua vida pessoal e profissional. | Crescer sua empresa e aumentar lucros. |
-|Katarina Sanches | Organizar sua vida pessoal e profissional. | Ter mais tempo com seu marido e filhos. |
-|Raimundo Ronaldo | Organizar suas finanças. | Fazer um intercâmbio. |
-|Raimundo Ronaldo | Organizar sua rotina. | Conseguir o que é necessário para fazer uma vida fora do país. |
+|Júlia Coimbra | Ter uma rotina mais saudável  | Ter uma gravidez sem riscos. |
+|Júlia Coimbra | Estabelecer um físico forte. | Ter uma boa recuperação pós-parto. |
+|Pedro Henrique  | Ter um físico trabalhado. | Ter uma imagem mais imponente. |
+|Pedro Henrique  | Conquistar seu objetivo físico de forma rápida e acessível. | Não atrapalhar a rotina. |
+|Patrícia Sampaio | Buscar um corpo equilibrado e saudável. | Não conviver com dores e desconfortos. |
+|Patrícia Sampaio | Praticar exercícios físicos. | Atingir qualidade de vida. |
+|Marcos Alberto | Manter um corpo atlético. | Trabalhar em alto nível. |
+|Marcos Alberto | Estar em forma. | Envelhecer com qualidade. |
+|Kleber Rocha | Começar a praticar exercícios. | Perder peso. |
+|Kleber Rocha | Melhorar sua imagem. | Organizar sua vida pessoal e profissional. |
+|Jéssica Lima  | Organizar toda sua carteira de alunos. | Ter mais sucesso profissional. |
+|Jéssica Lima  | Organizar sua rotina. | Conseguir atender melhor seus alunos.|
 
 ## Modelagem do Processo de Negócio 
 
