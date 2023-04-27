@@ -97,7 +97,7 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
   <tr>
    <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/102563767/234726262-b6388966-df50-48b9-aa44-c8a72ccf566a.png"></td>
    <td width="150" align="center">Ocupação</td>
-   <td colspan="3">Fisioterapeuta.</td>
+   <td colspan="3">Professora de ensino médio.</td>
    <tr>
     <td width="150" align="center">Aplicativos</td>
     <td width="210" align="center">Motivações</td>
@@ -123,20 +123,20 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
    </td>
    <td>
     ●	Viajar com a família.<br>
-    ●	Se dedicar aos seus .<br>
-    ●	Se especializar em técnicas de terapias alternativas do trabalho.
+    ●	Se dedicar aos seus alunos.<br>
+    ● Cuidar do seu Pet.
    </td>
   </tr>
  </table>
  
    <table>
   <tr>
-   <td width="1000" colspan="5" align="center">Elizabete Kim, 22 anos.</td>
+   <td width="1000" colspan="5" align="center">Marcos Alberto, 50 anos.</td>
   </tr>
   <tr>
    <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/102563767/234726463-f9638371-db6e-49d0-8e5c-69f9cc8f28b2.jpeg"></td>
    <td width="150" align="center">Ocupação</td>
-   <td colspan="3">Blogueira/Influenciadora Digital.</td>
+   <td colspan="3">Ator/Dublê.</td>
    <tr>
     <td width="150" align="center">Aplicativos</td>
     <td width="210" align="center">Motivações</td>
@@ -151,35 +151,32 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
     ●	Twitter<br>
     ●	TikTok<br>
     ●	Youtube<br>
-    ●	Photoshop<br>
-    ●	DaVinci Resolve
    </td>
    <td>
-    ●	Ter mais constância em suas postagens.<br>
-    ●	Crescer como profissional digital.<br>
-    ●	Bater metas estipuladas por patrocinadores.
+    ●	Ter um físico atlético que suporte o dia a dia de sua profissão.<br>
+    ●	Envelhecer com qualidade.<br>
+    ●	Aproveitar a vida da melhor maneira possível.
    </td>
    <td>
     ●	Dificuldade em organização pessoal e profissional.<br>
-    ●	Oportunidades perdidas de patrocinadores por dificuldade de agenda.
+    ●	Ter uma rotina mais constate em seus treinos.
    </td>
    <td>
-    ●	Gerenciar suas mídias Sociais.<br>
+    ●	Praticar esportes radicais.<br>
     ●	Praticar exercícios físicos.<br>
-    ●	Aprofundar-se nos estudos de sua área de atuação.
+    ●	Praticar meditação.
    </td>
   </tr>
  </table>
- ![IMG_0008-e1585157130120]()
 
 <table>
   <tr>
-   <td width="1000" colspan="5" align="center">Katarina Sanches, 46 anos.</td>
+   <td width="1000" colspan="5" align="center">Kleber Rocha, 38 anos.</td>
   </tr>
   <tr>
    <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/102563767/234726612-26828c2d-2dfa-42ac-b4bb-0ec95b9e8805.jpg"></td>
    <td width="150" align="center">Ocupação</td>
-   <td colspan="3">Empresária do ramo de cosméticos.</td>
+   <td colspan="3">Gerente Comercial.</td>
    <tr>
     <td width="150" align="center">Aplicativos</td>
     <td width="210" align="center">Motivações</td>
@@ -190,36 +187,37 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
   <tr>
    <td>
     ●	Linkedin<br>
-    ●	Instagram<br>
-    ●	TikTok<br>
-    ●	Youtube<br>
-    ●	Shopee
+    ●	YouTube<br>
+    ●	Mercado Livre<br>
+    ●	G1<br>
+    ●	QuatroRodas<br>
+    ●	Ifood
    </td>
    <td>
-    ●	Crescer sua empresa e maximizar seus lucros.<br>
-    ●	Terceirizar serviços.<br>
-    ●	Organizar seu tempo e sua agenda entre vida pessoal e empresarial.  
+    ●	Perder peso.<br>
+    ●	Ter qualidade de vida.<br>
+    ●	Passar uma imagem mais profissional e séria.  
    </td>
    <td>
-    ●	Falta de resultados expressivos na busca de mão de obra qualificada.<br>
-    ●	Perda de tempo e de dinheiro ao não conseguir uma equipe qualificada para construir seus projetos.
+    ●	Não gostar de academias.<br>
+    ●	Não encontrar um método fácil e rápido para ter em qualquer lugar como realizar uma breve rotina de exercícios.
    </td>
    <td>
-    ●	Criar artes gráficas.<br>
-    ●	Maquiagem.<br>
-    ●	Redes sociais
+    ●	Estudar.<br>
+    ●	Passar tempo em família.<br>
+    ●Conhecer Restaurantes e polos gastronômicos.
    </td>
   </tr>
  </table>
 
  <table>
   <tr>
-   <td width="1000" colspan="5" align="center">Raimundo Ronaldo, 30 anos.</td>
+   <td width="1000" colspan="5" align="center">Jéssica Lima, 30 anos.</td>
   </tr>
   <tr>
    <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/102563767/234726844-0e2b3e64-2862-4351-8fb8-38512b44368d.jpg"></td>
    <td width="150" align="center">Ocupação</td>
-   <td colspan="3">Bombeiro.</td>
+   <td colspan="3">Personal/Professora de dança.</td>
    <tr>
     <td width="150" align="center">Aplicativos</td>
     <td width="210" align="center">Motivações</td>
@@ -236,16 +234,17 @@ Seguem demonstradas por meio dos quadros apresentados o levantamento feito das p
     ●	Prime Vídeo
    </td>
    <td>
-    ●	Realizar um intercambio.<br>
-    ●	Fazer a vida no exterior.
+    ●	Cuidar do seu corpo.<br>
+    ●	Melhorar a qualidade de vida das pessoas.
    </td>
    <td>
-    ●	Não conseguir organização financeira e de agenda para realização de sua viagem.<br>
-    ●	Falta de organização pessoa para viver fora do país.
+    ●	Não possuir um sistema que facilite o acesso de seus alunos a rotinas de exercícios.<br>
+    ●	Perder muito tempo fazendo treinos manuscritos e sem automação.
    </td>
    <td>
-    ●	Passar tempo em família.<br>
-    ●	Consumir conteúdo de viagens e a vida de brasileiros no exterior.
+    ●	Dançar.<br>
+    ●	Cuidar das suas redes sociais.<br>
+    ● Estudar práticas de sempre melhorar o resultado de seus alunos.
    </td>
   </tr>
  </table>
