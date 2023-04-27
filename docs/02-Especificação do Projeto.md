@@ -440,7 +440,8 @@ Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o ger
 
 O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
 
-![Gráfico de Gantt](img/02-grafico-gantt.png)
+![02-grafico-gantt-dream-mapp](https://user-images.githubusercontent.com/102563767/234886494-46efafcb-6f4a-47fd-82c2-c055f4fa17fc.jpeg)
+
 
 ## Gerenciamento de Equipe
 
@@ -452,4 +453,5 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
 
-![Orçamento](img/02-orcamento.png)
+![Orçamento shapup](https://user-images.githubusercontent.com/102563767/234913893-580ebe65-e775-490b-8451-4dd64de862b4.png)
+
