@@ -303,37 +303,102 @@ Obs.: todas as informações para gerar os indicadores devem estar no diagrama d
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para priorizar os requisitos, foi utilizado  a técnica de Escala de três Níveis, para essa técnica foi definido dois aspectos principais: importância e urgência. Assim, forma-se um quadrante, que é usado para obter o nível de prioridade do requisito.
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+<table>
+  <tr>
+    <td align="center" width="80">ID</td>
+    <td align="center" width="800">Descrição do Requisito</td>
+    <td align="center" width="100">Prioridade</td>
+  </tr>
+  <tr>
+    <td align="center">RF-001</td>
+    <td align="left">Permitir que o usuário crie uma conta no aplicativo.</td>
+    <td align="center">ALTA</td>
+  </tr>
+  <tr>
+    <td align="center">RF-002</td>
+    <td align="left">Permitir que o usuário cadastre Treinos.</td>
+    <td align="center">ALTA</td>
+  </tr>
+  <tr>
+    <td align="center">RF-003</td>
+    <td align="left">Permitir que o usuário cadastre exercicios em seus treinos.</td>
+    <td align="center">ALTA</td>
+  </tr>
+  <tr>
+    <td align="center">RF-004</td>
+    <td align="left">Permitir que o usuário compartilhe entre exerccícios entre treinos.</td>
+    <td align="center">MÉDIA</td>
+  </tr>
+  <tr>
+    <td align="center">RF-005</td>
+    <td align="left">Permitir que o usuário disponha de um cronômentro de descanso entre séries do exercício.</td>
+    <td align="center">BAIXA</td>
+  </tr>
+  <tr>
+    <td align="center">RF-006</td>
+    <td align="left">Gerar relatórios de treinos concluídos.</td>
+    <td align="center">BAIXA</td>
+  </tr>
+  <tr>
+    <td align="center">RF-007</td>
+    <td align="left"Apresentar o avanço percentual do treino em execução.</td>
+    <td align="center">MÉDIA</td>
+  </tr>
+  <tr>
+    <td align="center">RF-008</td>
+    <td align="left">Permitir que o usuário visualize os treinos cadastrados.</td>
+    <td align="center">ALTA</td>
+  </tr>
+  <tr>
+    <td align="center">RF-009</td>
+    <td align="left">Permitir que o usúario pause/resete/pule o cronômentro de descanso entre séries.</td>
+    <td align="center">ALTA</td>
+  </tr>
+  <tr>
+    <td align="center">RF-010</td>
+    <td align="left">Permitir que o usuário vizualize os videos dos exercicios cadastrados nos treinos.</td>
+    <td align="center">BAIXA</td>
+  </tr>
+</table>
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-
+<table>
+  <tr>
+    <td align="center" width="100">ID</td>
+    <td align="center" width="800">Descrição do Requisito</td>
+    <td align="center" width="100">Prioridade</td>
+  </tr>
+  <tr>
+    <td align="center">RNF-001</td>
+    <td align="left">O sistema deve ser responsivo para rodar em um dispositivos móvel</td>
+    <td align="center">ALTA</td>
+  </tr>
+  <tr>
+    <td align="center">RNF-002</td>
+    <td align="left">O Tempo de consulta deverá ser de no máximo 2s</td>
+    <td align="center">ALTA</td>
+  </tr>
+  <tr>
+    <td align="center">RNF-003</td>
+    <td align="left">O Sistema deve manter o mesmo padrão de ícones para todas as páginas.</td>
+    <td align="center">MÉDIA</td>
+  </tr>
+  <tr>
+    <td align="center">RNF-005</td>
+    <td align="left">O Sistema deve notificar usuários mesmo minimizado.</td>
+    <td align="center">MÉDIA</td>
+  </tr>
+  <tr>
+    <td align="center">RNF-006</td>
+    <td align="left">O Sistema deve manter o mesmo padrão de cores para todas as páginas.</td>
+    <td align="center">MÉDIA</td>
+  </tr>
+</table>
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
