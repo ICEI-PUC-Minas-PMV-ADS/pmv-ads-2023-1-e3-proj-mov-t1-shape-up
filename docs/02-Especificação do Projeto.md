@@ -7,38 +7,269 @@ Definição do problema e ideia de solução a partir da perspectiva do usuário
 Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
 
 ## Personas
+Seguem demonstradas por meio dos quadros apresentados o levantamento feito das personas e suas características durante o processo de entendimento do problema:
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+<table>
+  <tr>
+   <td width="1000" colspan="5" align="center">Júlia Coimbra, 29 anos.</td>
+  </tr>
+  <tr>
+   <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/102563767/234725878-51696541-ac72-4d6f-8494-79b8583de80d.jpeg"></td>
+   <td width="150" align="center">Ocupação</td>
+   <td colspan="3">Jornalista de Fofocas.</td>
+   <tr>
+    <td width="150" align="center">Aplicativos</td>
+    <td width="210" align="center">Motivações</td>
+    <td width="210" align="center">Frustrações</td>
+    <td width="240" align="center">Hobbies, História</td>
+   </tr>
+  </tr>
+  <tr>
+   <td>
+    ●	Linkedin<br>
+    ●	Instagram<br>
+    ●	WhatsApp<br>
+    ●	Telegram<br>
+    ●	Teams<br>
+    ●	Youtube<br>
+    ●	Udemy<br>
+    ●	Microsoft Office<br>
+   </td>
+   <td>
+    ●	Ter uma rotina mais saudável e se preparar para a gravidez que planeja ter.
+   </td>
+   <td>
+    ●	Não conseguir organizar uma rotina estável de treinos no seu dia a dia.<br>
+    ●	Não ter conhecimento sobre quais exercícios fazer e como fazê-los.<br>
+   </td>
+   <td>
+    ●	Estudar.<br>
+    ●	Ler.<br>
+    ●	Estudar outras línguas.<br>
+    ●	Adquirir Soft Skills.<br>
+   </td>
+  </tr>
+ </table>
+ 
+ <table>
+  <tr>
+   <td width="1000" colspan="5" align="center">Pedro Henrique, 25 anos.</td>
+  </tr>
+  <tr>
+   <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/102563767/234726028-54dcaff0-1e52-49a1-ae99-6c043a5829ca.png"></td>
+   <td width="150" align="center">Ocupação</td>
+   <td colspan="3">Advogado Trabalhista.</td>
+   <tr>
+    <td width="150" align="center">Aplicativos</td>
+    <td width="210" align="center">Motivações</td>
+    <td width="210" align="center">Frustrações</td>
+    <td width="240" align="center">Hobbies, História</td>
+   </tr>
+  </tr>
+  <tr>
+   <td>
+    ●	Facebook<br>
+    ●	Instagram<br>
+    ●	WhatsApp<br>
+    ●	Tse<br>
+    ●	Portal Fazenda.gov<br>
+    ●	Apple Books<br>
+   </td>
+   <td>
+    ●	Buscar um físico mais equilibrado e melhorar seu visual.<br>
+    ●	Ter uma imagem mais respeitada em seu círculo social.
+   </td>
+   <td>
+    ●	Ser muito magro e se incomodar com sua aparência.<br>
+    ●	Não gosta do estilo de vida fitness a ponto de procurar um personal ou profissional da área.
+   </td>
+   <td>
+    ●	Resolver todos os casos que chegam em suas mãos com excelência.<br>
+    ●	Profissional dedicado e obcecado por resultados.
+   </td>
+  </tr>
+ </table>
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+  <table>
+  <tr>
+   <td width="1000" colspan="5" align="center">Patrícia Sampaio, 32 anos.</td>
+  </tr>
+  <tr>
+   <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/102563767/234726262-b6388966-df50-48b9-aa44-c8a72ccf566a.png"></td>
+   <td width="150" align="center">Ocupação</td>
+   <td colspan="3">Fisioterapeuta.</td>
+   <tr>
+    <td width="150" align="center">Aplicativos</td>
+    <td width="210" align="center">Motivações</td>
+    <td width="210" align="center">Frustrações</td>
+    <td width="240" align="center">Hobbies, História</td>
+   </tr>
+  </tr>
+  <tr>
+   <td>
+    ●	Facebook<br>
+    ●	Instagram<br>
+    ●	WhatsApp<br>
+    ●	Bancos Digitais<br>
+    ●	Uber
+   </td>
+   <td>
+    ●	Busca uma vida mais saudável por orientações médicas.<br>
+    ●	Ter uma postura corrigida e alívio de dores causadas pelo trabalho. 
+   </td>
+   <td>
+    ●	Não ter empenho em começar algo sozinha.<br>
+    ●	Sente dores e complicações que não são normais de sua idade.<br>
+   </td>
+   <td>
+    ●	Viajar com a família.<br>
+    ●	Se dedicar aos seus .<br>
+    ●	Se especializar em técnicas de terapias alternativas do trabalho.
+   </td>
+  </tr>
+ </table>
+ 
+   <table>
+  <tr>
+   <td width="1000" colspan="5" align="center">Elizabete Kim, 22 anos.</td>
+  </tr>
+  <tr>
+   <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/102563767/234726463-f9638371-db6e-49d0-8e5c-69f9cc8f28b2.jpeg"></td>
+   <td width="150" align="center">Ocupação</td>
+   <td colspan="3">Blogueira/Influenciadora Digital.</td>
+   <tr>
+    <td width="150" align="center">Aplicativos</td>
+    <td width="210" align="center">Motivações</td>
+    <td width="210" align="center">Frustrações</td>
+    <td width="240" align="center">Hobbies, História</td>
+   </tr>
+  </tr>
+  <tr>
+   <td>
+    ●	Facebook<br>
+    ●	Instagram<br>
+    ●	Twitter<br>
+    ●	TikTok<br>
+    ●	Youtube<br>
+    ●	Photoshop<br>
+    ●	DaVinci Resolve
+   </td>
+   <td>
+    ●	Ter mais constância em suas postagens.<br>
+    ●	Crescer como profissional digital.<br>
+    ●	Bater metas estipuladas por patrocinadores.
+   </td>
+   <td>
+    ●	Dificuldade em organização pessoal e profissional.<br>
+    ●	Oportunidades perdidas de patrocinadores por dificuldade de agenda.
+   </td>
+   <td>
+    ●	Gerenciar suas mídias Sociais.<br>
+    ●	Praticar exercícios físicos.<br>
+    ●	Aprofundar-se nos estudos de sua área de atuação.
+   </td>
+  </tr>
+ </table>
+ ![IMG_0008-e1585157130120]()
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+<table>
+  <tr>
+   <td width="1000" colspan="5" align="center">Katarina Sanches, 46 anos.</td>
+  </tr>
+  <tr>
+   <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/102563767/234726612-26828c2d-2dfa-42ac-b4bb-0ec95b9e8805.jpg"></td>
+   <td width="150" align="center">Ocupação</td>
+   <td colspan="3">Empresária do ramo de cosméticos.</td>
+   <tr>
+    <td width="150" align="center">Aplicativos</td>
+    <td width="210" align="center">Motivações</td>
+    <td width="210" align="center">Frustrações</td>
+    <td width="240" align="center">Hobbies, História</td>
+   </tr>
+  </tr>
+  <tr>
+   <td>
+    ●	Linkedin<br>
+    ●	Instagram<br>
+    ●	TikTok<br>
+    ●	Youtube<br>
+    ●	Shopee
+   </td>
+   <td>
+    ●	Crescer sua empresa e maximizar seus lucros.<br>
+    ●	Terceirizar serviços.<br>
+    ●	Organizar seu tempo e sua agenda entre vida pessoal e empresarial.  
+   </td>
+   <td>
+    ●	Falta de resultados expressivos na busca de mão de obra qualificada.<br>
+    ●	Perda de tempo e de dinheiro ao não conseguir uma equipe qualificada para construir seus projetos.
+   </td>
+   <td>
+    ●	Criar artes gráficas.<br>
+    ●	Maquiagem.<br>
+    ●	Redes sociais
+   </td>
+  </tr>
+ </table>
+
+ <table>
+  <tr>
+   <td width="1000" colspan="5" align="center">Raimundo Ronaldo, 30 anos.</td>
+  </tr>
+  <tr>
+   <td width="200" align="center" height="200" rowspan="3"><img src="https://user-images.githubusercontent.com/102563767/234726844-0e2b3e64-2862-4351-8fb8-38512b44368d.jpg"></td>
+   <td width="150" align="center">Ocupação</td>
+   <td colspan="3">Bombeiro.</td>
+   <tr>
+    <td width="150" align="center">Aplicativos</td>
+    <td width="210" align="center">Motivações</td>
+    <td width="210" align="center">Frustrações</td>
+    <td width="240" align="center">Hobbies, História</td>
+   </tr>
+  </tr>
+  <tr>
+   <td>
+    ●	Youtube<br>
+    ●	Instagram<br>
+    ●	Linkedin<br>
+    ●	Netflix<br>
+    ●	Prime Vídeo
+   </td>
+   <td>
+    ●	Realizar um intercambio.<br>
+    ●	Fazer a vida no exterior.
+   </td>
+   <td>
+    ●	Não conseguir organização financeira e de agenda para realização de sua viagem.<br>
+    ●	Falta de organização pessoa para viver fora do país.
+   </td>
+   <td>
+    ●	Passar tempo em família.<br>
+    ●	Consumir conteúdo de viagens e a vida de brasileiros no exterior.
+   </td>
+  </tr>
+ </table>
+
+
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+A fim de buscar mais informações sobre os motivos e causas de uso dessas pessoas a plataforma a ser desenvolvida, foram realizadas perguntas por meio de entrevistas, tendo resultados demonstrados no quadro apresentado:
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+|Carlos Augusto Santos | Controlar melhor as atividades <br> pessoais/profissionais do meu dia a dia. | Evoluir na carreira e conseguir melhores oportunidades. |
+|Carlos Augusto Santos | Estabelecer com mais precisam prazos e metas. | Entregar com mais eficiência seus projetos acadêmicos e profissionais. |
+|Sandro Motta | Estabelecer uma rotina mais organizada. | Ter mais tempo de qualidade com a família. |
+|Sandro Motta | Reformular de forma organizada toda a sua vida profissional. | Ser mais notado, atingir mais resultados e consequentemente crescer na profissão. |
+|Dominique de Cuoco | Comprar um carro. | Atingir a realização pessoal de ter um veículo e não depender mais de aplicativos de corridas. |
+|Dominique de Cuoco | Organizar sua vida financeira. | Atingir o objetivo de comprar um carro. |
+|Elizabete Kim | Crescer sua imagem pública. | Atrair mais parceiros e patrocinadores. |
+|Elizabete Kim | Se tornar famosa. | Realização pessoal. |
+|Katarina Sanches | Organizar sua vida pessoal e profissional. | Crescer sua empresa e aumentar lucros. |
+|Katarina Sanches | Organizar sua vida pessoal e profissional. | Ter mais tempo com seu marido e filhos. |
+|Raimundo Ronaldo | Organizar suas finanças. | Fazer um intercâmbio. |
+|Raimundo Ronaldo | Organizar sua rotina. | Conseguir o que é necessário para fazer uma vida fora do país. |
 
 ## Modelagem do Processo de Negócio 
 
