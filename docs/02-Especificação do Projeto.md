@@ -361,7 +361,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
   <tr>
     <td align="center">RF-010</td>
     <td align="left">Permitir que o usuário vizualize os videos dos exercicios cadastrados nos treinos.</td>
-    <td align="center">BAIXA</td>
+    <td align="center">MÉDIA</td>
   </tr>
 </table>
 
@@ -424,16 +424,8 @@ O diagrama de casos de uso é o próximo passo após a elicitação de requisito
 
 # Matriz de Rastreabilidade
 
-A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização dos relacionamento entre requisitos e outros artefatos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio. 
-
-A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura meramente ilustrativa apresentada a seguir.
-
-![Exemplo de matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
-
-> **Links Úteis**:
-> - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
-> - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
-> - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
+Conforme os requisitos levantados, foi rastreado o peso que cada um deles possui sobre os demais. Desta forma, pode-se visualizar o que cada requisito está influenciando sobre as funcionalidades que serão desenvolvidas. Assim, podemos entender o impacto de qualquer mudança  nos requisitos do sistema.
+![222986889-79f66f35-00e0-49e9-b918-59a64fa84b7d](https://user-images.githubusercontent.com/102563767/234885024-4cdef010-f4e9-48b0-9701-a9a7c31af671.png)
 
 
 # Gerenciamento de Projeto
