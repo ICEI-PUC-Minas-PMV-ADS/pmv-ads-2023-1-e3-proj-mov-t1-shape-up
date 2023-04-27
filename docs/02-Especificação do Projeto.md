@@ -298,7 +298,7 @@ Apresente aqui os principais indicadores de desempenho e algumas metas para o pr
 
 Usar o seguinte modelo: 
 
-![Indicadores de Desempenho](img/02-indic-desemp.png)
+![Indicadores de Desempenho](https://user-images.githubusercontent.com/102563767/234877730-5320cc7e-c790-42b6-8737-eb8ac62f4f3a.png)
 Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
 
 ## Requisitos
