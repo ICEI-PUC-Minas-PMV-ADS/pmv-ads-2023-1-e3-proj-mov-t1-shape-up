@@ -282,15 +282,15 @@ Apresente aqui uma descrição da sua proposta abordando seus limites e suas lig
 
 ### Processo 1 – As Is
 
-Segue apresentado abaixo o diagrama que representa o modelo de negócio As Isa descrito no padrão BPMN. 
+Segue apresentado abaixo o diagrama que representa o modelo de negócio As Is descrito no padrão BPMN. 
 
 ![Processo 1](https://user-images.githubusercontent.com/102563767/235310735-b9843805-5989-4285-b117-f4613577fe7a.png)
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 2 – To Be
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+Segue apresentado abaixo o diagrama que representa o modelo de negócio To Be descrito no padrão BPMN.
 
-![Processo 2](img/02-bpmn-proc2.png)
+![Processo 2](https://user-images.githubusercontent.com/102563767/235311772-91a4dc33-2d11-46c6-a883-53520f913185.png)
 
 ## Indicadores de Desempenho
 
