@@ -8,7 +8,8 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 A figura baixo ilustra o diagrama de classes para o sistema proposto.
 
-![image](https://user-images.githubusercontent.com/82043220/235319480-0d724da0-76f2-4881-9a51-50be6e8cbc48.png)
+![image](https://user-images.githubusercontent.com/82043220/235319595-6bd0f476-9a69-4e34-b65c-8d456cca7d6a.png)
+
 
 ## Modelo ER
 
