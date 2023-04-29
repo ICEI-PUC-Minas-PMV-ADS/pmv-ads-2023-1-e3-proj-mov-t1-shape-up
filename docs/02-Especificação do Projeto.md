@@ -284,7 +284,7 @@ Apresente aqui uma descrição da sua proposta abordando seus limites e suas lig
 
 Segue apresentado abaixo o diagrama que representa o modelo de negócio As Isa descrito no padrão BPMN. 
 
-![Processo 1](https://user-images.githubusercontent.com/102563767/235310420-a127b5d3-70e6-4103-9e65-661b948fa213.png)
+![Processo 1](https://user-images.githubusercontent.com/102563767/235310735-b9843805-5989-4285-b117-f4613577fe7a.png)
 
 ### Processo 2 – NOME DO PROCESSO
 
