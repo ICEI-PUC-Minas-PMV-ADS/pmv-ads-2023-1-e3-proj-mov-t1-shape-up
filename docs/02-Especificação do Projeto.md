@@ -347,7 +347,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
   </tr>
   <tr>
     <td align="center">RF-007</td>
-    <td align="left"Apresentar o avanço percentual do treino em execução.</td>
+    <td align="left">Apresentar o avanço percentual do treino em execução.</td>
     <td align="center">MÉDIA</td>
   </tr>
   <tr>
