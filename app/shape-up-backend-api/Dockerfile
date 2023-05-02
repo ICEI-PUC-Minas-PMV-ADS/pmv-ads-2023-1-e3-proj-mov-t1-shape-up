@@ -19,4 +19,4 @@ RUN dotnet publish "ShapeUpBackendApi.csproj" -c Release -o /app/publish /p:UseA
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ShapeUpBackendApi.dll"]
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet ShapeUpBackendApi.dll
