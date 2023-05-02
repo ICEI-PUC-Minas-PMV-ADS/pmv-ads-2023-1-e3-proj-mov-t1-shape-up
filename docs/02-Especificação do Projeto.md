@@ -280,17 +280,17 @@ Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o 
 
 Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – As Is
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+Segue apresentado abaixo o diagrama que representa o modelo de negócio As Is descrito no padrão BPMN. 
 
-![Processo 1](img/02-bpmn-proc1.png)
+![Processo 1](https://user-images.githubusercontent.com/102563767/235310735-b9843805-5989-4285-b117-f4613577fe7a.png)
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 2 – To Be
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+Segue apresentado abaixo o diagrama que representa o modelo de negócio To Be descrito no padrão BPMN.
 
-![Processo 2](img/02-bpmn-proc2.png)
+![Processo 2](https://user-images.githubusercontent.com/102563767/235311772-91a4dc33-2d11-46c6-a883-53520f913185.png)
 
 ## Indicadores de Desempenho
 
@@ -303,7 +303,9 @@ Obs.: todas as informações para gerar os indicadores devem estar no diagrama d
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para priorizar os requisitos, foi utilizado  a técnica de Escala de três Níveis, para essa técnica foi definido dois aspectos principais: importância e urgência. Assim, forma-se um quadrante, que é usado para obter o nível de prioridade do requisito.
+As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para priorizar os requisitos, foi utilizado  a técnica de Escala de três Níveis, para essa técnica foi definido dois aspectos principais: importância e urgência. Assim, forma-se um quadrante, que é usado para obter o nível de prioridade do requisito, como mostrado na figura a seguir:
+
+![image](https://user-images.githubusercontent.com/82043220/229387674-cf2d0986-0cd7-4243-b897-3fb5c7f09e58.png)
 
 ### Requisitos Funcionais
 
@@ -345,7 +347,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
   </tr>
   <tr>
     <td align="center">RF-007</td>
-    <td align="left"Apresentar o avanço percentual do treino em execução.</td>
+    <td align="left">Apresentar o avanço percentual do treino em execução.</td>
     <td align="center">MÉDIA</td>
   </tr>
   <tr>
@@ -447,7 +449,7 @@ O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utiliz
 
 O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
 
-![Simple Project Timeline](img/02-project-timeline.png)
+![Simple Project Timeline](https://user-images.githubusercontent.com/102563767/235471053-584fa4a8-19a2-4598-9265-30630d1a4cbc.png)
 
 ## Gestão de Orçamento
 
