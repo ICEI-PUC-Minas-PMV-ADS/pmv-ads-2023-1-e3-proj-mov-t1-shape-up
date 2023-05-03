@@ -60,8 +60,6 @@ using (var scope = app.Services.CreateScope()) {
     var services = scope.ServiceProvider;
 
     var context = services.GetRequiredService<ApplicationDBContext>();
-    if (context.Database.GetPendingMigrations().Any()) {
-        Console.WriteLine("Migrate");
-        context.Database.Migrate();
-    }
+    Console.WriteLine("Migrate");
+    context.Database.Migrate();
 }
