@@ -14,11 +14,7 @@ RUN dotnet build "ShapeUpBackendApi.csproj" -c Release -o /app/build
 FROM build AS publish
 RUN dotnet publish "ShapeUpBackendApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
-WORKDIR "/src/ShapeUpBackendApi"
-CMD dotnet ef database update
-
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-CMD dotnet ef database update
 CMD ASPNETCORE_URLS=http://*:$PORT dotnet ShapeUpBackendApi.dll
