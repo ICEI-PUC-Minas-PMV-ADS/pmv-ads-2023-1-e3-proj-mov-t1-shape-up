@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QO8ErKphRZcETVfxGC5PAxN2l/gjfuEXBLxsHShvtH5bJ2THpAxEhyJynKzM+dBRtc9Tsdp1ykUHKVHbRxQ4EA==",
+  "dgSpecHash": "2vEHgDD46tP/0f15OOfrNn5fRFDk4xvpPuxOpvj4d899SlUcww9DZSmqTuXH0GJzeQ2oL9c9MxQ8GJxfLNsB4A==",
   "success": true,
   "projectFilePath": "C:\\Users\\rshin\\Desktop\\Dev\\codes\\pucminas\\shape-up\\repo\\pmv-ads-2023-1-e3-proj-mov-t1-shape-up\\app\\shape-up-backend-api\\ShapeUpBackendApi\\ShapeUpBackendApi.csproj",
   "expectedPackageFiles": [
@@ -62,7 +62,11 @@
     "C:\\Users\\rshin\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\rshin\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
     "C:\\Users\\rshin\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
-    "C:\\Users\\rshin\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+    "C:\\Users\\rshin\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\rshin\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\rshin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\rshin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\rshin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.15\\microsoft.netcore.app.host.win-x64.6.0.15.nupkg.sha512"
   ],
   "logs": []
 }
