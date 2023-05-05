@@ -7,6 +7,8 @@ import 'moment/locale/pt-br'
 
 export default props => {
 
+    //constdate = moment(props.estimateAt)
+
     return (
         <View style={styles.container}>
             <View style={styles.checkContainer}>
