@@ -8,7 +8,6 @@ namespace ShapeUpBackendApi.Authentication.Models {
         public string Name { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        [Column(TypeName = "nullable")]
-        public string? ImageUrl { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

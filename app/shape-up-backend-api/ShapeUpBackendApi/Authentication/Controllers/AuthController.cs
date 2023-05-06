@@ -4,6 +4,7 @@ using ShapeUpBackendApi.Authentication.Contracts.Register;
 using ShapeUpBackendApi.Authentication.Models;
 using ShapeUpBackendApi.Authentication.Repositories;
 using ShapeUpBackendApi.Authentication.Services;
+using ShapeUpBackendApi.Internals;
 
 namespace ShapeUpBackendApi.Authentication.Controllers {
     [ApiController]
@@ -71,8 +72,10 @@ namespace ShapeUpBackendApi.Authentication.Controllers {
                 Password = _passwordService.EncryptPassword(content.Password)
             };
 
-            if (string.IsNullOrEmpty(content.ImageData)) {
+            if (!string.IsNullOrEmpty(content.ImageData)) {
                 user.ImageUrl = content.ImageData;
+            } else {
+                user.ImageUrl = UnknowUserImage.ImageUrl;
             }
 
             var userResponse = new RegisterResponse {
