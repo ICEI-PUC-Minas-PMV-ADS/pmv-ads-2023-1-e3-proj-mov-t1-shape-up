@@ -15,6 +15,7 @@ import {
   import { Card } from '../components/Card';
   import { MaterialCommunityIcons } from '@expo/vector-icons'; 
   import { MaterialIcons } from "@expo/vector-icons";
+  import * as ImagePicker from 'expo-image-picker';
 
   let carousel = {};
   let nav = {};
@@ -27,6 +28,29 @@ import {
     const [show, setShow] = React.useState(false);
     const {height, width} = useWindowDimensions();
     const [index, setIndex] = React.useState(0);
+
+    // forms
+
+    const [name, setName] = React.useState(null);
+    const [email, setEmail] = React.useState(null);
+    const [password, setPassword] = React.useState(null);
+    const [rePassword, setRePassword] = React.useState(null);
+    const [imageUri, setImageUri] = React.useState(null);
+
+    const handleSelectImage = () => {
+
+        ImagePicker.launchImageLibraryAsync({
+          mediaTypes: ImagePicker.MediaTypeOptions.Images,
+          allowsEditing: true,
+          quality: 1,
+        }).then(result => {
+            if (!result.canceled) {
+                setImageUri(result.uri);
+              } else {
+                alert('You did not select any image.');
+              }
+        })
+      };
 
     return (
     <View style={styles.inner}>
@@ -57,7 +81,7 @@ import {
                                                 <Card>
                                                     <MaterialCommunityIcons name="account" size={48} color="#ff4444" marginTop={40}/>
                                                     <Text marginTop={20} style={styles.cardTitle}>Qual é o seu nome?</Text>
-                                                    <Input w={'75%'} marginTop={10} placeholder='Nome' color='#ffffff'/>
+                                                    <Input w={'75%'} marginTop={10} placeholder='Nome' color='#ffffff' />
                                                     <Button w='60%' variant='outline' marginTop={6} borderColor='#ff4444'  _text={{fontWeight: 'bold', fontSize: 16, fontFamily: 'Roboto'}} 
                                                         onPress={() => carousel.current._snapToItem(carousel.current._getPositionIndex(index + 1))}>Confirmar</Button>
                                                     <TouchableWithoutFeedback onPress={() => nav.navigate('Login')}>
@@ -89,7 +113,7 @@ import {
                                                 <Card>
                                                     <MaterialCommunityIcons name="image-outline" size={48} color="#ff4444" marginTop={40}/>
                                                     <Text marginTop={20} style={styles.cardTitle}>Carregar foto de perfil</Text>
-                                                    <Button w='80%' mt={6} backgroundColor='#ff4444' _text={{color: '#2e2e2e', fontSize: 16, fontWeight: 'bold'}}>Carregar</Button>
+                                                    <Button w='80%' mt={6} backgroundColor='#ff4444' _text={{color: '#2e2e2e', fontSize: 16, fontWeight: 'bold'}} onPress={() => handleSelectImage()}>Carregar</Button>
                                                     <Text style={{
                                                         width: '80%',
                                                         fontSize: 12,

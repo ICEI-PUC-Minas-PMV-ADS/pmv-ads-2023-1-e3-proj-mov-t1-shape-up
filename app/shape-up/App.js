@@ -18,7 +18,7 @@ import { theme } from './assets/resources/Theme';
 import { LoginPage } from './src/pages/LoginPage';
 import { CadastrePage } from './src/pages/CadastrePage';
 import { WelcomePage } from './src/pages/WelcomePage';
-import { PamonhaPage } from './src/pages/PamonhaPage';
+import { HomePage } from './src/pages/HomePage';
 import { isAuthenticated  } from "./src/services/auth.services";
 
 const Stack = createNativeStackNavigator();
@@ -33,7 +33,7 @@ export default function App() {
             <Stack.Screen name="Login" component={LoginPage}/>
             <Stack.Screen name="Cadastre" component={CadastrePage}/>
             <Stack.Screen name="Welcome" component={WelcomePage}/>
-            <Stack.Screen name="Pamonha" component={PamonhaPage}/>
+            <Stack.Screen name="Home" component={HomePage}/>
           </Stack.Navigator>
         </NavigationContainer>
       </NativeBaseProvider>

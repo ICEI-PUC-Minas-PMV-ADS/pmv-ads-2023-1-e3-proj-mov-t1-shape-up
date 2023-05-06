@@ -45,7 +45,7 @@ import {
                                 <Dumbbell style={{marginTop: 20}}></Dumbbell>
                                 <Text style={styles.messageText}>Pronto para iniciar sua rotina de treinos?</Text>
                                 <Button w='80%' variant='outline' marginTop={7} borderColor='#ff4444'  _text={{fontWeight: 'bold', fontSize: 16, fontFamily: 'Roboto'}}
-                                     onPress={() => {}}>Criar rotina</Button>
+                                     onPress={() => {navigation.navigate('Home')}}>Criar rotina</Button>
                             </LinearGradient>
                         </Card>
                     </View>

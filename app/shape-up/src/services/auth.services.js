@@ -1,18 +1,50 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
+import CryptoJS from 'crypto-js';
 
 export const register = async (name, username, password) => {
 
+  var passHashed = CryptoJS.SHA1(password);
+
+  await axios.post('https://shape-up-backend-api.onrender.com/v1/auth/login', {
+    'username': username.toString(),
+    'password': passHashed.toString()
+  })
+  .then(function (response) {
+
+    var json = JSON.parse(response.data);
+
+    if (json.isAuthenticated) {
+        AsyncStorage.setItem('ShapeUp:Token', json.token);
+        AsyncStorage.setItem('ShapeUp:RefreshToken', json.refreshToken);
+        AsyncStorage.setItem('ShapeUp:LastUserName', json.name);
+        AsyncStorage.setItem('ShapeUp:LastUserEmail', json.username);
+
+        return true;
+    } else {
+        return false;
+    }
+  })
+  .catch(function (error) {
+      if (error.response) {
+          console.log(error.response.status);
+          console.log(error.response.data);
+      } else if (error.request) {
+
+        console.log(error.request);
+      } else {
+        console.log('Error', error.message);
+      }
+  });
 };
 
 export const login = async (username, password) => {
 
-    console.log(username);
-    console.log(password)
+    var passHashed = CryptoJS.SHA1(password);
 
     await axios.post('https://shape-up-backend-api.onrender.com/v1/auth/login', {
             'username': username.toString(),
-            'password': password.toString()
+            'password': passHashed.toString()
     })
     .then(function (response) {
 
