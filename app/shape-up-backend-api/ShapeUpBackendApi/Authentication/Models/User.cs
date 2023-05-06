@@ -1,4 +1,6 @@
-﻿using ShapeUpBackendApi.Authentication.Contracts.Register;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using ShapeUpBackendApi.Authentication.Contracts.Register;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ShapeUpBackendApi.Authentication.Models {
     public class User {
@@ -6,6 +8,7 @@ namespace ShapeUpBackendApi.Authentication.Models {
         public string Name { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public string ImageUrl { get; set; }
+        [Column(TypeName = "nullable")]
+        public string? ImageUrl { get; set; }
     }
 }
