@@ -1,4 +1,6 @@
-﻿using ShapeUpBackendApi.Authentication.Contracts.Register;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using ShapeUpBackendApi.Authentication.Contracts.Register;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ShapeUpBackendApi.Authentication.Models {
     public class User {

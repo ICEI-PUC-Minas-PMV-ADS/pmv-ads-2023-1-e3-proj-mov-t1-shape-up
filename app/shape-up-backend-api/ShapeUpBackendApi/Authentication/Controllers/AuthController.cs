@@ -4,6 +4,7 @@ using ShapeUpBackendApi.Authentication.Contracts.Register;
 using ShapeUpBackendApi.Authentication.Models;
 using ShapeUpBackendApi.Authentication.Repositories;
 using ShapeUpBackendApi.Authentication.Services;
+using ShapeUpBackendApi.Internals;
 
 namespace ShapeUpBackendApi.Authentication.Controllers {
     [ApiController]
@@ -53,6 +54,7 @@ namespace ShapeUpBackendApi.Authentication.Controllers {
             userResponse.Username = model.Username;
             userResponse.IsAuthenticated = true;
             userResponse.Name = user.Name;
+            userResponse.ImageData = user.ImageUrl;
             userResponse.Token = token;
             userResponse.RefreshToken = refreshToken;
 
@@ -61,7 +63,7 @@ namespace ShapeUpBackendApi.Authentication.Controllers {
 
         [HttpPost]
         [Route("register")]
-        public async Task<ActionResult<RegisterResponse>> RegisterAsync([FromBody] RegisterContent content, IFormFile formFile) {
+        public async Task<ActionResult<RegisterResponse>> RegisterAsync([FromBody] RegisterContent content) {
 
             var user = new User {
                 Id = Guid.NewGuid(),
@@ -70,11 +72,10 @@ namespace ShapeUpBackendApi.Authentication.Controllers {
                 Password = _passwordService.EncryptPassword(content.Password)
             };
 
-            if (formFile != null) {
-                MemoryStream memoryStream = new MemoryStream();
-                formFile.CopyTo(memoryStream);
-                string base64Data = Convert.ToBase64String(memoryStream.ToArray());
-                user.ImageUrl = string.Format("data:image/jpg;base64, {0}", base64Data);
+            if (!string.IsNullOrEmpty(content.ImageData)) {
+                user.ImageUrl = content.ImageData;
+            } else {
+                user.ImageUrl = UnknowUserImage.ImageUrl;
             }
 
             var userResponse = new RegisterResponse {
@@ -96,6 +97,7 @@ namespace ShapeUpBackendApi.Authentication.Controllers {
             userResponse.Name = user.Name;
             userResponse.Token = token;
             userResponse.RefreshToken = refreshToken;
+            userResponse.ImageData = user.ImageUrl;
 
             return Ok(userResponse);
         }

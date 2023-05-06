@@ -8,6 +8,7 @@ namespace ShapeUpBackendApi.Authentication.Contracts.Login {
         public string? Name { get; set; }
         public string? Token { get; set; }
         public string? RefreshToken { get; set; }
+        public string? ImageData { get; set; }
         public string ToJson() {
             return JsonSerializer.Serialize(this);
         }
