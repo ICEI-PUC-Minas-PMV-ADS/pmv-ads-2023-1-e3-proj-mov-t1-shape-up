@@ -97,6 +97,7 @@ namespace ShapeUpBackendApi.Authentication.Controllers {
             userResponse.Name = user.Name;
             userResponse.Token = token;
             userResponse.RefreshToken = refreshToken;
+            userResponse.ImageData = user.ImageUrl;
 
             return Ok(userResponse);
         }
