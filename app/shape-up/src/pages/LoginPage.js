@@ -14,14 +14,14 @@ import {
   import { LinearGradient } from 'expo-linear-gradient';
   import { MaterialIcons } from "@expo/vector-icons";
   
-  export function Login() {
+  export function LoginPage({navigation}) {
 
     const [show, setShow] = React.useState(false);
     const {height, width} = useWindowDimensions();
 
     return (
     <View style={styles.inner}>
-        <ImageBackground source={require('./assets/login-page-background.jpg')} resizeMode="cover" style={{
+        <ImageBackground source={require('../../assets/imgs/login-page-background.jpg')} resizeMode="cover" style={{
                 height: height + 40,
                 width: width
             }}>
@@ -30,7 +30,7 @@ import {
 	                        colors={['#ff4444','#000000']}
                             start={{x:0,y:0}}
                             end={{x:0.1,y:1}}>
-                       <Image style={styles.logo} resizeMode='contain' source={require('./assets/logomarca.png')}></Image>     
+                       <Image style={styles.logo} resizeMode='contain' source={require('../../assets/imgs/logomarca.png')}></Image>     
                 </LinearGradient>
                 <KeyboardAvoidingView
                     behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -49,7 +49,7 @@ import {
                                 <Text style={styles.dividerText}>or</Text>
                                 <Divider bg='muted.300' w='40%' thickness="2" orientation="horizontal" />
                             </Flex>
-                            <Button w='100%' variant='outline'>Cadastre</Button>
+                            <Button w='100%' variant='outline' onPress={() => navigation.navigate('Cadastre')}>Cadastre</Button>
                         </Stack>
                     </View>
                 </TouchableWithoutFeedback>
