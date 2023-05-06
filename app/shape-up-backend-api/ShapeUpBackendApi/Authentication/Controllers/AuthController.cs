@@ -61,7 +61,7 @@ namespace ShapeUpBackendApi.Authentication.Controllers {
 
         [HttpPost]
         [Route("register")]
-        public async Task<ActionResult<RegisterResponse>> RegisterAsync([FromBody] RegisterContent content) {
+        public async Task<ActionResult<RegisterResponse>> RegisterAsync([FromBody] RegisterContent content, IFormFile formFile) {
 
             var user = new User {
                 Id = Guid.NewGuid(),
@@ -69,6 +69,13 @@ namespace ShapeUpBackendApi.Authentication.Controllers {
                 Username = content.Username,
                 Password = _passwordService.EncryptPassword(content.Password)
             };
+
+            if (formFile != null) {
+                MemoryStream memoryStream = new MemoryStream();
+                formFile.CopyTo(memoryStream);
+                string base64Data = Convert.ToBase64String(memoryStream.ToArray());
+                user.ImageUrl = string.Format("data:image/jpg;base64, {0}", base64Data);
+            }
 
             var userResponse = new RegisterResponse {
                 IsAuthenticated = false,
