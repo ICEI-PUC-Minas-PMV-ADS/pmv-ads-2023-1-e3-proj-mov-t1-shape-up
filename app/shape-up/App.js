@@ -17,6 +17,7 @@ import { NativeBaseProvider } from "native-base";
 import { theme } from './assets/resources/Theme';
 import { LoginPage } from './src/pages/LoginPage';
 import { CadastrePage } from './src/pages/CadastrePage';
+import { WelcomePage } from './src/pages/WelcomePage';
 import { PamonhaPage } from './src/pages/PamonhaPage';
 import { isAuthenticated  } from "./src/services/auth.services";
 
@@ -31,6 +32,7 @@ export default function App() {
           <Stack.Navigator initialRouteName={"Login"} screenOptions={{headerShown: false,}}>
             <Stack.Screen name="Login" component={LoginPage}/>
             <Stack.Screen name="Cadastre" component={CadastrePage}/>
+            <Stack.Screen name="Welcome" component={WelcomePage}/>
             <Stack.Screen name="Pamonha" component={PamonhaPage}/>
           </Stack.Navigator>
         </NavigationContainer>
