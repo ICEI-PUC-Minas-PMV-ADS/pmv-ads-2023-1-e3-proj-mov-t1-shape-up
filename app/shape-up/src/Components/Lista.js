@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList, } from "react-native";
-import Icon from 'react-native-vector-icons/FontAwesome'
+import { View, Text, StyleSheet, FlatList, TouchableOpacity } from "react-native";
+import Icon from 'react-native-vector-icons/MaterialIcons'
 import { Checkbox } from 'react-native-paper';
 import { Image } from "native-base";
 
@@ -28,6 +28,9 @@ export default props => {
             <View style={styles.imageView}>
                 <Image style={styles.image} source={{ uri: props.imagePath }} alt="Alternate Text" size="xl" />
             </View>
+            <TouchableOpacity style={styles.buttonStyle}>
+                <Icon name="fitness-center" size={15} color={'#FF4444'}></Icon>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -39,7 +42,8 @@ const styles = StyleSheet.create({
         width: '90%',
         flexDirection: 'row',
         borderRadius: 15,
-        borderColor: '#FFF',//Alterar
+        borderColor: '#343434',//Alterar
+        backgroundColor: '#151515',
         borderWidth: 1,
         alignItems: 'center',
         marginBottom: 28
@@ -92,4 +96,16 @@ const styles = StyleSheet.create({
 
 
     },
+    buttonStyle: {
+        position: 'absolute',
+        right: 30,
+        bottom: 30,
+        width: 36,
+        height: 36,
+        borderRadius: 18,
+        backgroundColor: '#151515',
+        justifyContent: 'center',
+        alignItems: 'center'
+
+    }
 })
