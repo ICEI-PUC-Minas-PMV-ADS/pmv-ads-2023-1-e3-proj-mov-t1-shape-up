@@ -11,10 +11,10 @@ import {
   } from 'react-native';
   import { Button } from 'native-base';
   import Carousel, { Pagination } from 'react-native-snap-carousel';
-  import { InputEmailCard } from '../components/InputEmailCard';
-  import { InputNameCard } from '../components/InputNameCard';
-  import { InputImageCard } from '../components/InputImageCard';
-  import { InputPasswordCard } from '../components/InputPasswordCard';
+  import { InputEmailCard } from '../Components/InputEmailCard';
+  import { InputNameCard } from '../Components/InputNameCard';
+  import { InputImageCard } from '../Components/InputImageCard';
+  import { InputPasswordCard } from '../Components/InputPasswordCard';
   import { register } from '../services/auth.services';
 
   export function CadastrePage({navigation}) {

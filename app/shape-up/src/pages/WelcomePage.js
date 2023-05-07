@@ -11,7 +11,7 @@ import {
     Text
   } from 'react-native';
   import { LinearGradient } from 'expo-linear-gradient';
-  import { Card } from '../components/Card';
+  import { Card } from '../Components/Card';
   import { Button } from 'native-base';
   import { Dumbbell } from '../../assets/icons/Dumbbell';
   import { getUserName } from '../services/userdata.services';
