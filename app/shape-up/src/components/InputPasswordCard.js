@@ -17,6 +17,7 @@ export function InputPasswordCard({setValue, handleNext, handleGoToLogin}) {
     const [errorMessage, setErrorMessage] = React.useState(null);
     const [password, setPassword] = React.useState(null);
     const [rePassword, setRePassword] = React.useState(null);
+    const [waitingResponse, setWaitingResponse] = React.useState(false);
 
     const regexMaiuscula = /[A-Z]/;
     const regexEspecial = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
@@ -39,6 +40,7 @@ export function InputPasswordCard({setValue, handleNext, handleGoToLogin}) {
         }
 
         setPassword(value);
+        setValue(value);
     }
 
     const handleChangeRePassword = function(value) {
@@ -55,6 +57,7 @@ export function InputPasswordCard({setValue, handleNext, handleGoToLogin}) {
     }
 
     const handleOnPress = function() {
+
         if (isInvalid) {
             return;
         } else if (password == null) {
@@ -67,8 +70,9 @@ export function InputPasswordCard({setValue, handleNext, handleGoToLogin}) {
         } else {
             setIsInvalid(false);
             setErrorMessage(null);
-            setValue(password);
+            setWaitingResponse(true);
             handleNext();
+            setWaitingResponse(false);
         }
     }
 

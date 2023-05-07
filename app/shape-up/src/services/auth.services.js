@@ -1,124 +1,132 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import axios from 'axios';
+import {
+  setUserName,
+  setUserEmail,
+  setToken,
+  setRefreshToken,
+  saveImageProfile,
+  getToken,
+  getUserEmail } from './userdata.services';
 import CryptoJS from 'crypto-js';
-import { storeImage } from './imagestore.services';
+import axios from 'axios';
 
-export const register = async (name, username, password, imageData) => {
 
-  var passHashed = CryptoJS.SHA1(password);
-  var isAuthenticated = false;
+const WEBAPI_AUTH_REGISTER_URL = 'https://shape-up-backend-api.onrender.com/v1/auth/register';
+const WEBAPI_AUTH_LOGIN_URL = 'https://shape-up-backend-api.onrender.com/v1/auth/login';
+const WEBAPI_AUTH_CHECK_URL = 'https://shape-up-backend-api.onrender.com/v1/auth/token/check';
+const USER_EXISTS_CODE = 422;
+const USER_NOT_EXISTS_CODE = 404;
 
-  await axios.post('https://shape-up-backend-api.onrender.com/v1/auth/register', {
-    'name': name.toString(),
-    'username': username.toString(),
-    'password': passHashed.toString(),
-    'imageData': imageData.toString()
-  })
-  .then(function (response) {
+export async function register(name, email, password, imageData) {
+    
+ const passwordHashed = CryptoJS.SHA1(password).toString();
+ const registerResponse = {
+     isAuthenticated: false,
+     responseMessage: ''
+ }
 
-    const data = response.data;
+ await axios.post(WEBAPI_AUTH_REGISTER_URL, {
+     'name': name,
+     'username': email.toLowerCase(),
+     'password': passwordHashed,
+     'imageData': imageData.toString()
+ })
+ .then(function(response) {
+     if (response.data.isAuthenticated) {
+         registerResponse.isAuthenticated = response.data.isAuthenticated;
+         registerResponse.responseMessage = 'Usuário cadastrado com sucesso';
 
-    if (data.isAuthenticated) {
-        AsyncStorage.setItem('ShapeUp:Token', data.token);
-        AsyncStorage.setItem('ShapeUp:RefreshToken', data.refreshToken);
-        AsyncStorage.setItem('ShapeUp:UserName', data.name);
-        AsyncStorage.setItem('ShapeUp:UserEmail', data.username);
-        
-        storeImage(data.imageData);
-        
-        isAuthenticated = true;
-    }
-  })
-  .catch(function (error) {
-      if (error.response) {
-          console.log(error.response.status);
-          console.log(error.response.data);
-      } else if (error.request) {
+         setUserName(response.data.name);
+         setUserEmail(response.data.username);
+         setToken(response.data.token);
+         setRefreshToken(response.data.refreshToken);
+         saveImageProfile(response.data.imageData);
 
-        console.log(error.request);
-      } else {
-        console.log('Error', error.message);
-      }
-  });
+     } else {
+         registerResponse.isAuthenticated = response.data.isAuthenticated;
+         registerResponse.responseMessage = 'Problemas ao fazer o cadastro';
+     }
+ })
+ .catch(function(error) {
+     if (error.response.status == USER_EXISTS_CODE) {
+         registerResponse.isAuthenticated = false;
+         registerResponse.responseMessage = 'Usuário já cadastrado';
+     } else {
+         console.error(error);
+     }
+ });
 
-  return isAuthenticated;
-};
+ return registerResponse;
+}
 
-export const login = async (username, password) => {
+export async function login(email, password) {
 
-  console.log('Fazendo login');
+ const passwordHashed = CryptoJS.SHA1(password).toString();
+ const loginResponse = {
+     isAuthenticated: false,
+     responseMessage: ''
+ }
 
-    var passHashed = CryptoJS.SHA1(password);
-    var isAuthenticated = false;
+ await axios.post(WEBAPI_AUTH_LOGIN_URL, {
+     'username': email.toLowerCase(),
+     'password': passwordHashed
+ })
+ .then(function(response) {
+     if (response.data.isAuthenticated) {
+         loginResponse.isAuthenticated = response.data.isAuthenticated;
+         loginResponse.responseMessage = 'Usuário logado com sucesso';
 
-    await axios.post('https://shape-up-backend-api.onrender.com/v1/auth/login', {
-            'username': username.toString(),
-            'password': passHashed.toString()
-    })
-    .then(function (response) {
+         setUserName(response.data.name);
+         setUserEmail(response.data.username);
+         setToken(response.data.token);
+         setRefreshToken(response.data.refreshToken);
+         saveImageProfile(response.data.imageData);
 
-        var data = response.data;
+     } else {
+         loginResponse.isAuthenticated = response.data.isAuthenticated;
+         loginResponse.responseMessage = 'Problemas ao fazer o cadastro';
+     }
+ })
+ .catch(function(error) {
+     if (error.response.status == USER_NOT_EXISTS_CODE) {
+         loginResponse.isAuthenticated = false;
+         loginResponse.responseMessage = 'Usuário ou senha inválidos';
+     } else {
+         console.error(error);
+     }
+ });
 
-        if (data.isAuthenticated) {
-            AsyncStorage.setItem('ShapeUp:Token', data.token);
-            AsyncStorage.setItem('ShapeUp:RefreshToken', data.refreshToken);
-            AsyncStorage.setItem('ShapeUp:UserName', data.name);
-            AsyncStorage.setItem('ShapeUp:UserEmail', data.username);
-          
-            storeImage(data.imageData);
+ return loginResponse;
+}
 
-            isAuthenticated = true;
-        }
-    })
-    .catch(function (error) {
-        if (error.response) {
-          console.log(error.response.status);
-        } else if (error.request) {
+export async function logout() {
+ setUserName('');
+ setUserEmail('');
+ setToken('');
+ setRefreshToken('');
+}
 
-          console.log(error.request);
-        } else {
-          console.log('Error', error.message);
-        }
-      });
+export async function isAuthenticated() {
+ const token = await getToken();
+ const username =  await getUserEmail();
 
-    return isAuthenticated;
-};
+ const isAuthenticatedResponse = {
+     isAuthenticated: false
+ }
 
-export const logout = async () => {
+ if (token == null || username == null) {
+     return isAuthenticatedResponse;
+ }
 
-    console.log('Fazendo logout');
+ await axios.post(WEBAPI_AUTH_CHECK_URL, {
+     'token': token.toString(),
+     'username': username.toString()
+ })
+ .then(function(response) {
+    isAuthenticatedResponse.isAuthenticated = response.data.isValid;
+ })
+ .catch(function(error) {
+     console.error(error);
+ }) ;
 
-    AsyncStorage.removeItem('ShapeUp:Token');
-    AsyncStorage.removeItem('ShapeUp:RefreshToken');
-    AsyncStorage.removeItem('ShapeUp:UserName');
-    AsyncStorage.removeItem('ShapeUp:UserEmail');
-};
-
-export const isAuthenticated = async() => {
-
-    const token = await AsyncStorage.getItem('ShapeUp:Token');
-    const username =  await AsyncStorage.getItem('ShapeUp:UserEmail');
-
-    if (token == null || username == null) {
-        return false;
-    }
-
-    var isAuthenticated = false;
-
-    await axios.post('https://shape-up-backend-api.onrender.com/v1/auth/token/check', {
-            'token': token.toString(),
-            'username': username.toString()
-    })
-    .then(function (response) {
-      isAuthenticated = response.data.isValid;
-    })
-    .catch(function (error) {
-
-      });
-
-    return isAuthenticated;
-};
-
-export const refreshToken = async(token, refreshToken) => {
-
-};
+ return isAuthenticatedResponse;
+}

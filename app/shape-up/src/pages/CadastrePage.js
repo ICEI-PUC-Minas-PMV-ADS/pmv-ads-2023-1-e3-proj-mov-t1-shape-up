@@ -23,6 +23,7 @@ import {
     const {height, width} = useWindowDimensions();
     const [index, setIndex] = React.useState(0);
 
+
     // forms
 
     const [name, setName] = React.useState(null);
@@ -62,12 +63,12 @@ import {
     const handleCreateAccount = function() {
 
         register(name, email, password, imageData)
-            .then((response) => {
+            .then(function(response) {
 
-                if (response) {
-                    navigation.navigate('Home');
+                if (response.isAuthenticated) {
+                    navigation.push('Welcome');
                 } else {
-                    alert('autenticação falhou');
+                    alert(response.responseMessage);
                 }
             })
             .catch((error) => {

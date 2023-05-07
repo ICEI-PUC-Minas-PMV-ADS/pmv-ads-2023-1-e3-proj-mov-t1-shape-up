@@ -23,19 +23,26 @@ import {
     const [password, setPassword] = React.useState(null);
     const [isInvalid, setIsInvalid] = React.useState(false);
     const [errorMessage, setErrorMessage] = React.useState(null);
+    const [waitingResponse, setWaitingResponse] = React.useState(false);
 
     const handleLogin = function() {
+        
+        setWaitingResponse(true);
+
         login(email, password)
             .then(function(response) {
-                if (response) {
-                    navigation.navigate('Home');
+                if (response.isAuthenticated) {
+                    navigation.push('Home');
                 } else {
-                    setErrorMessage('Usuário ou senha inválido.');
+                    setErrorMessage(response.responseMessage);
                     setIsInvalid(true);
                 }
+
+                setWaitingResponse(false)
             })
             .catch(function(error) {
                 console.error(error);
+                setWaitingResponse(false)
             });
     }
 
@@ -76,13 +83,13 @@ import {
                                     </Pressable>}  placeholder="Password"/>
                                 <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>{errorMessage}</FormControl.ErrorMessage>
                             </FormControl>
-                            <Button w='100%' mt='3' onPress={handleLogin}>Login</Button>
+                            <Button w='100%' mt='3' isDisabled={waitingResponse} onPress={handleLogin}>Login</Button>
                             <Flex direction="row" alignItems='center' justifyContent='center' pr='3' pl='3'>
                                 <Divider bg='muted.300' w='40%' thickness="2" orientation="horizontal" />
                                 <Text style={styles.dividerText}>or</Text>
                                 <Divider bg='muted.300' w='40%' thickness="2" orientation="horizontal" />
                             </Flex>
-                            <Button w='100%' variant='outline' onPress={() => navigation.navigate('Cadastre')}>Cadastre</Button>
+                            <Button w='100%' variant='outline' isDisabled={waitingResponse} onPress={() => navigation.navigate('Cadastre')}>Cadastre</Button>
                         </Stack>
                     </View>
                 </TouchableWithoutFeedback>

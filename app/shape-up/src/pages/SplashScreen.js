@@ -6,14 +6,17 @@ import { isAuthenticated  } from "../services/auth.services";
 
 export function SplashScreen({navigation}) {
 
-    isAuthenticated()
-        .then((response) => {
-            if (response == true) {
-                navigation.navigate('Home');
-            } else {
+    React.useEffect(function() {
+        isAuthenticated()
+            .then(function(response) {
+              
+              if (response.isAuthenticated) {
+                navigation.push('Home');
+              } else {
                 navigation.navigate('Login');
-            }
-        });
+              }
+            });
+    }, []);
 
     return (
         <View style={{height: '100%', width: '100%'}}>

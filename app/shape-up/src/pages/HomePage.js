@@ -2,22 +2,18 @@ import React, { useState } from 'react';
 import { View, Text} from 'react-native';
 import { Button, Avatar } from 'native-base';
 import { logout } from '../services/auth.services';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { getUserProfileImage } from '../services/imagestore.services';
+import { getImageProfile, getUserName } from '../services/userdata.services';
+import { CommonActions } from '@react-navigation/native';
 
 export function HomePage({navigation}) {
 
     const [name, setName] = React.useState(null);
     const [imageUrl, setImageUrl] = React.useState(null);
 
-    AsyncStorage.getItem('ShapeUp:UserName')
-        .then((value) => {setName(value)})
-        .catch((error) => {console.log(error)});
-    getUserProfileImage()
-    .then((value) => {
-        setImageUrl(value);
-    })
-    .catch((error) => {console.log(error)});
+    React.useEffect(function() {
+        getImageProfile().then((profileImage) => setImageUrl(profileImage));
+        getUserName().then((userName) => setName(userName));
+    }, []);
 
     return (
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%'}}>
@@ -25,6 +21,18 @@ export function HomePage({navigation}) {
             <Text style={{fontSize: 20, fontWeight: 'bold'}}>{name}</Text>
             <Button onPress={() => {
                 logout();
+                
+                navigation.dispatch(
+                    CommonActions.reset({
+                      index: 1,
+                      routes: [
+                        { name: 'Home' },
+                        { name: 'Login' },
+                        { name: 'Welcome'}
+                      ],
+                    })
+                  );
+
                 navigation.navigate('Login');
             }}>Logout</Button>
         </View>

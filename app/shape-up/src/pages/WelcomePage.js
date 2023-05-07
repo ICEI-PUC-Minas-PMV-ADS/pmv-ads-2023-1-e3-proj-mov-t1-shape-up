@@ -12,14 +12,18 @@ import {
   } from 'react-native';
   import { LinearGradient } from 'expo-linear-gradient';
   import { Card } from '../components/Card';
-  import { MaterialCommunityIcons } from '@expo/vector-icons'; 
-  import { MaterialIcons } from "@expo/vector-icons";
-  import { createIcon, Button } from 'native-base';
+  import { Button } from 'native-base';
   import { Dumbbell } from '../../assets/icons/Dumbbell';
+  import { getUserName } from '../services/userdata.services';
 
   export function WelcomePage({navigation}) {
 
     const {height, width} = useWindowDimensions();
+    const [name, setName] = React.useState(null);
+
+    React.useEffect(function() {
+        getUserName().then((userName) => setName(userName));
+    }, []);
 
     return (
     <View style={styles.inner}>
@@ -41,7 +45,7 @@ import {
                                 start={{x:-.2,y:-3}}
                                 end={{x:.5,y:.6}}>
                                 <Text style={styles.welcomeText}>Bem Vindo</Text>
-                                <Text style={styles.nameText}>Raul Oliveira</Text>
+                                <Text style={styles.nameText}>{name}</Text>
                                 <Dumbbell style={{marginTop: 20}}></Dumbbell>
                                 <Text style={styles.messageText}>Pronto para iniciar sua rotina de treinos?</Text>
                                 <Button w='80%' variant='outline' marginTop={7} borderColor='#ff4444'  _text={{fontWeight: 'bold', fontSize: 16, fontFamily: 'Roboto'}}
