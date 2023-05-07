@@ -6,34 +6,27 @@ import { NativeBaseProvider } from "native-base";
 import { theme } from './assets/resources/Theme';
 import { LoginPage } from './src/pages/LoginPage';
 import { CadastrePage } from './src/pages/CadastrePage';
-import { PamonhaPage } from './src/pages/PamonhaPage';
-import { isAuthenticate  } from "./src/services/auth.services";
+import { WelcomePage } from './src/pages/WelcomePage';
+import { HomePage } from './src/pages/HomePage';
+import { SplashScreen } from './src/pages/SplashScreen';
 
 const Stack = createNativeStackNavigator();
-const getInitialPage = () => {
-  const [signed, setSigned] = React.useState(false);
-  const [signLoaded, setSignLoaded] = React.useState(true);
-
-  if (!isAuthenticate()) {
-    return 'Login;'
-  }
-
-  return 'Pamonha';
-};
 
 export default function App() {
 
   return (
     <SafeAreaProvider>
-        <NativeBaseProvider theme={theme}>
-          <NavigationContainer>
-            <Stack.Navigator initialRouteName={getInitialPage()} screenOptions={{headerShown: false,}}>
-              <Stack.Screen name="Login" component={LoginPage}/>
-              <Stack.Screen name="Cadastre" component={CadastrePage}/>
-              <Stack.Screen name="Pamonha" component={PamonhaPage}/>
-            </Stack.Navigator>
-          </NavigationContainer>
-        </NativeBaseProvider>
+      <NativeBaseProvider theme={theme}>
+        <NavigationContainer>
+          <Stack.Navigator initialRouteName={'Splash'} screenOptions={{headerShown: false,}}>
+            <Stack.Screen name="Splash" component={SplashScreen}/>
+            <Stack.Screen name="Login" component={LoginPage}/>
+            <Stack.Screen name="Cadastre" component={CadastrePage}/>
+            <Stack.Screen name="Welcome" component={WelcomePage}/>
+            <Stack.Screen name="Home" component={HomePage}/>
+          </Stack.Navigator>
+        </NavigationContainer>
+      </NativeBaseProvider>
     </SafeAreaProvider>
   );
 }
