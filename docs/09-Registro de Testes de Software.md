@@ -10,14 +10,24 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 <h3>CT-01 – Acesso a página "Home e cadastro"</h3>
 <p>Permitir que o usuário crie uma conta no aplicativo.</p>
 
+![cadastro passo 1](https://user-images.githubusercontent.com/102563767/236706374-14f76b18-490d-4db8-aa03-3532f99fd8d4.png)
+
+![cadastro passo 2](https://user-images.githubusercontent.com/102563767/236706381-53a67973-b4cd-4140-aad8-c7a3eb666ce8.png)
+
+![cadastro passo 3](https://user-images.githubusercontent.com/102563767/236706387-daf0bcc2-da31-47c0-9a9a-db94635a0ddb.png)
+
+![cadastro passo 4](https://user-images.githubusercontent.com/102563767/236706391-eff6ef4e-9440-4272-8e54-e6f32ccf56b4.png)
+
+![cadastro passo 5](https://user-images.githubusercontent.com/102563767/236706395-7e451790-89d7-400e-ba4f-3772cf36c8be.png)
+
 
 
 ![ct-08](https://user-images.githubusercontent.com/102563767/236699882-9fe2ad5f-addf-4956-b740-2d77bae8cd31.png)
 
 
 **Critério de Exito: Sucesso**
-<p>Usuário foi capaz de cadastrar uma conta no aplicativo.</p>
-(No atual momento do desenvolvimento ainda não foi feita a integração entre todas as telas não tornando possível o redirecionamento á tela Home após o cadastro)
+<p>Usuário foi capaz de cadastrar uma conta no aplicativo e foi redirecionado para Home-Page.</p>
+
 
 <br></br>
 
@@ -29,6 +39,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 <h3>CT-02 – Efetuar login</h3>
 <p>Verificar se o usuário é capaz de realizar login.</p>
 
+![login](https://user-images.githubusercontent.com/102563767/236706687-1ac62107-e8d6-48f1-8996-90e46c11d698.jpg)
 
 
 ![ct-08](https://user-images.githubusercontent.com/102563767/236699882-9fe2ad5f-addf-4956-b740-2d77bae8cd31.png)
@@ -36,7 +47,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 **Critério de Exito: Sucesso**
 
-<p> O login foi realizado com sucesso e o úsuario deve ser redirecionado para a página de Exito.p>
+<p> O login foi realizado com sucesso e o úsuario deve ser redirecionado para a página de Exito.</p>
   <br></br>
 
 **Fluxo Alternativo**
