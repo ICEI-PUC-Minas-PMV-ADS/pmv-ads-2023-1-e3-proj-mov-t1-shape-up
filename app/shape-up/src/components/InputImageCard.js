@@ -22,6 +22,7 @@ export function InputImageCard({setValue, handleNext, handleGoToLogin}) {
           mediaTypes: ImagePicker.MediaTypeOptions.Images,
           allowsEditing: true,
           quality: 1,
+          base64: true
         }).then(result => {
             if (!result.canceled) {
                 if (result.uri != undefined) {
@@ -29,11 +30,11 @@ export function InputImageCard({setValue, handleNext, handleGoToLogin}) {
                     setImageData(`data:image/jpeg;base64,${result.base64}`)
                     setIsUploaded(true);
                 }
-              } else {
+            } else {
                 alert('You did not select any image.');
                 setImageUri(null);
                 setIsUploaded(false);
-              }
+            }
         })
     };
 

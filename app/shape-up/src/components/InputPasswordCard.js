@@ -36,23 +36,22 @@ export function InputPasswordCard({setValue, handleNext, handleGoToLogin}) {
         } else {
             setIsInvalid(false);
             setErrorMessage(null);
-            setPassword();
         }
+
+        setPassword(value);
     }
 
     const handleChangeRePassword = function(value) {
-        if (isInvalid) {
-            return;
-        }
-        else if (value != password) {
+        if (value != password) {
             setIsInvalid(true);
             setErrorMessage('As senhas não são iguais.');
         }
         else {
             setIsInvalid(false);
             setErrorMessage(null);
-            setRePassword();
         }
+
+        setRePassword(value);
     }
 
     const handleOnPress = function() {
@@ -69,6 +68,7 @@ export function InputPasswordCard({setValue, handleNext, handleGoToLogin}) {
             setIsInvalid(false);
             setErrorMessage(null);
             setValue(password);
+            handleNext();
         }
     }
 

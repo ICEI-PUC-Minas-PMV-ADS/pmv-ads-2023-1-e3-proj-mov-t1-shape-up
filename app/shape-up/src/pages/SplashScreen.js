@@ -8,7 +8,7 @@ export function SplashScreen({navigation}) {
 
     isAuthenticated()
         .then((response) => {
-            if (response) {
+            if (response == true) {
                 navigation.navigate('Home');
             } else {
                 navigation.navigate('Login');

@@ -10,14 +10,44 @@ import {
     Image,
     Text
   } from 'react-native';
-  import { Stack, Input, Button, Divider, Flex, Pressable, Icon } from 'native-base';
+  import { Stack, Input, Button, Divider, Flex, Pressable, Icon, FormControl, WarningOutlineIcon } from 'native-base';
   import { LinearGradient } from 'expo-linear-gradient';
   import { MaterialIcons } from "@expo/vector-icons";
+  import { login } from '../services/auth.services';
   
   export function LoginPage({navigation}) {
 
     const [show, setShow] = React.useState(false);
     const {height, width} = useWindowDimensions();
+    const [email, setEmail] = React.useState(null);
+    const [password, setPassword] = React.useState(null);
+    const [isInvalid, setIsInvalid] = React.useState(false);
+    const [errorMessage, setErrorMessage] = React.useState(null);
+
+    const handleLogin = function() {
+        login(email, password)
+            .then(function(response) {
+                if (response) {
+                    navigation.navigate('Home');
+                } else {
+                    setErrorMessage('Usuário ou senha inválido.');
+                    setIsInvalid(true);
+                }
+            })
+            .catch(function(error) {
+                console.error(error);
+            });
+    }
+
+    const handlePassword = function(value) {
+        setIsInvalid(false);
+        setPassword(value);
+    }
+
+    const handleEmail = function(value) {
+        setIsInvalid(false);
+        setEmail(value);
+    }
 
     return (
     <View style={styles.inner}>
@@ -38,12 +68,15 @@ import {
                 <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                     <View style={styles.container}>
                         <Stack space={4} w={{base: '75%', md: '25%'}} alignItems='center'>
-                            <Input color='light.50' placeholder="Email"/>
-                            <Input color='light.50' type={show ? "text" : "password"} InputRightElement={
-                                <Pressable onPress={() => setShow(!show)}>
-                                    <Icon as={<MaterialIcons name={show ? "visibility" : "visibility-off"} />} size={5} mr="2" color="muted.400" />
-                                </Pressable>}  placeholder="Password"/>
-                            <Button w='100%' mt='3'>Login</Button>
+                            <FormControl isInvalid={isInvalid} style={{ height: 120}}>
+                                <Input color='light.50' placeholder="Email" marginBottom={3} onChangeText={handleEmail}/>
+                                <Input color='light.50' type={show ? "text" : "password"} onChangeText={handlePassword} InputRightElement={
+                                    <Pressable onPress={() => setShow(!show)}>
+                                        <Icon as={<MaterialIcons name={show ? "visibility" : "visibility-off"} />} size={5} mr="2" color="muted.400" />
+                                    </Pressable>}  placeholder="Password"/>
+                                <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>{errorMessage}</FormControl.ErrorMessage>
+                            </FormControl>
+                            <Button w='100%' mt='3' onPress={handleLogin}>Login</Button>
                             <Flex direction="row" alignItems='center' justifyContent='center' pr='3' pl='3'>
                                 <Divider bg='muted.300' w='40%' thickness="2" orientation="horizontal" />
                                 <Text style={styles.dividerText}>or</Text>

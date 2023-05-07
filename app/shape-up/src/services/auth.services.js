@@ -1,14 +1,14 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import CryptoJS from 'crypto-js';
+import { storeImage } from './imagestore.services';
 
 export const register = async (name, username, password, imageData) => {
 
   var passHashed = CryptoJS.SHA1(password);
-  const formData = new FormData();
-  formData.append('imagem', imagemInput.files[0]);
+  var isAuthenticated = false;
 
-  await axios.post('https://shape-up-backend-api.onrender.com/v1/auth/login', {
+  await axios.post('https://shape-up-backend-api.onrender.com/v1/auth/register', {
     'name': name.toString(),
     'username': username.toString(),
     'password': passHashed.toString(),
@@ -16,18 +16,17 @@ export const register = async (name, username, password, imageData) => {
   })
   .then(function (response) {
 
-    var json = JSON.parse(response.data);
+    const data = response.data;
 
-    if (json.isAuthenticated) {
-        AsyncStorage.setItem('ShapeUp:Token', json.token);
-        AsyncStorage.setItem('ShapeUp:RefreshToken', json.refreshToken);
-        AsyncStorage.setItem('ShapeUp:UserName', json.name);
-        AsyncStorage.setItem('ShapeUp:UserEmail', json.username);
-        AsyncStorage.setItem('ShapeUp:UserImage', json.imageData);
-
-        return true;
-    } else {
-        return false;
+    if (data.isAuthenticated) {
+        AsyncStorage.setItem('ShapeUp:Token', data.token);
+        AsyncStorage.setItem('ShapeUp:RefreshToken', data.refreshToken);
+        AsyncStorage.setItem('ShapeUp:UserName', data.name);
+        AsyncStorage.setItem('ShapeUp:UserEmail', data.username);
+        
+        storeImage(data.imageData);
+        
+        isAuthenticated = true;
     }
   })
   .catch(function (error) {
@@ -41,11 +40,16 @@ export const register = async (name, username, password, imageData) => {
         console.log('Error', error.message);
       }
   });
+
+  return isAuthenticated;
 };
 
 export const login = async (username, password) => {
 
+  console.log('Fazendo login');
+
     var passHashed = CryptoJS.SHA1(password);
+    var isAuthenticated = false;
 
     await axios.post('https://shape-up-backend-api.onrender.com/v1/auth/login', {
             'username': username.toString(),
@@ -53,24 +57,22 @@ export const login = async (username, password) => {
     })
     .then(function (response) {
 
-        var json = JSON.parse(response.data);
+        var data = response.data;
 
-        if (json.isAuthenticated) {
-            AsyncStorage.setItem('ShapeUp:Token', json.token);
-            AsyncStorage.setItem('ShapeUp:RefreshToken', json.refreshToken);
-            AsyncStorage.setItem('ShapeUp:UserName', json.name);
-            AsyncStorage.setItem('ShapeUp:UserEmail', json.username);
-            AsyncStorage.setItem('ShapeUp:UserImage', json.imageData);
+        if (data.isAuthenticated) {
+            AsyncStorage.setItem('ShapeUp:Token', data.token);
+            AsyncStorage.setItem('ShapeUp:RefreshToken', data.refreshToken);
+            AsyncStorage.setItem('ShapeUp:UserName', data.name);
+            AsyncStorage.setItem('ShapeUp:UserEmail', data.username);
+          
+            storeImage(data.imageData);
 
-            return true;
-        } else {
-            return false;
+            isAuthenticated = true;
         }
     })
     .catch(function (error) {
         if (error.response) {
           console.log(error.response.status);
-          console.log(error.response.data);
         } else if (error.request) {
 
           console.log(error.request);
@@ -78,42 +80,43 @@ export const login = async (username, password) => {
           console.log('Error', error.message);
         }
       });
+
+    return isAuthenticated;
 };
 
 export const logout = async () => {
+
+    console.log('Fazendo logout');
+
     AsyncStorage.removeItem('ShapeUp:Token');
     AsyncStorage.removeItem('ShapeUp:RefreshToken');
     AsyncStorage.removeItem('ShapeUp:UserName');
     AsyncStorage.removeItem('ShapeUp:UserEmail');
-    AsyncStorage.removeItem('ShapeUp:UserImage');
 };
 
 export const isAuthenticated = async() => {
 
-    let token = AsyncStorage.getItem('ShapeUp:Token');
-    let username =  AsyncStorage.getItem('ShapeUp:UserEmail');
+    const token = await AsyncStorage.getItem('ShapeUp:Token');
+    const username =  await AsyncStorage.getItem('ShapeUp:UserEmail');
 
-    if (!token || !username) {
+    if (token == null || username == null) {
         return false;
     }
+
+    var isAuthenticated = false;
 
     await axios.post('https://shape-up-backend-api.onrender.com/v1/auth/token/check', {
             'token': token.toString(),
             'username': username.toString()
     })
     .then(function (response) {
-        return JSON.parse(response.data).isValid;
+      isAuthenticated = response.data.isValid;
     })
     .catch(function (error) {
-        if (error.response) {
-          console.log(error.response.status);
-        } else if (error.request) {
 
-          console.log(error.request);
-        } else {
-          console.log('Error', error.message);
-        }
       });
+
+    return isAuthenticated;
 };
 
 export const refreshToken = async(token, refreshToken) => {

@@ -1,15 +1,4 @@
 import React from 'react';
-import {
-  View,
-  KeyboardAvoidingView,
-  TextInput,
-  StyleSheet,
-  Text,
-  Platform,
-  TouchableWithoutFeedback,
-  Button,
-  Keyboard,
-} from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -19,7 +8,7 @@ import { LoginPage } from './src/pages/LoginPage';
 import { CadastrePage } from './src/pages/CadastrePage';
 import { WelcomePage } from './src/pages/WelcomePage';
 import { HomePage } from './src/pages/HomePage';
-import { isAuthenticated  } from "./src/services/auth.services";
+import { SplashScreen } from './src/pages/SplashScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,7 +18,8 @@ export default function App() {
     <SafeAreaProvider>
       <NativeBaseProvider theme={theme}>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName={"Login"} screenOptions={{headerShown: false,}}>
+          <Stack.Navigator initialRouteName={'Splash'} screenOptions={{headerShown: false,}}>
+            <Stack.Screen name="Splash" component={SplashScreen}/>
             <Stack.Screen name="Login" component={LoginPage}/>
             <Stack.Screen name="Cadastre" component={CadastrePage}/>
             <Stack.Screen name="Welcome" component={WelcomePage}/>
@@ -40,9 +30,3 @@ export default function App() {
     </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  }
-});

@@ -60,9 +60,19 @@ import {
     }
 
     const handleCreateAccount = function() {
-        if(register(name, email, password, imageData)) {
-            navigation.navigate('Welcome');
-        }
+
+        register(name, email, password, imageData)
+            .then((response) => {
+
+                if (response) {
+                    navigation.navigate('Home');
+                } else {
+                    alert('autenticação falhou');
+                }
+            })
+            .catch((error) => {
+                console.error(error);
+            });
     }
 
     return (
