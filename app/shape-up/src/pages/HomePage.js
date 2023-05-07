@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, SafeAreaView, Image, ScrollView } from "react-native";
-import Header from "../Components/Header"
-import Lista from "../Components/Lista"
+import Header from "../components/Header"
+import Lista from "../components/Lista"
 
 
 function Saudacao() {
