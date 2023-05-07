@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, FlatList, TouchableOpacity, ScrollView } from "react-native";
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import { Checkbox } from 'react-native-paper';
 import { Image } from "native-base";
@@ -12,6 +12,7 @@ export default props => {
     const [checked, setChecked] = React.useState(false);
     const imagePath = props.imagePath
     return (
+
         <View style={styles.container}>
             <View style={styles.checkContainer}>
                 <Checkbox
@@ -107,5 +108,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
 
-    }
+    },
 })
