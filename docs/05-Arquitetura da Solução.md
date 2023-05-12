@@ -36,7 +36,8 @@ O Esquema Relacional trabalha em conjunto com o Modelo ER, para mais informaçõ
 O Modelo Físico contém o código necessário para gerar o banco de dados da aplicação, com todas as entidades como tabelas, e seus atributos como linhas dessas tabelas.
 O Modelo Físico trabalha em conjunto com o Esquema Relacional, **veja**: [Esquema relacional](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/blob/main/docs/05-Arquitetura%20da%20Solu%C3%A7%C3%A3o.md#esquema-relacional).
 
-O script de criação do banco foi gerado usando o Esquema Relacional apartir da ferramenta [Lucidchart](), e é gerado com a seguinte estrutura:
+O script de criação do banco foi gerado usando o Esquema Relacional apartir da ferramenta [Lucidchart](https://www.lucidchart.com), ele se destina ao banco de dados relacional [Postgres](https://www.postgresql.org
+) e é gerado com a seguinte estrutura:
 
 ```sql
 ...
@@ -55,19 +56,126 @@ CREATE TABLE "User" (
 O modelo completo pode ser encontrado em:  
 - **`pmv-ads-2023-1-e3-proj-mov-t1-shape-up/app/shape-up-db/ShapeUpDB.sql`**  
 
-ou acessando o Link: [**ShapeUpDB.sql**]().
+ou acessando o Link: [**ShapeUpDB.sql**](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/blob/main/app/shape-up-db/ShapeUpDB.sql).
 
 
 ## Tecnologias Utilizadas
 
-|Função    | Tecnologia  | 
-|------------|-----------------------------------------|
-| Linguagem | JavaScript | 
-| Framework | ReactNative | 
-| Bibliotecas | NativeBase, React Navigation, Json server, Json server auth, Axios | 
-| IDE | Visual Studio Code | 
-| Ferramentas | Microsoft Teams, GitHub, Whatsapp | 
-| Banco de dados | SQL SERVER | 
+O desenvolvimento de software moderno depende de uma variedade de tecnologias para criar produtos eficientes e inovadores. Nesta seção, destacamos algumas das principais tecnologias utilizadas no processo de desenvolvimento do sistema proposto.
+
+### Linguagens
+
+As linguagens de programação são a base do desenvolvimento de software. Dependendo dos requisitos e objetivos do projeto, diferentes linguagens podem ser utilizadas.
+
+<table>
+ <tr>
+   <td colspan='2' align='center'><strong>Linguagens</strong></td>
+ </tr>
+ <tr>
+   <td width='200' align='center'><strong>Linguagem</strong></td>
+   <td width='800'><strong>Motivo da escolha</strong></td>
+ </tr>
+  <tr>
+   <td>JavaScript</td>
+   <td></td>
+ </tr>
+  <tr>
+   <td>C#</td>
+   <td></td>
+ </tr>
+</table>
+
+### Bibliotecas
+
+As bibliotecas são conjuntos de código predefinido e reutilizável que fornecem funcionalidades específicas para facilitar o desenvolvimento de software. Elas são criadas para resolver problemas comuns e oferecer uma abordagem mais eficiente e rápida para a construção de aplicativos
+
+<table>
+ <tr>
+   <td colspan='2' align='center'><strong>Bibliotecas</strong></td>
+ </tr>
+ <tr>
+   <td width='200' align='center'><strong>Biblioteca</strong></td>
+   <td width='800'><strong>Motivo da escolha</strong></td>
+ </tr>
+  <tr>
+   <td>Native Base</td>
+   <td></td>
+ </tr>
+  <tr>
+   <td>Axios</td>
+   <td></td>
+ </tr>
+  <tr>
+   <td>Entity Framework</td>
+   <td></td>
+ </tr>
+</table>
+
+### Ambiente de desenvolvimento
+
+Um ambiente de desenvolvimento padronizado e bem definido, permite que todos os desenvolvedores trabalhem em conjunto, evitando problemas de incompatibilidade entre ambientes de desenvolvimento.
+
+<table>
+ <tr>
+   <td colspan='2' align='center'><strong>Ambiente de desenvolvimento</strong></td>
+ </tr>
+ <tr>
+   <td width='200' align='center'><strong>Tecnologia</strong></td>
+   <td width='800'><strong>Motivo da escolha</strong></td>
+ </tr>
+  <tr>
+   <td>Visual Studio Code</td>
+   <td></td>
+ </tr>
+  <tr>
+   <td>Android Studio</td>
+   <td></td>
+ </tr>
+</table>
+
+### Comunicação
+
+Uma comunicação rápida e eficaz desempenha um papel vital nos processos de desenvolvimento de uma aplicação, então é importante que os meios de comunicação sejam efetivos e acessíveis a todos.
+
+<table>
+ <tr>
+   <td colspan='2' align='center'><strong>Comunicação</strong></td>
+ </tr>
+ <tr>
+   <td width='200' align='center'><strong>Tecnologia</strong></td>
+   <td width='800'><strong>Motivo da escolha</strong></td>
+ </tr>
+  <tr>
+   <td>Microsoft Teams</td>
+   <td></td>
+ </tr>
+  <tr>
+   <td>Whatsapp</td>
+   <td></td>
+ </tr>
+</table>
+
+### UI Design
+
+Uma boa ferramenta de design de interface do usuário (UI) pode desempenhar um papel crucial no desenvolvimento de uma experiência de usuário eficaz e atraente.
+
+<table>
+ <tr>
+   <td colspan='2' align='center'><strong>UI Design</strong></td>
+ </tr>
+ <tr>
+   <td width='200' align='center'><strong>Tecnologia</strong></td>
+   <td width='800'><strong>Motivo da escolha</strong></td>
+ </tr>
+  <tr>
+   <td>Figma</td>
+   <td></td>
+ </tr>
+  <tr>
+   <td>Photoshopp</td>
+   <td></td>
+ </tr>
+</table>
 
 ## Hospedagem
 
