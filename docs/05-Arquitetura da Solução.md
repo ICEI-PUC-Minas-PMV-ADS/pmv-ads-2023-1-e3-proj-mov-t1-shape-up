@@ -6,18 +6,19 @@ A arquitetura da aplicação é um conceito essencial no desenvolvimento de soft
 
 O diagrama de classe é uma representação visual da estrutura e das relações entre as classes de um sistema orientado a objetos. Ele fornece uma visão abstrata dos objetos que compõem o sistema, bem como seus atributos e métodos.
 
-A figura baixo ilustra o diagrama de classes para o sistema proposto.
+A figura abaixo ilustra o diagrama de classes para o sistema proposto.
 
-![image diagrama de classes shapeup](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/82043220/d7ac54f2-13bf-4fa4-b3ed-759204057f19)
-
+![imagem diagrama de classe ShapeUp](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/82043220/74150353-c90d-4a6c-9b75-b486b0c879ec)
 
 ## Modelo ER
 
-O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
+O diagrama Entidade-Relacionamento (ER) é uma ferramenta gráfica usada para modelar e representar a estrutura lógica de um banco de dados. Ele é amplamente utilizado na fase de projeto de sistemas de banco de dados, permitindo visualizar as entidades (objetos) envolvidas no sistema e as relações entre elas.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER”.
+A figura abaixo ilustra o diagrama de Entidade-Relacionamento para o sistema proposto.
 
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
+![imagem modelo ER shapeUp](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/82043220/4fba6ba7-c8b7-4b39-8902-5f06169ac956)
+
+trabalha em conjunto com o diagrama de classe. (Veja a seção: [Diagrama de Classe]())
 
 ## Esquema Relacional
 
