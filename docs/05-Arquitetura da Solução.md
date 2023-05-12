@@ -8,7 +8,7 @@ O diagrama de classe é uma representação visual da estrutura e das relações
 
 A figura abaixo ilustra o diagrama de classes para o sistema proposto.
 
-![imagem diagrama de classe ShapeUp](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/82043220/74150353-c90d-4a6c-9b75-b486b0c879ec)
+![imagem diagrama de classe ShapeUp](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/82043220/2f2881ad-869d-4004-beb2-9e5db8a1a4e0)
 
 ## Modelo ER
 
@@ -17,7 +17,7 @@ e os relacionamentos são representados com losangos, com sua respectiva intera�
 
 A figura abaixo ilustra o modelo de Entidade-Relacionamento para o sistema proposto.
 
-![imagem do modelo entidade relacionamento](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/82043220/60eeda32-9d0f-4511-a296-d6bae545857b)
+![imagem do modelo entidade relacionamento](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/82043220/92395d36-b88b-4899-ada4-bc246d83f5bb)
 
 O modelo de Entidade-Relacionamento trabalha em conjunto com o diagrama de classe, para mais informações sobre os objetos do sistema veja: [Diagrama de Classe](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/blob/main/docs/05-Arquitetura%20da%20Solu%C3%A7%C3%A3o.md#diagrama-de-classes).
 
