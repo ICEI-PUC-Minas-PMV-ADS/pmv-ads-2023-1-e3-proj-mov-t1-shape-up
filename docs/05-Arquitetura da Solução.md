@@ -63,6 +63,12 @@ ou acessando o Link: [**ShapeUpDB.sql**](https://github.com/ICEI-PUC-Minas-PMV-A
 
 O desenvolvimento de software moderno depende de uma variedade de tecnologias para criar produtos eficientes e inovadores. Nesta seção, destacamos algumas das principais tecnologias utilizadas no processo de desenvolvimento do sistema proposto.
 
+A imagem abaixo representa a comunicação entre algumas das tecnologias utilizadas no desenvolvimento do sistema:
+
+![Diagrama em branco (4)](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/82043220/10b141ab-c810-434d-aada-0a5b63666602)
+
+Todas as tecnologias utilizadas no processo de desenvolvimento dessa solução estão listadas abaixo, separadas por tópicos e contém um breve resumo dos motivos de sua escolha.
+
 ### Linguagens
 
 As linguagens de programação são a base do desenvolvimento de software. Dependendo dos requisitos e objetivos do projeto, diferentes linguagens podem ser utilizadas.
@@ -109,6 +115,10 @@ As bibliotecas são conjuntos de código predefinido e reutilizável que fornece
    <td align='center'><a href='https://learn.microsoft.com/pt-br/ef/core/'>Entity Framework</a></td>
    <td>O Entity framework é um mapeador relacional de objeto (ORM) que permite o acesso a dados como objetos, é muito usado por apis desenvolvidas com .NET e fácil de ser utilizada.</td>
  </tr>
+  <tr>
+   <td align='center'><a href='https://github.com/react-native-async-storage/async-storage'>AsyncStorage</a></td>
+   <td>O AsyncStorage é a biblioteca mais usual para armazenamento de dados localmente em dispositivos móveis.</td>
+ </tr>
 </table>
 
 ### Ambiente de desenvolvimento
@@ -130,6 +140,25 @@ Um ambiente de desenvolvimento padronizado e bem definido, permite que todos os 
   <tr>
    <td align='center'><a href='https://developer.android.com/studio'>Android Studio</a></td>
    <td>O Android Studio é uma IDE para desenvolvimento mobile, que conta com recursos de emulação de dispositivos móveis, permitindo um preview da aplicação enquanto em ambiente de desenvolvimento.</td>
+ </tr>
+</table>
+
+
+### Serviços web
+
+Os serviços web desempenham um papel fundamental no mundo digital de hoje, permitindo a comunicação e a troca de informações entre diferentes sistemas e aplicativos em todo o mundo. Esses serviços são essenciais para facilitar a integração de plataformas, o compartilhamento de dados e o desenvolvimento de soluções modernas e interconectadas.
+
+<table>
+ <tr>
+   <td colspan='2' align='center'><strong>Serviços</strong></td>
+ </tr>
+ <tr>
+   <td width='200' align='center'><strong>Serviço</strong></td>
+   <td width='800'><strong>Motivo da escolha</strong></td>
+ </tr>
+  <tr>
+   <td align='center'><a href='https://render.com/'>Render</a></td>
+   <td>O Render é um web host gratuito que possibilita a hospedagem da api e do banco de dados da aplicação.</td>
  </tr>
 </table>
 
