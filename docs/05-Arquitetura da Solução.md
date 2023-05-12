@@ -98,16 +98,16 @@ As bibliotecas são conjuntos de código predefinido e reutilizável que fornece
    <td width='800'><strong>Motivo da escolha</strong></td>
  </tr>
   <tr>
-    <td align='center'><a href=''>Native Base</a></td>
-   <td></td>
+    <td align='center'><a href='https://nativebase.io/'>Native Base</a></td>
+   <td>A biblioteca de componentes Native Base foi escolhida por proporcionar uma grande variedade de components e estilizações que auxiliam no processo de criação das páginas da aplicação.</td>
  </tr>
   <tr>
-   <td align='center'><a href=''>Axios</a></td>
-   <td></td>
+   <td align='center'><a href='https://www.npmjs.com/package/axios'>Axios</a></td>
+   <td>A biblioteca Axios foi escolhida para o acesso a webapi, por ser muito objetiva e fácil de ser utilizada.</td>
  </tr>
   <tr>
-   <td align='center'><a href=''>Entity Framework</a></td>
-   <td></td>
+   <td align='center'><a href='https://learn.microsoft.com/pt-br/ef/core/'>Entity Framework</a></td>
+   <td>O Entity framework é um mapeador relacional de objeto (ORM) que permite o acesso a dados como objetos, é muito usado por apis desenvolvidas com .NET e fácil de ser utilizada.</td>
  </tr>
 </table>
 
@@ -124,12 +124,12 @@ Um ambiente de desenvolvimento padronizado e bem definido, permite que todos os 
    <td width='800'><strong>Motivo da escolha</strong></td>
  </tr>
   <tr>
-   <td align='center'><a href=''>Visual Studio Code</a></td>
-   <td></td>
+   <td align='center'><a href='https://code.visualstudio.com/'>Visual Studio Code</a></td>
+   <td>O VS code é um editor de código aberto leve e com uma vasta variedade de recursos, que possibilita o desenvolvimento com react native em qualquer sistema operacional.</td>
  </tr>
   <tr>
-   <td align='center'><a href=''>Android Studio</a></td>
-   <td></td>
+   <td align='center'><a href='https://developer.android.com/studio'>Android Studio</a></td>
+   <td>O Android Studio é uma IDE para desenvolvimento mobile, que conta com recursos de emulação de dispositivos móveis, permitindo um preview da aplicação enquanto em ambiente de desenvolvimento.</td>
  </tr>
 </table>
 
@@ -146,12 +146,12 @@ Uma comunicação rápida e eficaz desempenha um papel vital nos processos de de
    <td width='800'><strong>Motivo da escolha</strong></td>
  </tr>
   <tr>
-   <td align='center'><a href=''>Microsoft Teams</a></td>
-   <td></td>
+   <td align='center'><a href='https://www.microsoft.com/pt-br/microsoft-teams/group-chat-software'>Microsoft Teams</a></td>
+   <td>O Microsoft Teams facilita a comunicação durante todo o ciclo do projeto, contendo recursos de compartilhamento de tela que são essenciais para uma reunião mais assertiva.</td>
  </tr>
   <tr>
-   <td align='center'><a href=''>Whatsapp</a></td>
-   <td></td>
+   <td align='center'><a href='https://www.whatsapp.com/'>Whatsapp</a></td>
+   <td>O Whatsapp possibilita uma comunicação mais rápida entre os stakeholders, tornando a comunicação no projeto mais fluida e direta.</td>
  </tr>
 </table>
 
@@ -168,12 +168,8 @@ Uma boa ferramenta de design de interface do usuário (UI) pode desempenhar um p
    <td width='800'><strong>Motivo da escolha</strong></td>
  </tr>
   <tr>
-   <td align='center'><a href=''>Figma</href></td>
-   <td></td>
- </tr>
-  <tr>
-   <td align='center'><a href=''>Photoshopp</a></td>
-   <td></td>
+   <td align='center'><a href='https://www.figma.com/'>Figma</href></td>
+   <td>O Figma é um serviço web que permite a criação de design da aplicação de maneira simples e gratuita.</td>
  </tr>
 </table>
 
