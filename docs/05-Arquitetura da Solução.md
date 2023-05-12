@@ -1,14 +1,14 @@
 # Arquitetura da Solução
 
-Nessa seção vamos detalhar como será o modelo dos objetos e seus relacionamentos, nesse processo de análise, seram utilizados diagramas UML para uma maior visibilidade das regras de negócio, que vão auxiliar o processo de implementação do sistema proposto.
+A arquitetura da aplicação é um conceito essencial no desenvolvimento de software, pois define a estrutura, os componentes e as interações dentro de um sistema de software. Neste tópico, vamos detalhar como será o modelo dos objetos e seus relacionamentos, utilizando diagramas UML para uma maior visibilidade das regras de negócio, que vão auxiliar o processo de implementação e manutenção do sistema proposto.
 
 ## Diagrama de Classes
 
-O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
+O diagrama de classe é uma representação visual da estrutura e das relações entre as classes de um sistema orientado a objetos. Ele fornece uma visão abstrata dos objetos que compõem o sistema, bem como seus atributos e métodos.
 
 A figura baixo ilustra o diagrama de classes para o sistema proposto.
 
-![image](https://user-images.githubusercontent.com/82043220/235319595-6bd0f476-9a69-4e34-b65c-8d456cca7d6a.png)
+![image diagrama de classes shapeup](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/82043220/d7ac54f2-13bf-4fa4-b3ed-759204057f19)
 
 
 ## Modelo ER
