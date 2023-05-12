@@ -33,7 +33,30 @@ O Esquema Relacional trabalha em conjunto com o Modelo ER, para mais informaçõ
 
 ## Modelo Físico
 
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+O Modelo Físico contém o código necessário para gerar o banco de dados da aplicação, com todas as entidades como tabelas, e seus atributos como linhas dessas tabelas.
+O Modelo Físico trabalha em conjunto com o Esquema Relacional, **veja**: [Esquema relacional](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/blob/main/docs/05-Arquitetura%20da%20Solu%C3%A7%C3%A3o.md#esquema-relacional).
+
+O script de criação do banco foi gerado usando o Esquema Relacional apartir da ferramenta [Lucidchart](), e é gerado com a seguinte estrutura:
+
+```sql
+...
+
+CREATE TABLE "User" (
+  "email" nvarchar(50),
+  "password" nvarchar(50),
+  "name" nvarchar(50),
+  "imageData" nvarchar,
+  PRIMARY KEY ("email")
+);
+
+...
+```
+
+O modelo completo pode ser encontrado em:  
+- **`pmv-ads-2023-1-e3-proj-mov-t1-shape-up/app/shape-up-db/ShapeUpDB.sql`**  
+
+ou acessando o Link: [**ShapeUpDB.sql**]().
+
 
 ## Tecnologias Utilizadas
 
