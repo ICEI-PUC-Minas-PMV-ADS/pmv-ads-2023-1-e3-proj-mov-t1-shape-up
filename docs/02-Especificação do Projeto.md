@@ -397,6 +397,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
     <td align="center">MÉDIA</td>
   </tr>
 </table>
+
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
