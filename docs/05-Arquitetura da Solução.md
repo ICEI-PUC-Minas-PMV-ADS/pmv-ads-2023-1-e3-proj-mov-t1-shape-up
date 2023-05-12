@@ -18,7 +18,7 @@ A figura abaixo ilustra o diagrama de Entidade-Relacionamento para o sistema pro
 
 ![imagem modelo ER shapeUp](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/82043220/4fba6ba7-c8b7-4b39-8902-5f06169ac956)
 
-trabalha em conjunto com o diagrama de classe. (Veja a seção: [Diagrama de Classe]())
+O diagrama de Entidade-Relacionamento trabalha em conjunto com o diagrama de classe, para mais informações sobre os objetos do sistema veja: [Diagrama de Classe](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/edit/main/docs/05-Arquitetura%20da%20Solu%C3%A7%C3%A3o.md#diagrama-de-classes).
 
 ## Esquema Relacional
 
