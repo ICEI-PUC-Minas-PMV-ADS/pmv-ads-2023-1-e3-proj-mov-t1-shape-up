@@ -76,12 +76,12 @@ As linguagens de programação são a base do desenvolvimento de software. Depen
    <td width='800'><strong>Motivo da escolha</strong></td>
  </tr>
   <tr>
-   <td>JavaScript</td>
-   <td></td>
+    <td align='center'><a href='https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript'>JavaScript</a></td>
+   <td> O JavaScript (JS) foi pré-definido para a etapa de desenvolvimento do eixo 3 da <a href='https://www.pucminas.br/PucVirtual/Paginas/default.aspx'>PucMinas Virtual</a>, sendo a linguagem escolhida para o desenvolvimento mobile com react-native.</td>
  </tr>
   <tr>
-   <td>C#</td>
-   <td></td>
+   <td align='center'><a href='https://learn.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/'>C#</a></td>
+   <td>O C# foi escolhido para o desenvolvimento da Api, sendo uma linguagem orientada à objetos e fortemente tipada, ela disponibiliza recursos que facilitam a criação de webapis.</td>
  </tr>
 </table>
 
@@ -98,15 +98,15 @@ As bibliotecas são conjuntos de código predefinido e reutilizável que fornece
    <td width='800'><strong>Motivo da escolha</strong></td>
  </tr>
   <tr>
-   <td>Native Base</td>
+    <td align='center'><a href=''>Native Base</a></td>
    <td></td>
  </tr>
   <tr>
-   <td>Axios</td>
+   <td align='center'><a href=''>Axios</a></td>
    <td></td>
  </tr>
   <tr>
-   <td>Entity Framework</td>
+   <td align='center'><a href=''>Entity Framework</a></td>
    <td></td>
  </tr>
 </table>
@@ -124,11 +124,11 @@ Um ambiente de desenvolvimento padronizado e bem definido, permite que todos os 
    <td width='800'><strong>Motivo da escolha</strong></td>
  </tr>
   <tr>
-   <td>Visual Studio Code</td>
+   <td align='center'><a href=''>Visual Studio Code</a></td>
    <td></td>
  </tr>
   <tr>
-   <td>Android Studio</td>
+   <td align='center'><a href=''>Android Studio</a></td>
    <td></td>
  </tr>
 </table>
@@ -146,11 +146,11 @@ Uma comunicação rápida e eficaz desempenha um papel vital nos processos de de
    <td width='800'><strong>Motivo da escolha</strong></td>
  </tr>
   <tr>
-   <td>Microsoft Teams</td>
+   <td align='center'><a href=''>Microsoft Teams</a></td>
    <td></td>
  </tr>
   <tr>
-   <td>Whatsapp</td>
+   <td align='center'><a href=''>Whatsapp</a></td>
    <td></td>
  </tr>
 </table>
@@ -168,11 +168,11 @@ Uma boa ferramenta de design de interface do usuário (UI) pode desempenhar um p
    <td width='800'><strong>Motivo da escolha</strong></td>
  </tr>
   <tr>
-   <td>Figma</td>
+   <td align='center'><a href=''>Figma</href></td>
    <td></td>
  </tr>
   <tr>
-   <td>Photoshopp</td>
+   <td align='center'><a href=''>Photoshopp</a></td>
    <td></td>
  </tr>
 </table>
