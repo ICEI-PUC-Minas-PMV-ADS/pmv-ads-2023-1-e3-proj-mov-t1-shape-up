@@ -328,7 +328,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
   </tr>
   <tr>
     <td align="center">RF-004</td>
-    <td align="left">Permitir que o usuário compartilhe entre exerccícios entre treinos.</td>
+    <td align="left">Permitir que o usuário compartilhe exercícios entre treinos.</td>
     <td align="center">MÉDIA</td>
   </tr>
   <tr>
@@ -387,12 +387,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
     <td align="center">MÉDIA</td>
   </tr>
   <tr>
-    <td align="center">RNF-005</td>
+    <td align="center">RNF-004</td>
     <td align="left">O Sistema deve notificar usuários mesmo minimizado.</td>
     <td align="center">MÉDIA</td>
   </tr>
   <tr>
-    <td align="center">RNF-006</td>
+    <td align="center">RNF-005</td>
     <td align="left">O Sistema deve manter o mesmo padrão de cores para todas as páginas.</td>
     <td align="center">MÉDIA</td>
   </tr>
