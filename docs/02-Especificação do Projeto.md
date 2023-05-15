@@ -301,7 +301,7 @@ Obs.: todas as informações para gerar os indicadores devem estar no diagrama d
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para priorizar os requisitos, foi utilizado  a técnica de Escala de três Níveis, para essa técnica foi definido dois aspectos principais: importância e urgência. Assim, forma-se um quadrante, que é usado para obter o nível de prioridade do requisito, como mostrado na figura a seguir:
 
-![image](https://user-images.githubusercontent.com/82043220/229387674-cf2d0986-0cd7-4243-b897-3fb5c7f09e58.png)
+![Escala de tres niveis](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/102563767/7bb28443-2189-4509-8b43-9437e22f417f)
 
 ### Requisitos Funcionais
 
