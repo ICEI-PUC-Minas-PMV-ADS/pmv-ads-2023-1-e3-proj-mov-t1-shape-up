@@ -334,7 +334,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
   <tr>
     <td align="center">RF-005</td>
     <td align="left">Permitir que o usuário disponha de um cronômentro de descanso entre séries do exercício.</td>
-    <td align="center">BAIXA</td>
+    <td align="center">MÉDIA</td>
   </tr>
   <tr>
     <td align="center">RF-006</td>
