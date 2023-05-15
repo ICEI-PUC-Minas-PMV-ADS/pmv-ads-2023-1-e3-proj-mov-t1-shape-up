@@ -354,12 +354,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
   <tr>
     <td align="center">RF-009</td>
     <td align="left">Permitir que o usúario pause/resete/pule o cronômentro de descanso entre séries.</td>
-    <td align="center">ALTA</td>
+    <td align="center">MÉDIA</td>
   </tr>
   <tr>
     <td align="center">RF-010</td>
     <td align="left">Permitir que o usuário vizualize os videos dos exercicios cadastrados nos treinos.</td>
-    <td align="center">MÉDIA</td>
+    <td align="center">ALTA</td>
   </tr>
 </table>
 
