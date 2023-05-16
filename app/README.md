@@ -1,6 +1,6 @@
 # Instruções de utilização
 
-O ShapeUp é uma aplicação feita em **[React Native]()** e contém uma api que desenvolvida em **[.NET]()**, para começar a utilizar essa aplicação é necessário fazer algumas configurações iniciais para que o ambiente de desenvolvimento estava apto a rodar a aplicação.
+O ShapeUp é uma aplicação feita em **[React Native]()** e contém uma api que será desenvolvida em **[.NET]()**, para começar a utilizar essa aplicação é necessário fazer algumas configurações iniciais para que o ambiente de desenvolvimento estava apto a rodar a aplicação.
 
 ## Ambiente de Desenvolvimento
 
@@ -19,7 +19,7 @@ Para que seja possível compilar e rodar o projeto na máquina local
 
 Para clonar o repositório do projeto acesse o terminal e digite o seguinte comando:
 ```
-git clone https://github.com/metalmax-projetos/template-repository
+git clone https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up
 ```
 ou faça o download do repositório no **[Link]()**.
 
@@ -29,7 +29,12 @@ Após fazer o download do repositório, acesse a paiz raiz do projeto, abra o te
 os seguinte comandos:
 
 ```
+npm install
+```
+Após configurar o ambiente, execute os seguintes comandos para iniciar a aplicação:
 
+```
+npm run start
 ```
 
 ## Releases
