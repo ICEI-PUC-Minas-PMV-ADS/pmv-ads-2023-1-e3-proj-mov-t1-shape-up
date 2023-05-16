@@ -270,21 +270,22 @@ A fim de buscar mais informações sobre os motivos e causas de uso dessas pesso
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Hoje em dia a prática de exercícios físicos está cada vez mais comum e difundida na sociedade sendo uma pratica que abrange todas as pessoas idependende de idade, caracteristica e objetivo, porém o começo pela busca de hábitos mais saudáveis ou de se obter um físico estético pode ser muito confuso para maioria das pessoas e buscar uma mentoria especializada que cobre todas as nuances dessa dessa prática geralmente trata-se de um serviço caro, especicífico, demorado e que demanda de gastos de tempo e dinheiro da forma que muitas pessoas não conseguem dispor, induzindo muitas vezes aqueles que não conhecem do assunto e não conseguem obter o auxílio de um profissional da área ao erro e que muitas vezes gerar consequências negativas. 
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Dado o contexto do problema abordado na sessão acima desse documento surge a proposta como modelo de negócio o desenvolvimento do aplicativo "ShapeUp BodyBooster".
+Uma solução digital em forma de aplicativo que permite direcionar seus usuários a buscarem seus objetivos físicos, minimizando ao máximo o risco de erros, entregando diveros planos de treinamentos completos dos mais variados níveis de experiência e objetivos elaborados por profissionais da area da Educação Física com explicações, vídeos interativos e diversas funcionalidades que direciona, ensina e motiva as pessoas a conquistarem seus objetivos.
 
-### Processo 1 – As Is
+### Processo 1 – As Is (Modelo atual - sem implementação da solução)
 
-Segue apresentado abaixo o diagrama que representa o modelo de negócio As Is descrito no padrão BPMN. 
+Segue apresentado abaixo o diagrama que representa o modelo de negócio As Is (Modelo atual - sem implementação da solução) descrito no padrão BPMN. 
 
 ![Processo 1](https://user-images.githubusercontent.com/102563767/235310735-b9843805-5989-4285-b117-f4613577fe7a.png)
 
-### Processo 2 – To Be
+### Processo 2 – To Be (Modelo ideal - pós implementação da solução)
 
-Segue apresentado abaixo o diagrama que representa o modelo de negócio To Be descrito no padrão BPMN.
+Segue apresentado abaixo o diagrama que representa o modelo de negócio To Be (Modelo ideal - pós implementação da solução) descrito no padrão BPMN.
 
 ![Processo 2](https://user-images.githubusercontent.com/102563767/235311772-91a4dc33-2d11-46c6-a883-53520f913185.png)
 
