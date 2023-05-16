@@ -219,6 +219,33 @@ A qualidade de software é um aspecto essencial para o sucesso de qualquer proje
 
 Para o sistema propostos foram escolhidas algumas características de qualidade com base na norma [ISO/IEC 25010:2011]() (anteriormente conhecida como [ISO/IEC 9126]()), que tratam de Funcionalidade, Eficiência, Usabilidade e Manutenibilidade. Para o controle da qualidade de software, foram estabelecidas métricas com base na norma [ISO/IEC 25021:2011](), que faz parte da família de normas [ISO/IEC 25000 (SQuaRE)]() e trata de Referências para Medição de Qualidade, fornecendo diretrizes e conceitos relacionados à medição da qualidade do software. Abaixo está uma distribuição do peso de cada característica de qualidade na avaliação do sistema:
 
+![Sem Título-1](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/82043220/cc28e53a-fceb-42a7-8a8a-dffc2acca256)
+
+Essa distribuição será usada para calcular o percentual de qualidade do sistema, durante o processo de análise das métricas será gerado um relatório geral de qualidade que será usado para concluir o estado atual da aplicação diante seus usuários, sendo os seguintes estados:
+
+<table>
+  <tr>
+    <td width='200'><strong>Percentual</strong></td>
+    <td width='800'><strong>Estado da aplicação</strong></td>
+  <tr>
+    <td>80% ou Superior</td>
+    <td>O Sistema atende todos os requisitos de qualidade, entregando muito valor ao usuário.</td>
+  </tr>
+  <tr>
+    <td>entre 60% e 79%</td>
+    <td>O Sistema atende boa parte dos requisitos de qualidade, entregando valor ao usuário.</td>
+  </tr>
+  <tr>
+    <td>entre 30% e 59%</td>
+    <td>O Sistema atende apenas alguns dos requisitos de qualidade, entregando pouco valor ao usuário.</td>
+  </tr>
+  <tr>
+    <td>abaixo de 30%</td>
+    <td>O Sistema não atende os requisitos de qualidade, não entregando valor ao usuário.</td>
+  </tr>
+</table>
+
+
 
 
 
