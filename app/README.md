@@ -1,11 +1,35 @@
 # Instruções de utilização
 
-## Instalação do Site
+O ShapeUp é uma aplicação feita em **[React Native]()** e contém uma api que desenvolvida em **[.NET]()**, para começar a utilizar essa aplicação é necessário fazer algumas configurações iniciais para que o ambiente de desenvolvimento estava apto a rodar a aplicação.
 
-O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em servidores...
+## Ambiente de Desenvolvimento
 
-## Histórico de versões
+Essa seção descreve os requisitos e processos para começar a trabalhar nesse projeto.
 
-### [0.1.0] - DD/MM/AAAA
-#### Adicionado
-- Adicionado ...
+### Requisitos de desenvolvimento
+
+Para que seja possível compilar e rodar o projeto na máquina local
+é necessário a instalação dos seguintes itens na máquina de desenvolvimento:
+
+- **[Node.js]()** (versão 12 ou superior)
+- **[NPM]()** (Node Package Manager)
+- **[.NET SDK]()**(versão 7 ou superior)
+
+### Baixar o repositório
+
+Para clonar o repositório do projeto acesse o terminal e digite o seguinte comando:
+```
+git clone https://github.com/metalmax-projetos/template-repository
+```
+ou faça o download do repositório no **[Link]()**.
+
+### Iniciar o desenvolvimento
+
+Após fazer o download do repositório, acesse a paiz raiz do projeto, abra o terminal e execute
+os seguinte comandos:
+
+```
+
+```
+
+## Releases
