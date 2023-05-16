@@ -1,10 +1,6 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
 Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
 
 ## Personas
 Seguem demonstradas por meio dos quadros apresentados o levantamento feito das personas e suas características durante o processo de entendimento do problema:
@@ -274,21 +270,22 @@ A fim de buscar mais informações sobre os motivos e causas de uso dessas pesso
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+Hoje em dia a prática de exercícios físicos está cada vez mais comum e difundida na sociedade sendo uma pratica que abrange todas as pessoas idependende de idade, caracteristica e objetivo, porém o começo pela busca de hábitos mais saudáveis ou de se obter um físico estético pode ser muito confuso para maioria das pessoas e buscar uma mentoria especializada que cobre todas as nuances dessa dessa prática geralmente trata-se de um serviço caro, especicífico, demorado e que demanda de gastos de tempo e dinheiro da forma que muitas pessoas não conseguem dispor, induzindo muitas vezes aqueles que não conhecem do assunto e não conseguem obter o auxílio de um profissional da área ao erro e que muitas vezes gerar consequências negativas. 
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Dado o contexto do problema abordado na sessão acima desse documento surge a proposta como modelo de negócio o desenvolvimento do aplicativo "ShapeUp BodyBooster".
+Uma solução digital em forma de aplicativo que permite direcionar seus usuários a buscarem seus objetivos físicos, minimizando ao máximo o risco de erros, entregando diveros planos de treinamentos completos dos mais variados níveis de experiência e objetivos elaborados por profissionais da area da Educação Física com explicações, vídeos interativos e diversas funcionalidades que direciona, ensina e motiva as pessoas a conquistarem seus objetivos.
 
-### Processo 1 – As Is
+### Processo 1 – As Is (Modelo atual - sem implementação da solução)
 
-Segue apresentado abaixo o diagrama que representa o modelo de negócio As Is descrito no padrão BPMN. 
+Segue apresentado abaixo o diagrama que representa o modelo de negócio As Is (Modelo atual - sem implementação da solução) descrito no padrão BPMN. 
 
 ![Processo 1](https://user-images.githubusercontent.com/102563767/235310735-b9843805-5989-4285-b117-f4613577fe7a.png)
 
-### Processo 2 – To Be
+### Processo 2 – To Be (Modelo ideal - pós implementação da solução)
 
-Segue apresentado abaixo o diagrama que representa o modelo de negócio To Be descrito no padrão BPMN.
+Segue apresentado abaixo o diagrama que representa o modelo de negócio To Be (Modelo ideal - pós implementação da solução) descrito no padrão BPMN.
 
 ![Processo 2](https://user-images.githubusercontent.com/102563767/235311772-91a4dc33-2d11-46c6-a883-53520f913185.png)
 
@@ -305,7 +302,7 @@ Obs.: todas as informações para gerar os indicadores devem estar no diagrama d
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para priorizar os requisitos, foi utilizado  a técnica de Escala de três Níveis, para essa técnica foi definido dois aspectos principais: importância e urgência. Assim, forma-se um quadrante, que é usado para obter o nível de prioridade do requisito, como mostrado na figura a seguir:
 
-![image](https://user-images.githubusercontent.com/82043220/229387674-cf2d0986-0cd7-4243-b897-3fb5c7f09e58.png)
+![Escala de tres niveis](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/102563767/7bb28443-2189-4509-8b43-9437e22f417f)
 
 ### Requisitos Funcionais
 
@@ -332,13 +329,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
   </tr>
   <tr>
     <td align="center">RF-004</td>
-    <td align="left">Permitir que o usuário compartilhe entre exerccícios entre treinos.</td>
+    <td align="left">Permitir que o usuário compartilhe exercícios entre treinos.</td>
     <td align="center">MÉDIA</td>
   </tr>
   <tr>
     <td align="center">RF-005</td>
     <td align="left">Permitir que o usuário disponha de um cronômentro de descanso entre séries do exercício.</td>
-    <td align="center">BAIXA</td>
+    <td align="center">MÉDIA</td>
   </tr>
   <tr>
     <td align="center">RF-006</td>
@@ -358,12 +355,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
   <tr>
     <td align="center">RF-009</td>
     <td align="left">Permitir que o usúario pause/resete/pule o cronômentro de descanso entre séries.</td>
-    <td align="center">ALTA</td>
+    <td align="center">MÉDIA</td>
   </tr>
   <tr>
     <td align="center">RF-010</td>
     <td align="left">Permitir que o usuário vizualize os videos dos exercicios cadastrados nos treinos.</td>
-    <td align="center">MÉDIA</td>
+    <td align="center">ALTA</td>
   </tr>
 </table>
 
@@ -391,16 +388,17 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
     <td align="center">MÉDIA</td>
   </tr>
   <tr>
-    <td align="center">RNF-005</td>
+    <td align="center">RNF-004</td>
     <td align="left">O Sistema deve notificar usuários mesmo minimizado.</td>
     <td align="center">MÉDIA</td>
   </tr>
   <tr>
-    <td align="center">RNF-006</td>
+    <td align="center">RNF-005</td>
     <td align="left">O Sistema deve manter o mesmo padrão de cores para todas as páginas.</td>
     <td align="center">MÉDIA</td>
   </tr>
 </table>
+
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
@@ -408,15 +406,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-|03| O projeto deverá ser feito apenas por integrantes do grupo |
-|04| O projeto só pode ser desenvolvido utilizando o framework React-Native |
+|02| O projeto deverá ser feito apenas por integrantes do grupo |
+|03| O projeto só pode ser desenvolvido utilizando o framework React-Native |
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
 
