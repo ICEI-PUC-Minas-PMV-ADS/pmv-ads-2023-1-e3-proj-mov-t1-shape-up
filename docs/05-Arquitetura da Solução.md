@@ -246,6 +246,120 @@ Essa distribuição será usada para calcular o percentual de qualidade do siste
 </table>
 
 
+As características de qualidade, juntamente com suas subcaracterísticas escolhidas para esse sistema seram abordadas a seguir:
+
+## Adequação Funcional
+A adequação funcional é uma característica de qualidade essencial para um software. Refere-se à capacidade do software de fornecer as funcionalidades e os recursos necessários para atender às necessidades e expectativas dos usuários. 
+
+### Integridade funcional
+A integridade funcional é uma característica de qualidade fundamental em software, que se refere à precisão e consistência dos dados manipulados e dos resultados produzidos pelo sistema.Em termos simples, um software com alta integridade funcional é capaz de realizar suas funções corretamente, sem corromper ou modificar os dados de forma inesperada.
+
+Foi escolhida como uma qualidade de software por estar diretamente relacionada ao valor que agrega ao usuário, sendo fundamental para um sistema bem estruturado, a integridade é um dos pontos mais importantes em uma aplicação.
+
+#### Métrica
+
+<table>
+  <tr>
+    <td align='center' colspan='3'><strong>Integridade funcional - 12pts</strong></td>
+  </tr>
+  <tr>
+    <td colspan='3'>Com que frequência há perda de informação durante o processamento dos dados?</td>
+  </tr>
+  <tr>
+    <td width='100' align='center'><strong>Opção</strong></td>
+    <td width='800' align='center'><strong>Descrição</strong></td>
+    <td width='100' align='center'><strong>Pontuação</strong></td>
+  </tr>
+  <tr>
+    <td align='center'>a)</td>
+    <td>Ocorre perda de dados frequentemente</td>
+    <td>0 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>b)</td>
+    <td>Ocorre perda de dados</td>
+    <td>4 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>c)</td>
+    <td>Raramente ocorre perda de dados</td>
+    <td>8 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>d)</td>
+    <td>Não ocorre perda de dados</td>
+    <td>12 pts</td>
+  </tr>
+</table>
+
+
+### Correção funcional
+
+A correção funcional é uma característica de qualidade vital em software, que se concentra na capacidade do sistema de funcionar corretamente, livre de erros e defeitos. Essa característica busca garantir que o software execute suas funcionalidades conforme especificado, atendendo aos requisitos estabelecidos.
+
+Essa característica foi escolhida por estar ligada ao controle de falhas, sendo um ponto essêncial para garantir que o sistema funcione como esperado.
+
+#### Métrica
+
+<table>
+  <tr>
+    <td align='center' colspan='3'><strong>Correção funcional - 12pts</strong></td>
+  </tr>
+  <tr>
+    <td colspan='3'>Com que frequência o sistema apresenta erros inesperados?</td>
+  </tr>
+  <tr>
+    <td width='100' align='center'><strong>Opção</strong></td>
+    <td width='800' align='center'><strong>Descrição</strong></td>
+    <td width='100' align='center'><strong>Pontuação</strong></td>
+  </tr>
+  <tr>
+    <td align='center'>a)</td>
+    <td>Muito frequente</td>
+    <td>0 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>b)</td>
+    <td>frequente</td>
+    <td>4 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>c)</td>
+    <td>Pouco frequente</td>
+    <td>8 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>d)</td>
+    <td>O Sistema não aprensenta erros inesperados</td>
+    <td>12 pts</td>
+  </tr>
+</table>
+
+### Pertinência funcional
+
+## Eficiência de Desempenho
+
+### Comportamento temporal
+
+### Capacidade
+
+## Usabilidade
+
+### Proteção a erros
+
+### Apreensibilidade
+
+### Estética da interface
+
+## Manutenibilidade
+
+### Reusabilidade
+
+### Modularidade
+
+
+
+
 
 
 
