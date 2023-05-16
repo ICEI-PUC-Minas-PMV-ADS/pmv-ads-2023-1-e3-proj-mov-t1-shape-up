@@ -86,3 +86,53 @@ Abaixo está a listagem dos artefatos gerados pela funcionalida de **Autenticaç
 ### Desenvolvedores
 
 - **[Raul Oliveira]()**
+
+
+## Página Principal
+
+A página principal está relacionada com a listagem dos treinos do usuário, e é responsável por exibir os dados e permitir que o usuário interaja com os treinos ou avançar para uma lista de tutoriais de treinos.
+
+### Requisitos relacionados
+
+Abaixo está uma relação de requisitios que essa funcionalidade busca atender, sendo requisitos funcionais e requisitos não funcionais.
+
+#### Requisitos Funcionais
+- **[RF-008]()**: Permitir que o usuário visualize os treinos cadastrados.
+ 
+#### Requisitos não funcionais
+- **[RNF-001]()**: O Sistema deve ser responsivo para rodar em dispositivos móveis.
+- **[RNF-002]()**: O Tempo de consulta deverá ser de no máximo 2s.
+- **[RNF-003]()**: O Sistema deve manter o mesmo padrão de ícones para todas as páginas.
+- **[RNF-005]()**: O Sistema deve manter o mesmo padrão de cores para todas as páginas.
+
+### Preview
+
+<table>
+  <tr>
+    <td width='330'>Página Home</td>
+  </tr>
+  <tr>
+    <td><img src='https://user-images.githubusercontent.com/102563767/236699882-9fe2ad5f-addf-4956-b740-2d77bae8cd31.png'/></td>
+  </tr>
+</table>
+
+### Código fonte
+
+Para acessar os arquivos de código da aplicação, leia a documentação de utilização **[aqui](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/tree/main/app)**, faça o download do código fonte, e navegue até a pasta raiz **[shape-up]()** e abra em seu editor de código.
+
+Abaixo está a listagem dos artefatos gerados pela funcionalidade **Página Principal**.
+
+- 📁 **[src]()**
+  - 📁 **[Components]()**
+    - 📄 [Header.js]() - `Componente para o cabeçalho da aplicação.`
+    - 📄 [Lista.js]() - `Componente para os elementos da Lista.`
+    - 📄 [Tabbar.js]() - `Componente para o menu de navegação.`
+  - 📁 **[pages]()**
+    - 📄 [HomePage.js]() - `Página principal.`
+
+
+### Desenvolvedores
+
+- **[Bruno Sellas]()**
+
+
