@@ -429,6 +429,8 @@ A capacidade é uma característica de qualidade que se refere à capacidade do 
 
 Essa característica foi escolhida por estar relacionada a robustez do sistema em lidar com volumes grandes de dados.
 
+#### Métrica
+
 <table>
   <tr>
     <td align='center' colspan='3'><strong>Capacidade - 6pts</strong></td>
@@ -449,31 +451,190 @@ Essa característica foi escolhida por estar relacionada a robustez do sistema e
   <tr>
     <td align='center'>b)</td>
     <td>10GB</td>
-    <td>4 pts</td>
+    <td>2 pts</td>
   </tr>
   <tr>
     <td align='center'>c)</td>
     <td>100GB</td>
-    <td>8 pts</td>
+    <td>4 pts</td>
   </tr>
   <tr>
     <td align='center'>d)</td>
     <td>1TB</td>
-    <td>12 pts</td>
+    <td>6 pts</td>
   </tr>
 </table>
 
 ## Usabilidade
 
+A usabilidade é uma característica de qualidade que se refere à facilidade de uso e à experiência do usuário ao interagir com o software. Ela busca garantir que o software seja intuitivo, eficiente e agradável de usar.
+
 ### Proteção a erros
+
+A proteção a erros é uma característica de qualidade que se concentra na capacidade do software de prevenir, detectar e lidar com erros de forma adequada. Essa característica busca garantir que o software seja resiliente e capaz de lidar com situações inesperadas, evitando falhas catastróficas e minimizando o impacto de erros no sistema.
+
+Está característica foi escolhida por estar relacionada ao sistema de tratamento de erros, que é uma parte vital para que o sistema funcione corretamente.
+
+#### Métrica
+
+<table>
+  <tr>
+    <td align='center' colspan='3'><strong>Proteção a erros - 12pts</strong></td>
+  </tr>
+  <tr>
+    <td colspan='3'>Com qual frequência o sistema se recupera após uma falhas?</td>
+  </tr>
+  <tr>
+    <td width='100' align='center'><strong>Opção</strong></td>
+    <td width='800' align='center'><strong>Descrição</strong></td>
+    <td width='100' align='center'><strong>Pontuação</strong></td>
+  </tr>
+  <tr>
+    <td align='center'>a)</td>
+    <td>Não se recupera</td>
+    <td>0 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>b)</td>
+    <td>As vezes se recupera</td>
+    <td>4 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>c)</td>
+    <td>Na maioria das vezes se recupera</td>
+    <td>8 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>d)</td>
+    <td>Sempre se recupera</td>
+    <td>12 pts</td>
+  </tr>
+</table>
 
 ### Apreensibilidade
 
+A apreensibilidade é uma característica de qualidade que se concentra na facilidade de compreensão e aprendizado do software. Refere-se à capacidade do software de ser compreendido pelos usuários, mesmo sem conhecimentos prévios, e de fornecer informações claras e acessíveis.
+
+Essa característica foi escolhido por trazer informações sobre a curva de aprendizado da aplicação, e em como os usuários tem se adaptado a ela.
+
+#### Métrica
+
+<table>
+  <tr>
+    <td align='center' colspan='3'><strong>Apreensibilidade - 12pts</strong></td>
+  </tr>
+  <tr>
+    <td colspan='3'>Qual é a média de tempo para novos usuários aprenderem a usar a aplicação?</td>
+  </tr>
+  <tr>
+    <td width='100' align='center'><strong>Opção</strong></td>
+    <td width='800' align='center'><strong>Descrição</strong></td>
+    <td width='100' align='center'><strong>Pontuação</strong></td>
+  </tr>
+  <tr>
+    <td align='center'>a)</td>
+    <td>1 mês</td>
+    <td>0 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>b)</td>
+    <td>2 semanas</td>
+    <td>4 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>c)</td>
+    <td>1 semana</td>
+    <td>8 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>d)</td>
+    <td>3 dias</td>
+    <td>12 pts</td>
+  </tr>
+</table>
+
 ### Estética da interface
+
+A estética da interface é uma característica de qualidade que se refere à aparência visual e ao design atrativo do software. Ela busca criar uma experiência agradável e envolvente para os usuários, com elementos visuais bem projetados, cores harmoniosas e layout organizado. A medição da estética da interface envolve a avaliação da consistência visual, a atratividade do design, a usabilidade dos elementos gráficos e a aderência a princípios de design de interface. 
+
+Essa característica foi escolhida por estar relacionada a parte visual da aplicação e em como agrada o usuário.
+
+#### Métrica
+
+<table>
+  <tr>
+    <td align='center' colspan='3'><strong>Estética da interface - 6pts</strong></td>
+  </tr>
+  <tr>
+    <td colspan='3'>A disposição dos itens da tela traz desconforto visualmente?</td>
+  </tr>
+  <tr>
+    <td width='100' align='center'><strong>Opção</strong></td>
+    <td width='800' align='center'><strong>Descrição</strong></td>
+    <td width='100' align='center'><strong>Pontuação</strong></td>
+  </tr>
+  <tr>
+    <td align='center'>a)</td>
+    <td>Sim</td>
+    <td>0 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>b)</td>
+    <td>Um pouco</td>
+    <td>4 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>c)</td>
+    <td>Não</td>
+    <td>6 pts</td>
+  </tr>
+</table>
 
 ## Manutenibilidade
 
+A manutenibilidade é uma característica de qualidade fundamental em software, que se refere à facilidade e eficiência com que o software pode ser mantido e evoluído ao longo do tempo. Ela abrange a capacidade de compreender, modificar, corrigir e aprimorar o software de forma eficaz.
+
 ### Reusabilidade
+
+A reusabilidade é uma característica de qualidade que se refere à capacidade do software de ser reutilizado em diferentes contextos ou partes do sistema. Ela busca maximizar a utilização de componentes, módulos ou funcionalidades existentes, reduzindo a necessidade de desenvolvimento repetitivo e aumentando a eficiência e a produtividade. 
+
+Essa característica foi escolhida por estar ligada a padrões de clean code, que ajudam na hora de manter um código limpo e estruturado.
+
+#### Métrica
+
+<table>
+  <tr>
+    <td align='center' colspan='3'><strong>Reusabilidade - 12pts</strong></td>
+  </tr>
+  <tr>
+    <td colspan='3'>Com que frequencia os componentes podem ser reutilizados?</td>
+  </tr>
+  <tr>
+    <td width='100' align='center'><strong>Opção</strong></td>
+    <td width='800' align='center'><strong>Descrição</strong></td>
+    <td width='100' align='center'><strong>Pontuação</strong></td>
+  </tr>
+  <tr>
+    <td align='center'>a)</td>
+    <td>Não podem ser reutilizados</td>
+    <td>0 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>b)</td>
+    <td>Algum dos componentes podem ser reutilizados</td>
+    <td>4 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>c)</td>
+    <td>Quase todos os componentes podem ser reutilizados</td>
+    <td>8 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>c)</td>
+    <td>Todos os componentes podem ser reutilizados</td>
+    <td>12 pts</td>
+  </tr>
+</table>
 
 ### Modularidade
 
