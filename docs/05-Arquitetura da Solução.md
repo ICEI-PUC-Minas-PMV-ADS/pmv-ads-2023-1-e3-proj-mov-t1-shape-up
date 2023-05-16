@@ -272,22 +272,22 @@ Foi escolhida como uma qualidade de software por estar diretamente relacionada a
   </tr>
   <tr>
     <td align='center'>a)</td>
-    <td>Ocorre perda de dados frequentemente</td>
+    <td>Muito frequente</td>
     <td>0 pts</td>
   </tr>
   <tr>
     <td align='center'>b)</td>
-    <td>Ocorre perda de dados</td>
+    <td>Frequente</td>
     <td>4 pts</td>
   </tr>
   <tr>
     <td align='center'>c)</td>
-    <td>Raramente ocorre perda de dados</td>
+    <td>Pouco frequente</td>
     <td>8 pts</td>
   </tr>
   <tr>
     <td align='center'>d)</td>
-    <td>Não ocorre perda de dados</td>
+    <td>Não há perda de informação</td>
     <td>12 pts</td>
   </tr>
 </table>
@@ -303,7 +303,7 @@ Essa característica foi escolhida por estar ligada ao controle de falhas, sendo
 
 <table>
   <tr>
-    <td align='center' colspan='3'><strong>Correção funcional - 12pts</strong></td>
+    <td align='center' colspan='3'><strong>Correção funcional - 6pts</strong></td>
   </tr>
   <tr>
     <td colspan='3'>Com que frequência o sistema apresenta erros inesperados?</td>
@@ -321,27 +321,147 @@ Essa característica foi escolhida por estar ligada ao controle de falhas, sendo
   <tr>
     <td align='center'>b)</td>
     <td>frequente</td>
-    <td>4 pts</td>
+    <td>2 pts</td>
   </tr>
   <tr>
     <td align='center'>c)</td>
     <td>Pouco frequente</td>
-    <td>8 pts</td>
+    <td>4 pts</td>
   </tr>
   <tr>
     <td align='center'>d)</td>
-    <td>O Sistema não aprensenta erros inesperados</td>
-    <td>12 pts</td>
+    <td>O Sistema não apresenta erros inesperados</td>
+    <td>6 pts</td>
   </tr>
 </table>
 
 ### Pertinência funcional
 
+A pertinência funcional é uma característica de qualidade que se concentra na relevância e utilidade das funcionalidades oferecidas pelo software. Refere-se à capacidade do sistema de fornecer as funcionalidades que são realmente necessárias e significativas para os usuários e para os objetivos do negócio. 
+
+Essa característica foi escolhida por estar ligado diretamente ao usuário, e em como as funcionalidades do sistema atendem as necessidades dele e geram valor.
+
+#### Métrica
+
+<table>
+  <tr>
+    <td align='center' colspan='3'><strong>Pertinência funcional - 12pts</strong></td>
+  </tr>
+  <tr>
+    <td colspan='3'>O Software atende a todas as necessidades do seu posto de trabalho?</td>
+  </tr>
+  <tr>
+    <td width='100' align='center'><strong>Opção</strong></td>
+    <td width='800' align='center'><strong>Descrição</strong></td>
+    <td width='100' align='center'><strong>Pontuação</strong></td>
+  </tr>
+  <tr>
+    <td align='center'>a)</td>
+    <td>não atende</td>
+    <td>0 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>b)</td>
+    <td>atende parcialmente</td>
+    <td>4 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>c)</td>
+    <td>atende plenamente</td>
+    <td>8 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>d)</td>
+    <td>possui mais funções do que necessito</td>
+    <td>12 pts</td>
+  </tr>
+</table>
+
 ## Eficiência de Desempenho
+
+A eficiência de desempenho é uma característica de qualidade que se concentra na capacidade do software de executar suas funcionalidades de maneira eficiente, otimizando o uso de recursos, como processamento, memória e largura de banda. Essa característica busca garantir que o software seja capaz de entregar um desempenho adequado dentro dos limites estabelecidos, levando em consideração fatores como tempo de resposta, velocidade de processamento e utilização eficiente dos recursos disponíveis.
 
 ### Comportamento temporal
 
+O comportamento temporal é uma característica de qualidade que se refere à capacidade do software de cumprir requisitos relacionados ao tempo, como prazos, tempo de resposta e frequência de atualização. Essa característica busca garantir que o software seja capaz de responder e processar informações dentro de limites de tempo aceitáveis.
+
+Foi escolhido por estar ligado ao tempo de resposta da aplicação, sendo um fator importante para aplicações que fazem comunicação com banco de dados e serviços web.
+
+#### Métrica
+
+<table>
+  <tr>
+    <td align='center' colspan='3'><strong>Comportamento temporal - 12pts</strong></td>
+  </tr>
+  <tr>
+    <td colspan='3'>Qual o tempo médio de resposta de ações na aplicação?</td>
+  </tr>
+  <tr>
+    <td width='100' align='center'><strong>Opção</strong></td>
+    <td width='800' align='center'><strong>Descrição</strong></td>
+    <td width='100' align='center'><strong>Pontuação</strong></td>
+  </tr>
+  <tr>
+    <td align='center'>a)</td>
+    <td>10s</td>
+    <td>0 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>b)</td>
+    <td>6s</td>
+    <td>4 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>c)</td>
+    <td>4s</td>
+    <td>8 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>d)</td>
+    <td>2s</td>
+    <td>12 pts</td>
+  </tr>
+</table>
+
 ### Capacidade
+
+A capacidade é uma característica de qualidade que se refere à capacidade do software de lidar com volumes de dados, usuários ou transações em conformidade com os requisitos estabelecidos. Essa característica busca garantir que o software seja capaz de escalar e suportar a carga de trabalho esperada, sem comprometer o desempenho ou a disponibilidade do sistema.
+
+Essa característica foi escolhida por estar relacionada a robustez do sistema em lidar com volumes grandes de dados.
+
+<table>
+  <tr>
+    <td align='center' colspan='3'><strong>Capacidade - 6pts</strong></td>
+  </tr>
+  <tr>
+    <td colspan='3'>Qual é a quantidade máxima de dados que o software pode armazenar?</td>
+  </tr>
+  <tr>
+    <td width='100' align='center'><strong>Opção</strong></td>
+    <td width='800' align='center'><strong>Descrição</strong></td>
+    <td width='100' align='center'><strong>Pontuação</strong></td>
+  </tr>
+  <tr>
+    <td align='center'>a)</td>
+    <td>1GB</td>
+    <td>0 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>b)</td>
+    <td>10GB</td>
+    <td>4 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>c)</td>
+    <td>100GB</td>
+    <td>8 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>d)</td>
+    <td>1TB</td>
+    <td>12 pts</td>
+  </tr>
+</table>
 
 ## Usabilidade
 
