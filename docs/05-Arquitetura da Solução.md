@@ -638,7 +638,40 @@ Essa característica foi escolhida por estar ligada a padrões de clean code, qu
 
 ### Modularidade
 
+A modularidade é uma característica de qualidade que se refere à capacidade do software de ser dividido em módulos independentes, cada um com uma responsabilidade bem definida e com interfaces claras de comunicação. Essa abordagem de design promove a organização e a estruturação do software em componentes isolados, permitindo a flexibilidade, a manutenibilidade e o reuso de partes específicas do sistema. 
 
+Essa característica foi escolhida por estar ligada a padrões de clean code, que ajudam na hora de manter um código limpo e estruturado.
+
+#### Métrica
+
+<table>
+  <tr>
+    <td align='center' colspan='3'><strong>Reusabilidade - 10pts</strong></td>
+  </tr>
+  <tr>
+    <td colspan='3'>Qual é relação de dependência entre módulos?</td>
+  </tr>
+  <tr>
+    <td width='100' align='center'><strong>Opção</strong></td>
+    <td width='800' align='center'><strong>Descrição</strong></td>
+    <td width='100' align='center'><strong>Pontuação</strong></td>
+  </tr>
+  <tr>
+    <td align='center'>a)</td>
+    <td>Muito dependêntes</td>
+    <td>0 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>b)</td>
+    <td>Dependêntes</td>
+    <td>4 pts</td>
+  </tr>
+  <tr>
+    <td align='center'>c)</td>
+    <td>Pouco dependêntes</td>
+    <td>10 pts</td>
+  </tr>
+</table>
 
 
 
