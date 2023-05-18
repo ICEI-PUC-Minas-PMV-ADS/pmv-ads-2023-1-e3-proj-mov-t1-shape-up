@@ -289,6 +289,10 @@ Segue apresentado abaixo o diagrama que representa o modelo de negócio To Be (M
 
 ![Processo 2](https://user-images.githubusercontent.com/102563767/235311772-91a4dc33-2d11-46c6-a883-53520f913185.png)
 
+## Relação Potencialidades e Oportunidades de Melhoria para o Processo de Negócio
+
+Como visto no mapeamento dos modelos dos processos 1 e 2 demonstrados acima, a relação de  Potencialidades e de melhoria de Oportunidades se mostra muito evidente na comparação entre os mesmos seja no quesito mercadológico e de implementação do serviço apresentado a ser prestado pela empresa ao usuário final, já que com o modelo To Be(Modelo ideal - pós implementação da solução) o resultado obtido ao usúario final é muito satisfatório e efetivo. 
+
 ## Indicadores de Desempenho
 
 Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
@@ -296,7 +300,7 @@ Apresente aqui os principais indicadores de desempenho e algumas metas para o pr
 Usar o seguinte modelo: 
 
 ![Indicadores de Desempenho](https://user-images.githubusercontent.com/102563767/234877730-5320cc7e-c790-42b6-8737-eb8ac62f4f3a.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
+Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posterior. 
 
 ## Requisitos
 
