@@ -291,7 +291,7 @@ Segue apresentado abaixo o diagrama que representa o modelo de negócio To Be (M
 
 ## Relação Potencialidades e Oportunidades de Melhoria para o Processo de Negócio
 
-Como visto no mapeamento dos modelos dos processos 1 e 2 demonstrados acima, a relação de  Potencialidades e de melhoria de Oportunidades se mostra muito evidente na comparação entre os mesmos seja no quesito mercadológico e de implementação do serviço apresentado a ser prestado pela empresa ao usuário final, já que com o modelo To Be(Modelo ideal - pós implementação da solução) o resultado obtido ao usúario final é muito satisfatório e efetivo. 
+Como visto no mapeamento dos modelos dos processos 1 e 2 demonstrados acima, a relação de  Potencialidades e da melhoria de Oportunidades se mostra muito evidente na comparação entre os mesmos processos seja no quesito mercadológico e de implementação do serviço apresentado a ser prestado pela empresa e até mesmo ao usuário final, já que com o modelo To Be(Modelo ideal - pós implementação da solução) o resultado obtido ao usúario final é muito satisfatório e efetivo como no modelo manual mas com um ganho de tempo e agilidade muito grande na entrega e na manutenção do serviço prestado, a procura pelo serviço passa a ser mais organica, mais efetiva, mais popular, mais acessível do que um modelo de negócio tradicional e a permanencia do cliente também é mantida por mais tempo do que no modelo As Is. 
 
 ## Indicadores de Desempenho
 
