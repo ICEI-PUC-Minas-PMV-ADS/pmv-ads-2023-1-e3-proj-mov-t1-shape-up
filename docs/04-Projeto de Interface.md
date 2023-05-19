@@ -8,6 +8,10 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 
 ![Shape Up - Fluxograma](https://user-images.githubusercontent.com/82043220/235316687-12ca5601-4336-40f5-bb1b-c4c36b1e3c96.png)
 
+Abaixo está uma visão mais ampla da comunicação entre as telas, demonstrando como as funcionalidades estaram vinculadas e como o usuário irá navegar na aplicação.
+
+![](https://user-images.githubusercontent.com/82043220/238690840-f1d67542-9c15-4e28-a268-2977119112f6.png)
+
 ## Wireframes
 
  <table>
