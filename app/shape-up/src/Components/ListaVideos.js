@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, Image } from "react-native";
+import { StyleSheet, TouchableOpacity, Image, ImageBackground } from "react-native";
 import Icon from 'react-native-vector-icons/Entypo'
 import { Box, Text } from 'native-base';
 
@@ -7,19 +7,18 @@ import { Box, Text } from 'native-base';
 export default props => {
     const imagePath = props.imagePath
     return (
-        <Box style={styles.container}>
+        <Box bg='secondary.900' style={styles.container}>
             <Box style={styles.textView}>
                 <Text style={styles.propname}>{props.nomeex}</Text>
                 <Text style={styles.propnivel}>{props.nivel}</Text>
             </Box>
 
             <Box style={styles.imageView}>
-                <Image style={styles.image} source={{ uri: props.imagePath }} alt="Alternate Text" size="xl" />
+                <Image style={styles.image} source={{ uri: props.imagePath }} alt="Alternate Text" size="xl"></Image>
+                <TouchableOpacity style={styles.buttonStyle}>
+                    <Icon name="controller-play" size={15} color={'#FF4444'}></Icon>
+                </TouchableOpacity>
             </Box>
-
-            <TouchableOpacity style={styles.buttonStyle}>
-                <Icon name="controller-play" size={15} color={'#FF4444'}></Icon>
-            </TouchableOpacity>
         </Box>
     )
 }
@@ -31,11 +30,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         borderRadius: 15,
         borderColor: '#343434',//Alterar
-        backgroundColor: '#151515',
         borderWidth: 1,
         alignItems: 'center',
         marginBottom: 20,
-        left: 5,
+
 
 
 
@@ -54,25 +52,23 @@ const styles = StyleSheet.create({
     },
 
     textView: {
-        width: '40%',
-
-
-
+        width: '60%',
+        paddingLeft: 15
     },
 
 
     imageView: {
         height: '100%',
-        width: '50%',
-        right: 0,
-
-
+        width: '40%',
     },
 
     image: {
-        resizeMode: 'cover',
+        flex: 0,
+        resizeMode: 'contain',
         width: '100%',
         height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
         borderTopRightRadius: 10,
         borderBottomRightRadius: 10,
         borderBottomLeftRadius: 50,
@@ -80,11 +76,11 @@ const styles = StyleSheet.create({
 
     },
     buttonStyle: {
-        position: 'absolute',
-        right: 30,
-        bottom: 30,
-        width: 36,
-        height: 36,
+        position: "absolute",
+        right: 50,
+        bottom: 35,
+        width: 30,
+        height: 30,
         borderRadius: 18,
         backgroundColor: '#151515',
         justifyContent: 'center',
