@@ -11,11 +11,10 @@ export function TutorialsPage() {
     const exec2 = 'Exercícios para Perna'
     return (
 
-        <Box h='100%' bg='secondary.400' >
+        <Box h='100%'>
             <Header name={name}></Header>
-
             <ScrollView width='100%'>
-                <Box bg='secondary.300' style={styles.containerGeral}>
+                <Box bg="secondary.600" style={styles.containerGeral}>
                     <Text style={styles.propTxt}>{exec}</Text>
                     <ListaVideos nomeex='Flexão' nivel='Nível Fácil' imagePath='https://img.freepik.com/fotos-gratis/jovem-esportista-poderoso-treinamento-flexoes-sobre-parede-escura_176420-537.jpg?w=1380&t=st=1684794760~exp=1684795360~hmac=65720d7266f3e0f0a7fd4cb465078e01aa9e631e291896adcefc142e9d60366b'></ListaVideos>
                     <ListaVideos nomeex='Prancha' nivel='Nível Fácil' imagePath='https://img.freepik.com/fotos-gratis/treino-em-casa_144627-44329.jpg?w=1380&t=st=1684797546~exp=1684798146~hmac=7e8ccf7e2ccc6ba58008ecae6550c96880ec544352fb983a7bd47ddf8f929057'></ListaVideos>

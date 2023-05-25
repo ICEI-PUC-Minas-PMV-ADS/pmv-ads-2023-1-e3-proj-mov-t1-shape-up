@@ -19,7 +19,7 @@ export default function App() {
     <SafeAreaProvider>
       <NativeBaseProvider theme={theme}>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName={'Tutoriais'} screenOptions={{ headerShown: false, }}>
+          <Stack.Navigator initialRouteName={'Home'} screenOptions={{ headerShown: false, }}>
             <Stack.Screen name="Splash" component={SplashScreen} />
             <Stack.Screen name="Login" component={LoginPage} />
             <Stack.Screen name="Cadastre" component={CadastrePage} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, StyleSheet, Text, StatusBar, TouchableOpacity } from 'react-native';
 import { Avatar } from "native-base";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 64;
 
@@ -15,6 +16,11 @@ export default function Header({ name }) {
                 </Avatar>
                 <Text style={styles.username}>{name}</Text>
             </View>
+            <View>
+                <TouchableOpacity style={styles.buttonStyle}>
+                    <MaterialCommunityIcons name="logout-variant" size={25} color={'#FF4444'}></MaterialCommunityIcons>
+                </TouchableOpacity>
+            </View>
         </View>
     )
 }
@@ -24,8 +30,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#151515',
         paddingTop: statusBarHeight,
         flexDirection: 'row',
-        paddingStart: 16,
-        paddingBottom: 30,
+        paddingStart: 21,
+        paddingBottom: 21,
     },
 
     content: {
@@ -41,4 +47,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginLeft: 18
     },
+
+    buttonStyle: {
+        marginRight: 20
+    }
 })

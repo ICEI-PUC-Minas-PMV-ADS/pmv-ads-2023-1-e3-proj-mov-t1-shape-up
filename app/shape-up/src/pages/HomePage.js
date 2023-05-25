@@ -16,9 +16,10 @@ export function HomePage() {
     const name = "Marcos Alberto"
 
     return (
-        <ScrollView>
-            <View>
-                <Header name={name} ></Header>
+
+        <View>
+            <Header name={name} ></Header>
+            <ScrollView>
                 <View style={styles.container}>
                     <Text style={styles.contentTxt}>{Saudacao()} {name}</Text>
                     <Text style={styles.contentTxt}>Por onde vamos começar?</Text>
@@ -31,8 +32,9 @@ export function HomePage() {
                         <Lista desc="Treino de Abdômen" numEx={"4 exercícios"} imagePath='https://img.freepik.com/fotos-gratis/homem-musculoso-fazendo-abdominais-no-chao_651396-1595.jpg?w=1380&t=st=1683483777~exp=1683484377~hmac=68fcafc22edbc9f476923cd44f3627068540e8c0b804d10b4ee50aa8f0b9a3bf'></Lista>
                     </View>
                 </View>
-            </View>
-        </ScrollView>
+            </ScrollView>
+        </View>
+
 
 
     );
@@ -43,7 +45,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#202020',
         height: '100%',
         paddingTop: 15,
-        alignItems: 'center'
+
 
     },
 
@@ -57,7 +59,8 @@ const styles = StyleSheet.create({
     contentTxt: {
         color: '#FFF',
         fontWeight: 'bold',
-        fontSize: 18,
+        fontSize: 15,
+        marginLeft: 20
 
     },
 
