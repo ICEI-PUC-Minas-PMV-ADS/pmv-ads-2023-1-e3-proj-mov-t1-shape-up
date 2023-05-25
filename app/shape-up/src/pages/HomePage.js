@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, SafeAreaView, Image, ScrollView } from "react-native";
 import Header from "../Components/Header"
 import Lista from "../Components/Lista"
+import Tabbar from "../Components/Tabbar"
 
 
 function Saudacao() {
@@ -18,7 +19,6 @@ export function HomePage() {
     return (
 
         <View>
-            <Header name={name} ></Header>
             <ScrollView>
                 <View style={styles.container}>
                     <Text style={styles.contentTxt}>{Saudacao()} {name}</Text>

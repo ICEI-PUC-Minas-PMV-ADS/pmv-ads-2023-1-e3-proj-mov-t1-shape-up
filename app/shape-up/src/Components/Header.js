@@ -5,7 +5,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 64;
 
-export default function Header({ name }) {
+export function Header({ name }) {
     return (
         <View style={styles.container}>
             <View style={styles.content}>

@@ -12,7 +12,6 @@ export function TutorialsPage() {
     return (
 
         <Box h='100%'>
-            <Header name={name}></Header>
             <ScrollView width='100%'>
                 <Box bg="secondary.600" style={styles.containerGeral}>
                     <Text style={styles.propTxt}>{exec}</Text>
