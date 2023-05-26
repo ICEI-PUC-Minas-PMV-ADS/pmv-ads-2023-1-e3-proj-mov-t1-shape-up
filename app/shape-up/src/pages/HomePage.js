@@ -1,8 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, SafeAreaView, Image, ScrollView } from "react-native";
-import Header from "../Components/Header"
 import Lista from "../Components/Lista"
-import Tabbar from "../Components/Tabbar"
+
 
 
 function Saudacao() {

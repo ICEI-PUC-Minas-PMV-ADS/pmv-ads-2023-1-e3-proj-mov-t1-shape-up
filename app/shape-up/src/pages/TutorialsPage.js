@@ -1,7 +1,6 @@
 import React from "react";
 import { StyleSheet, Image, ScrollView } from "react-native";
 import { Box, Text } from "native-base";
-import Header from "../Components/Header"
 import ListaVideos from "../Components/ListaVideos"
 
 
