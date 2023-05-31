@@ -18,6 +18,7 @@ namespace ShapeUpBackendApi.Training.Repositories {
 
             if (exercise is not null) {
                 _context.Exercises.Remove(exercise);
+                _context.SaveChanges();
             }
         }
         public Exercise? GetById(Guid id) {
