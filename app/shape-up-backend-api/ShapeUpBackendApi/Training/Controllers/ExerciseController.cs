@@ -39,5 +39,14 @@ namespace ShapeUpBackendApi.Training.Controllers {
 
             return Ok(exercise);
         }
+
+        [HttpPost]
+        [Route("delete")]
+        public ActionResult DeleteExercise(Guid id) {
+
+            _exerciseRepository.Delete(id);
+
+            return Ok();
+        }
     }
 }
