@@ -270,12 +270,12 @@ A fim de buscar mais informações sobre os motivos e causas de uso dessas pesso
 
 ### Análise da Situação Atual
 
-Hoje em dia a prática de exercícios físicos está cada vez mais comum e difundida na sociedade sendo uma pratica que abrange todas as pessoas idependende de idade, caracteristica e objetivo, porém o começo pela busca de hábitos mais saudáveis ou de se obter um físico estético pode ser muito confuso para maioria das pessoas e buscar uma mentoria especializada que cobre todas as nuances dessa dessa prática geralmente trata-se de um serviço caro, especicífico, demorado e que demanda de gastos de tempo e dinheiro da forma que muitas pessoas não conseguem dispor, induzindo muitas vezes aqueles que não conhecem do assunto e não conseguem obter o auxílio de um profissional da área ao erro e que muitas vezes gerar consequências negativas. 
+Hoje em dia a prática de exercícios físicos está cada vez mais comum e difundida na sociedade sendo uma prática que abrange todas as pessoas independentes de idade, característica e objetivo, porém o começo pela busca de hábitos mais saudáveis ou de se obter um físico estético pode ser muito confuso para maioria das pessoas e buscar uma mentoria especializada que cobre todas as nuances dessa prática geralmente trata-se de um serviço caro, específico, demorado e que demanda de gastos de tempo e dinheiro da forma que muitas pessoas não conseguem dispor, induzindo muitas vezes aqueles que não conhecem do assunto e não conseguem obter o auxílio de um profissional da área ao erro e que muitas vezes gerar consequências negativas. 
 
 ### Descrição Geral da Proposta
 
 Dado o contexto do problema abordado na sessão acima desse documento surge a proposta como modelo de negócio o desenvolvimento do aplicativo "ShapeUp BodyBooster".
-Uma solução digital em forma de aplicativo que permite direcionar seus usuários a buscarem seus objetivos físicos, minimizando ao máximo o risco de erros, entregando diveros planos de treinamentos completos dos mais variados níveis de experiência e objetivos elaborados por profissionais da area da Educação Física com explicações, vídeos interativos e diversas funcionalidades que direciona, ensina e motiva as pessoas a conquistarem seus objetivos.
+Uma solução digital em forma de aplicativo que permite direcionar seus usuários a buscarem seus objetivos físicos, minimizando ao máximo o risco de erros, entregando diversos planos de treinamentos completos dos mais variados níveis de experiência e objetivos elaborados por profissionais da área da Educação Física com explicações, vídeos interativos e diversas funcionalidades que direciona, ensina e motiva as pessoas a conquistarem seus objetivos.
 
 ### Processo 1 – As Is (Modelo atual - sem implementação da solução)
 
@@ -291,7 +291,7 @@ Segue apresentado abaixo o diagrama que representa o modelo de negócio To Be (M
 
 ## Relação Potencialidades e Oportunidades de Melhoria para o Processo de Negócio
 
-Como visto no mapeamento dos modelos dos processos 1 e 2 demonstrados acima, a relação de  Potencialidades e da melhoria de Oportunidades se mostra muito evidente na comparação entre os mesmos processos seja no quesito mercadológico e de implementação do serviço apresentado a ser prestado pela empresa e até mesmo ao usuário final, já que com o modelo To Be(Modelo ideal - pós implementação da solução) o resultado obtido ao usúario final é muito satisfatório e efetivo como no modelo manual mas com um ganho de tempo e agilidade muito grande na entrega e na manutenção do serviço prestado, a procura pelo serviço passa a ser mais organica, mais efetiva, mais popular, mais acessível do que um modelo de negócio tradicional e a permanencia do cliente também é mantida por mais tempo do que no modelo As Is. 
+Como visto no mapeamento dos modelos dos processos 1 e 2 demonstrados acima, a relação de Potencialidades e da melhoria de Oportunidades se mostra muito evidente na comparação entre os mesmos processos seja no quesito mercadológico e de implementação do serviço apresentado a ser prestado pela empresa e até mesmo ao usuário final, já que com o modelo To Be(Modelo ideal – pós implementação da solução) o resultado obtido ao usuário final é muito satisfatório e efetivo como no modelo manual mas com um ganho de tempo e agilidade muito grande na entrega e na manutenção do serviço prestado, a procura pelo serviço passa a ser mais orgânica, mais efetiva, mais popular, mais acessível do que um modelo de negócio tradicional e a permanência do cliente também é mantida por mais tempo do que no modelo As Is.
 
 ## Indicadores de Desempenho
 
