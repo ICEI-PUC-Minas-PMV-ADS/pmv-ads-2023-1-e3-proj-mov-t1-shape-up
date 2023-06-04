@@ -25,12 +25,16 @@ export default function App() {
     const [isSignedIn, setIsSignedIn] = React.useState(false);
     const [user, setUser] = React.useState(null);
     const [training, setTraining] = React.useState(null);
-  
-    React.useEffect(function() {
+
+    React.useEffect(function () {
         isAuthenticated()
-            .then(function(response) {
+            .then(async function (response) {
                 if (response.isAuthenticated) {
                     setIsSignedIn(true);
+                    await getUserInfo()
+                        .then(function (response) {
+                            setUser(response);
+                        })
                 } else {
                     setIsSignedIn(false);
                 }
@@ -50,15 +54,15 @@ export default function App() {
     if (isSignedIn && (training == null)) {
 
         getTraining()
-            .then(function(response) {
+            .then(function (response) {
                 setTraining(response);
-        });
+            });
     }
 
     if (isSignedIn && (user == null)) {
 
         getUserInfo()
-            .then(function(response) {
+            .then(function (response) {
                 setUser(response);
             })
     }
@@ -66,30 +70,30 @@ export default function App() {
     function handleLogout() {
         logout();
         setIsSignedIn(false),
-        setTraining(null);
+            setTraining(null);
         setUser(null);
     }
 
     return (
         <SafeAreaProvider>
             <NativeBaseProvider theme={Theme}>
-                <AuthContext.Provider value={{handleLogout, setIsSignedIn, user}}>
-                    <TrainingContext.Provider value={{training}}>
+                <AuthContext.Provider value={{ handleLogout, setIsSignedIn, user }}>
+                    <TrainingContext.Provider value={{ training }}>
                         <NavigationContainer>
-                            <Stack.Navigator screenOptions={{headerShown: false,}}>
-                                { isSignedIn ? (
+                            <Stack.Navigator screenOptions={{ headerShown: false, }}>
+                                {isSignedIn ? (
                                     <>
-                                    <Stack.Screen name="Main" component={MainPage}/>
+                                        <Stack.Screen name="Main" component={MainPage} />
                                     </>
                                 ) : (
                                     <>
-                                    <Stack.Screen name="Login" component={LoginPage}/>
-                                    <Stack.Screen name="Cadastre" component={CadastrePage}/>
-                                    <Stack.Screen name="Welcome" component={WelcomePage}/>
-                                    <Stack.Screen name="GenerateTraining" component={GenerateTrainingPage}/>
-                                    <Stack.Screen name="TrainingCreated" component={TrainingCreatedPage}/>
+                                        <Stack.Screen name="Login" component={LoginPage} />
+                                        <Stack.Screen name="Cadastre" component={CadastrePage} />
+                                        <Stack.Screen name="Welcome" component={WelcomePage} />
+                                        <Stack.Screen name="GenerateTraining" component={GenerateTrainingPage} />
+                                        <Stack.Screen name="TrainingCreated" component={TrainingCreatedPage} />
                                     </>
-                                )}                    
+                                )}
                             </Stack.Navigator>
                         </NavigationContainer>
                     </TrainingContext.Provider>
