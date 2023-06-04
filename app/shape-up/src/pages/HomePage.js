@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, SafeAreaView, Image, ScrollView } from "react-native";
-import Header from "../Components/Header"
 import Lista from "../Components/Lista"
+
 
 
 function Saudacao() {
@@ -16,9 +16,9 @@ export function HomePage() {
     const name = "Marcos Alberto"
 
     return (
-        <ScrollView>
-            <View>
-                <Header name={name} ></Header>
+
+        <View>
+            <ScrollView>
                 <View style={styles.container}>
                     <Text style={styles.contentTxt}>{Saudacao()} {name}</Text>
                     <Text style={styles.contentTxt}>Por onde vamos começar?</Text>
@@ -29,12 +29,11 @@ export function HomePage() {
                         <Lista desc="Treino de Braços" numEx={"6 exercícios"} imagePath='https://img.freepik.com/fotos-gratis/homem-forte-treinando-na-academia_1303-23478.jpg?w=1380&t=st=1683333513~exp=1683334113~hmac=3c6c4e5d32331cae27b5aaf51cc2f8b2dd89780632f361c4f40022ee28f4d7d0'></Lista>
                         <Lista desc="Treino de Ombros" numEx={"5 exercícios"} imagePath='https://www.bodybuilding.com/images/2021/june/best-workouts-to-get-bigger-shoulders-header-960x540.jpg'></Lista>
                         <Lista desc="Treino de Abdômen" numEx={"4 exercícios"} imagePath='https://img.freepik.com/fotos-gratis/homem-musculoso-fazendo-abdominais-no-chao_651396-1595.jpg?w=1380&t=st=1683483777~exp=1683484377~hmac=68fcafc22edbc9f476923cd44f3627068540e8c0b804d10b4ee50aa8f0b9a3bf'></Lista>
-
-
                     </View>
                 </View>
-            </View>
-        </ScrollView>
+            </ScrollView>
+        </View>
+
 
 
     );
@@ -45,7 +44,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#202020',
         height: '100%',
         paddingTop: 15,
-        alignItems: 'center'
+
 
     },
 
@@ -59,7 +58,8 @@ const styles = StyleSheet.create({
     contentTxt: {
         color: '#FFF',
         fontWeight: 'bold',
-        fontSize: 18,
+        fontSize: 15,
+        marginLeft: 20
 
     },
 
