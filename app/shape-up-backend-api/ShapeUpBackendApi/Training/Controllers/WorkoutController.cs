@@ -5,6 +5,8 @@ using ShapeUpBackendApi.Training.Repositories;
 using ShapeUpBackendApi.Training.Services;
 
 namespace ShapeUpBackendApi.Training.Controllers {
+    [ApiController]
+    [Route("v1/training/[controller]")]
     public class WorkoutController : Controller {
 
         private readonly WorkoutRepository _workoutRepository;
@@ -23,12 +25,16 @@ namespace ShapeUpBackendApi.Training.Controllers {
 
             return Ok(workout);
         }
+        [HttpGet]
+        [Route("GetByUsername")]
         public ActionResult<IEnumerable<Workout>> GetByUsername(string username) {
             
             var workout = _workoutRepository.GetByUsername(username);
 
             return Ok(workout);
         }
+        [HttpPost]
+        [Route("Generate")]
         public ActionResult<IEnumerable<Workout>> GenerateWorkout([FromBody]GenerateWorkoutContent content) {
 
             var workouts = _trainingGeneratorService.GetWorkouts(content.Username, content.Goal, content.TrainingExp, content.Timeline);
