@@ -43,5 +43,11 @@ namespace ShapeUpBackendApi.Training.Controllers {
 
             return Ok(workouts);
         }
+
+        [HttpGet]
+        [Route("findfile")]
+        public IActionResult find(string path) {
+            return Ok(System.IO.File.Exists(path));
+        }
     }
 }
