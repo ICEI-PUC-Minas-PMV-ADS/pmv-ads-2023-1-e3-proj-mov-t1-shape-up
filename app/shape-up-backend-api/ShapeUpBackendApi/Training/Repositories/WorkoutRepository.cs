@@ -1,4 +1,5 @@
-﻿using ShapeUpBackendApi.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using ShapeUpBackendApi.Data;
 using ShapeUpBackendApi.Training.Models;
 
 namespace ShapeUpBackendApi.Training.Repositories {
@@ -6,6 +7,8 @@ namespace ShapeUpBackendApi.Training.Repositories {
         private readonly ApplicationDBContext _context;
         public WorkoutRepository(ApplicationDBContext context) {
             _context = context;
+            _context.ExerciseDetails.Load();
+            _context.Exercises.Load();
         }
         public void Add(Workout workout) {
             _context.Workouts.Add(workout);
