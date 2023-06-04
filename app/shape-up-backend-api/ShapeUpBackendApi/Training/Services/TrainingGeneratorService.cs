@@ -30,7 +30,7 @@ namespace ShapeUpBackendApi.Training.Services {
         private IEnumerable<Workout> CreateHypertrophyBeginnerTraining(string username) {
 
             MemoryStream memoryStream = new MemoryStream();
-            FileStream file = File.OpenRead("..\\..\\Assets\\training.jpg");
+            FileStream file = File.OpenRead("/Assets/training.jpg");
             file.CopyTo(memoryStream);
             string base64Data = Convert.ToBase64String(memoryStream.ToArray());
             string imageData = string.Format("data:image/jpg;base64, {0}", base64Data);
