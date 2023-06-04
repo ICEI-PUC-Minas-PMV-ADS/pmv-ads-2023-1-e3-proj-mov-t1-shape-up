@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
-import { Header } from "../components/Header";
-import { Tabbar } from "../components/Tabbar";
+import { Header } from "../Components/Header";
+import { Tabbar } from "../Components/Tabbar";
 import AuthContext from '../contexts/AuthContext';
 
 export default function MainPage() {

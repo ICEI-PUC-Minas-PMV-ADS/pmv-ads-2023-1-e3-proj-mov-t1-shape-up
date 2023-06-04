@@ -5,9 +5,9 @@ import {
     Dimensions } from 'react-native';
 import { Box, Text, Button, Center } from 'native-base';
 import { LinearGradient } from 'expo-linear-gradient';
-import LogoMarca from '../components/LogoMarca';
-import Card from '../components/Card';
-import Dumbbell from '../components/icons/Dumbbell';
+import LogoMarca from '../Components/LogoMarca';
+import Card from '../Components/Card';
+import Dumbbell from '../Components/icons/Dumbbell';
 import { getUserName } from '../services/userdata.services';
 
 const screenWidth = Dimensions.get('window').width;

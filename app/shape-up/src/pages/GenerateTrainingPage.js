@@ -11,10 +11,10 @@ import {
 } from 'react-native';
 import { Box, Button } from 'native-base';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
-import LogoMarca from '../components/LogoMarca';
-import InputGoalCard from '../components/InputGoalCard';
-import InputTrainingExpCard from '../components/InputTrainingExpCard';
-import InputTimelineCard from '../components/InputTimelineCard';
+import LogoMarca from '../Components/LogoMarca';
+import InputGoalCard from '../Components/InputGoalCard';
+import InputTrainingExpCard from '../Components/InputTrainingExpCard';
+import InputTimelineCard from '../Components/InputTimelineCard';
 import TrainingContext from '../contexts/TrainingContext';
 import { generate } from '../services/training.services';
 

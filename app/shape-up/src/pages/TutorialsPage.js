@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Image, ScrollView } from "react-native";
 import { Box, Text } from "native-base";
-import ListaVideos from "../components/ListaVideos"
+import ListaVideos from "../Components/ListaVideos"
 
 
 export function TutorialsPage() {

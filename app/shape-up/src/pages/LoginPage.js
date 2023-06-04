@@ -8,7 +8,7 @@ import {
     Keyboard } from 'react-native';
 import { Stack, Input, FormControl, Box, WarningOutlineIcon, Pressable, Icon, Button, Flex, Divider, Text } from 'native-base';
 import { LinearGradient } from 'expo-linear-gradient';
-import LogoMarca from '../components/LogoMarca';
+import LogoMarca from '../Components/LogoMarca';
 import { Platform } from 'expo-modules-core';
 import { MaterialIcons } from "@expo/vector-icons";
 import { login } from '../services/auth.services';

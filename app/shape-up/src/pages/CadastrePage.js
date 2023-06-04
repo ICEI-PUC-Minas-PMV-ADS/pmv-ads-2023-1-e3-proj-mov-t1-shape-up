@@ -11,12 +11,12 @@ import {
 } from 'react-native';
 import { Box, Button } from 'native-base';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
-import LogoMarca from '../components/LogoMarca';
-import InputNameCard from '../components/InputNameCard';
-import InputEmailCard from '../components/InputEmailCard';
-import InputImageCard from '../components/InputImageCard';
-import InputPasswordCard from '../components/InputPasswordCard';
-import InputRePasswordCard from '../components/InputRePasswordCard';
+import LogoMarca from '../Components/LogoMarca';
+import InputNameCard from '../Components/InputNameCard';
+import InputEmailCard from '../Components/InputEmailCard';
+import InputImageCard from '../Components/InputImageCard';
+import InputPasswordCard from '../Components/InputPasswordCard';
+import InputRePasswordCard from '../Components/InputRePasswordCard';
 import { register } from '../services/auth.services';
 
 const screenWidth = Dimensions.get('window').width;

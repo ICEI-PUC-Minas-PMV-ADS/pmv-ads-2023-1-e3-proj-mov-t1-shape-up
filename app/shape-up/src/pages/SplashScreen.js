@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Box, Spinner } from 'native-base';
-import LogoMarca from '../components/LogoMarca';
+import LogoMarca from '../Components/LogoMarca';
 
 export default function SplashScreen() {
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, SafeAreaView, Image, ScrollView } from "react-native";
-import Lista from "../components/Lista"
+import Lista from "../Components/Lista"
 import TrainingContext from "../contexts/TrainingContext";
 import AuthContext from '../contexts/AuthContext';
 
