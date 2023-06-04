@@ -4,6 +4,8 @@ using Microsoft.IdentityModel.Tokens;
 using ShapeUpBackendApi.Authentication.Repositories;
 using ShapeUpBackendApi.Authentication.Services;
 using ShapeUpBackendApi.Data;
+using ShapeUpBackendApi.Training.Repositories;
+using ShapeUpBackendApi.Training.Services;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +16,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<TokenService>();
 builder.Services.AddScoped<PasswordService>();
 builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<ExerciseRepository>();
+builder.Services.AddScoped<WorkoutRepository>();
+builder.Services.AddScoped<TrainingGeneratorService>();
 builder.Services.AddScoped<RefreshTokenRepository>();
 builder.Services.AddDbContext<ApplicationDBContext>(options => {
     options.UseNpgsql(builder.Configuration.GetConnectionString("Default"));
