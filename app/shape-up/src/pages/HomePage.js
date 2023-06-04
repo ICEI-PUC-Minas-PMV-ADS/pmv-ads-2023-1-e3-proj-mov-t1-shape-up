@@ -19,7 +19,6 @@ export function HomePage() {
     const { training } = React.useContext(TrainingContext);
 
     const name = user.name;
-
     return (
         <View style={{ height: "100%" }}>
             <View style={styles.container}>
