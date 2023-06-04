@@ -1,22 +1,17 @@
 import React from 'react';
-import {
-    View,
-    Text,
-    StyleSheet,
-    TouchableWithoutFeedback
-  } from 'react-native';
-import { Button, Avatar } from 'native-base';
-import { Card } from './Card';
+import { StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+import { Avatar, Text, Button, Box, Fab, Icon } from 'native-base';
+import Card from './Card';
 import * as ImagePicker from 'expo-image-picker';
 
-export function InputImageCard({setValue, handleNext, handleGoToLogin}) {
+export default function InputImageCard({setValue, handleNext, handleGoToLogin}) {
 
     const [imageUri, setImageUri] = React.useState(null);
     const [imageData, setImageData] = React.useState(null);
-    const [isUploaded, setIsUploaded] = React.useState(null);
+    const [isUploaded, setIsUploaded] = React.useState(false);
 
-    const handleSelectImage = () => {
+    function handleSelectImage() {
 
         ImagePicker.launchImageLibraryAsync({
           mediaTypes: ImagePicker.MediaTypeOptions.Images,
@@ -25,9 +20,9 @@ export function InputImageCard({setValue, handleNext, handleGoToLogin}) {
           base64: true
         }).then(result => {
             if (!result.canceled) {
-                if (result.uri != undefined) {
-                    setImageUri(result.uri);
-                    setImageData(`data:image/jpeg;base64,${result.base64}`)
+                if (result.assets[0].uri != undefined) {
+                    setImageUri(result.assets[0].uri);
+                    setImageData(`data:image/jpeg;base64,${result.assets[0].base64}`)
                     setIsUploaded(true);
                 }
             } else {
@@ -38,42 +33,51 @@ export function InputImageCard({setValue, handleNext, handleGoToLogin}) {
         })
     };
 
-    const handleRemoveItem = function() {
+    function handleRemoveImage() {
         setImageUri(null);
         setIsUploaded(false);
     }
 
-    const handleOnPress = function() {
+    function handleConfirm() {
         setValue(imageData);
         handleNext();
     }
 
     return (
         <Card>
-            <View>
-                <Avatar bg="transparent" marginTop={3} size={100} source={{uri: imageUri}}>
-                    <MaterialCommunityIcons name="image-outline" size={48} color="#ff4444"/>
+            <Box style={{marginTop: 20}}>
+                <Fab renderInPortal={false} style={{ display: isUploaded ? 'flex' : 'none' }} onPress={handleRemoveImage} backgroundColor='secondary.600' placement="top-right" right={-20} top={0} size="sm" icon={<Icon color="primary.400" as={MaterialCommunityIcons} name="delete" size="4" />}/>
+                <Avatar bg='transparent' size='xl' source={{uri: imageUri}}>
+                    <MaterialCommunityIcons name='image-outline' size={48} color='#ff4444'/>
                 </Avatar>
-                
-            </View>
-            <Text marginTop={5} style={styles.cardTitle}>Carregar foto de perfil</Text>
-            <Button w='80%' mt={5} backgroundColor='#ff4444' _text={{color: '#2e2e2e', fontSize: 16, fontWeight: 'bold'}} onPress={() => handleSelectImage()}>Carregar</Button>
-            <TouchableWithoutFeedback onPress={isUploaded ? handleRemoveItem : handleSelectImage}>
-                <Text style={styles.cardMessageText}>{(isUploaded ? 'Remover imagem carregada' : 'Nenhuma imagem carregada')}</Text>
-            </TouchableWithoutFeedback>
-            <Button w='60%' variant='outline' marginTop={4} borderColor='#ff4444'  _text={{fontWeight: 'bold', fontSize: 16, fontFamily: 'Roboto'}}
-                    onPress={handleOnPress}>Confirmar</Button>
+            </Box>
+            <Text style={styles.cardTitle}>Carregar foto de perfil</Text>
+            <Button style={styles.selectImageButton} _text={styles.selectImageButtonText} onPress={handleSelectImage}>Carregar</Button>
+            <Button variant='outline' style={styles.confirmButton} _text={styles.confirmButtonText} onPress={handleConfirm}>Confirmar</Button>
             <TouchableWithoutFeedback onPress={handleGoToLogin}>
-                <View style={{flex: 1, flexDirection: 'row'}}>
+                <Box style={styles.rowContainer}>
                     <Text style={styles.cardHasAccountText}>Já tem uma conta?</Text>
                     <Text style={styles.cardLoginText}>Login</Text>
-                </View>
+                </Box>
             </TouchableWithoutFeedback>
         </Card>
     );
 }
 
 const styles = StyleSheet.create({
+    selectImageButton: {
+        width: '80%',
+        backgroundColor: '#ff4444',
+    },
+    selectImageButtonText: {
+        color: '#2e2e2e',
+        fontSize: 16,
+        fontWeight: 'bold'
+    },
+    confirmButton: {
+        width: '60%',
+        borderColor: '#ff4444'
+    },
     confirmButtonText: {
         fontFamily: 'Roboto',
         fontWeight: 'bold',
@@ -90,14 +94,12 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 14,
         color: '#C0C0C0',
-        marginTop: 18
     },
     cardLoginText: {
         fontFamily: 'Roboto',
         fontWeight: 'bold',
         fontSize: 14,
         color: '#1C7793',
-        marginTop: 18,
         marginLeft: 3
     },
     cardMessageText: {
@@ -106,6 +108,10 @@ const styles = StyleSheet.create({
         fontWeight: '600',
         color: '#c2c2c2',
         marginLeft: 20,
-        marginTop: 10
-    }
+    },
+    
+    rowContainer: {
+        flexDirection: 'row',
+        marginBottom: 20
+    },
 });

@@ -1,8 +1,8 @@
 import React from "react";
-import { Icon, Center, NativeBaseProvider } from "native-base";
+import { Icon, Center } from "native-base";
 import { Path, G } from "react-native-svg";
 
-export function Dumbbell(props) {
+export default function Dumbbell(props) {
     return <Center>
       <Icon style={{...props.style}} size='47' viewBox="0 96 960 960">
         <G fillRule="nonzero" stroke="none" strokeWidth={1} fill="none">

@@ -1,38 +1,37 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Spinner } from 'native-base';
-import { isAuthenticated  } from "../services/auth.services";
+import { Box, Spinner } from 'native-base';
+import LogoMarca from '../components/LogoMarca';
 
-export function SplashScreen({navigation}) {
-
-    React.useEffect(function() {
-        isAuthenticated()
-            .then(function(response) {
-              
-              if (response.isAuthenticated) {
-                navigation.push('Home');
-              } else {
-                navigation.navigate('Login');
-              }
-            });
-    }, []);
+export default function SplashScreen() {
 
     return (
-        <View style={{height: '100%', width: '100%'}}>
+        <Box style={styles.container}>
             <LinearGradient
-                            style={{height: '100%', width: '100%', justifyContent: 'center', alignItems: 'center'}}
-	                        colors={['#ff4444','#000000']}
-                            start={{x:-1,y:-0.9}}
-                            end={{x:0.1,y:1}}>
-                       <Image style={{
-                           width: 300,
-                           height: 150,
-                           alignSelf: 'center',
-                           marginBottom: 100
-                       }} resizeMode='contain' source={require('../../assets/imgs/logomarca.png')}></Image>     
-                       <Spinner size={80}/>
-                </LinearGradient>
-        </View>
+                style={styles.gradient}
+                colors={['#ff4444', '#000']}
+                start={{x: -1, y: -.9}}
+                end={{x:.1, y:1}}>
+                <LogoMarca style={styles.logo}></LogoMarca>
+                <Spinner size={80}/>
+            </LinearGradient>
+        </Box>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        height: '100%',
+        width: '100%'
+    },
+    gradient: {
+        height: '100%',
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    logo: {
+        marginBottom: 100
+    }
+});

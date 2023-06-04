@@ -1,14 +1,16 @@
 import React from "react";
 import { View } from "react-native";
-import { Header } from "../Components/Header";
-import { Tabbar } from "../Components/Tabbar";
-import { height } from "deprecated-react-native-prop-types/DeprecatedImagePropType";
+import { Header } from "../components/Header";
+import { Tabbar } from "../components/Tabbar";
+import AuthContext from '../contexts/AuthContext';
 
-export function MainPage() {
-    const name = "Marcos Alberto"
+export default function MainPage() {
+    
+    const { user } = React.useContext(AuthContext);
+
     return (
         <View style={{ height: "100%" }}>
-            <Header name={name}></Header>
+            <Header name={user.name}></Header>
             <Tabbar></Tabbar>
         </View>
     )

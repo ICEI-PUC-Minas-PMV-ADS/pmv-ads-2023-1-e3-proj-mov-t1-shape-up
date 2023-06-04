@@ -12,82 +12,51 @@ import {
 import { Box, Button } from 'native-base';
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import LogoMarca from '../components/LogoMarca';
-import InputNameCard from '../components/InputNameCard';
-import InputEmailCard from '../components/InputEmailCard';
-import InputImageCard from '../components/InputImageCard';
-import InputPasswordCard from '../components/InputPasswordCard';
-import InputRePasswordCard from '../components/InputRePasswordCard';
-import { register } from '../services/auth.services';
+import InputGoalCard from '../components/InputGoalCard';
+import InputTrainingExpCard from '../components/InputTrainingExpCard';
+import InputTimelineCard from '../components/InputTimelineCard';
+import TrainingContext from '../contexts/TrainingContext';
+import { generate } from '../services/training.services';
 
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 const imageBackground = require('../../assets/imgs/cadastre-page-background.jpg');
 const navigationBarHeight = StatusBar.currentHeight;
 
-export default function CadastrePage({navigation}) {
+export default function GenerateTrainingPage({navigation}) {
 
     const carousel = useRef(null);
     const [index, setIndex] = React.useState(0);
-
-    // forms
-
-    const [name, setName] = React.useState(null);
-    const [email, setEmail] = React.useState(null);
-    const [imageData, setImageData] = React.useState(null);
-    const [password, setPassword] = React.useState(null);
-
-    function handlePasswordCompare(value) {
-        if (value == password) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+    const [goal, setGoal] = React.useState(0);
+    const [trainingExp, setTrainingExp] = React.useState(0);
+    const [timeline, setTimeline] = React.useState(0);
 
     function handleNext() {
         carousel.current._snapToItem(carousel.current._getPositionIndex(index + 1));
     }
 
     function handleBack() {
-        if (index == 0) {
-            handleGoToLogin();
-        } else {
-            carousel.current._snapToItem(carousel.current._getPositionIndex(index - 1));
-        }
+        carousel.current._snapToItem(carousel.current._getPositionIndex(index - 1));
     }
 
-    function handleGoToLogin() {
-        navigation.goBack();
-    }
-
-    function handleGoToWelcomePage() {
-        register(name, email, password, imageData)
+    function handleCreateTraining() {
+        
+        generate(goal, trainingExp, timeline)
             .then(function(response) {
-
-                if (response.isAuthenticated) {
-                    navigation.push('Welcome');
-                } else {
-                    alert(response.responseMessage);
-                    navigation.goBack();
+                if (response == true) {
+                    navigation.push("TrainingCreated");
                 }
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+        });
     }
 
     function renderCarouselItems({item, index}) {
         switch(index) {
             case 0:
-                return (<InputNameCard setValue={setName} handleNext={handleNext} handleGoToLogin={handleGoToLogin}></InputNameCard>);
+                return <InputGoalCard setValue={setGoal} handleNext={handleNext}></InputGoalCard>;
             case 1:
-                return (<InputEmailCard setValue={setEmail} handleNext={handleNext} handleGoToLogin={handleGoToLogin}></InputEmailCard>);
+                return <InputTrainingExpCard setValue={setTrainingExp} handleNext={handleNext}></InputTrainingExpCard>;
             case 2:
-                return (<InputImageCard setValue={setImageData} handleNext={handleNext} handleGoToLogin={handleGoToLogin}></InputImageCard>);
-            case 3:
-                return (<InputPasswordCard setValue={setPassword} handleNext={handleNext} handleGoToLogin={handleGoToLogin}></InputPasswordCard>);
-            case 4:
-                return (<InputRePasswordCard passwordCompare={handlePasswordCompare} handleNext={handleGoToWelcomePage} handleGoToLogin={handleGoToLogin}></InputRePasswordCard>);
+                return <InputTimelineCard setValue={setTimeline} handleNext={handleCreateTraining}></InputTimelineCard>;
         }
     }
 
@@ -99,7 +68,7 @@ export default function CadastrePage({navigation}) {
                     <Box style={styles.container}>
                         <Box style={styles.carouselContainer}>
                             <Carousel
-                                data={[0,1,2,3,4]}
+                                data={[0,1,2]}
                                 sliderWidth={screenWidth * .9}
                                 ref={carousel}
                                 itemWidth={screenWidth * .9}
@@ -110,12 +79,11 @@ export default function CadastrePage({navigation}) {
                         </Box>
                         <Box style={styles.bottomNavContainer}>
                             <Button style={styles.bottomNavItem} _text={styles.bottomNavItemText} onPress={handleBack}>Voltar</Button>
-                            <Button style={{...styles.bottomNavItem, display: index === 2 ? 'flex' : 'none'}} _text={styles.bottomNavItemText} onPress={handleNext}>Pular</Button>
                         </Box>  
 
                         <Pagination
                             style={{borderColor: 'black', borderWidth: 2, marginBottom: navigationBarHeight}}
-                            dotsLength={5}
+                            dotsLength={3}
                             activeDotIndex={index}
                             carouselRef={carousel}
                             dotStyle={styles.dotStyle}
@@ -186,4 +154,3 @@ const styles = StyleSheet.create({
         backgroundColor: '#ff4444'
     }
 });
-

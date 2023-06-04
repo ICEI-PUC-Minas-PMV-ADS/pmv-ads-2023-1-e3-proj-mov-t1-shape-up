@@ -8,24 +8,17 @@ import { LinearGradient } from 'expo-linear-gradient';
 import LogoMarca from '../components/LogoMarca';
 import Card from '../components/Card';
 import Dumbbell from '../components/icons/Dumbbell';
-import { getUserName } from '../services/userdata.services';
 
 const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 const imageBackground = require('../../assets/imgs/welcome-page-background.jpg');
 
-export default function WelcomePage({navigation}) {
+export default function TrainingCreatedPage({navigation}) {
 
-    const [name, setName] = React.useState(null);
     const { setIsSignedIn } = useContext(AuthContext);
 
-    getUserName()
-        .then(function(response) {
-            setName(response);
-    });
-
     function handleButton() {
-        navigation.push('GenerateTraining');
+        setIsSignedIn(true);
     }
 
     return (
@@ -38,11 +31,9 @@ export default function WelcomePage({navigation}) {
 	                    colors={['#ff4444','#2e2e2e']}
                         start={{x:-.2,y:-3}}
                         end={{x:.5,y:.6}}>
-                        <Text style={styles.welcomeText}>Bem Vindo</Text>
-                        <Text style={styles.nameText}>{name}</Text>
                         <Dumbbell style={styles.icon}></Dumbbell>
-                        <Text style={styles.messageText}>Pronto para iniciar sua rotina de treinos?</Text>
-                        <Button variant='outline' style={styles.button} _text={styles.buttonText} onPress={handleButton}>Criar rotina</Button>
+                        <Text style={styles.messageText}>Treino gerado com sucesso</Text>
+                        <Button variant='outline' style={styles.button} _text={styles.buttonText} onPress={handleButton}>Visualizar</Button>
                     </LinearGradient>
                 </Card>
             </Center>
@@ -72,27 +63,11 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center'
     },
-    welcomeText: {
-        fontSize: 16,
-        fontFamily: 'Roboto',
-        fontWeight: 'bold',
-        color: '#ffffff',
-        marginTop: 30,
-        marginLeft: 50,
-        width: '100%'
-    },
-    nameText: {
-        fontSize: 22,
-        fontFamily: 'Roboto',
-        fontWeight: 'bold',
-        color: '#ffffff',
-        marginTop: 30
-    },
     icon: {
-        marginTop: 20
+        marginTop: 50
     },
     messageText: {
-        fontSize: 16,
+        fontSize: 20,
         fontFamily: 'Roboto',
         fontWeight: 'bold',
         color: '#ffffff',

@@ -28,7 +28,7 @@ export async function register(name, email, password, imageData) {
      'name': name,
      'username': email.toLowerCase(),
      'password': passwordHashed,
-     'imageData': imageData.toString()
+     'imageData': imageData ? imageData.toString() : ""
  })
  .then(function(response) {
      if (response.data.isAuthenticated) {
@@ -125,8 +125,8 @@ export async function isAuthenticated() {
     isAuthenticatedResponse.isAuthenticated = response.data.isValid;
  })
  .catch(function(error) {
-     console.error(error);
- }) ;
+    
+ });
 
  return isAuthenticatedResponse;
 }

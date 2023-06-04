@@ -1,21 +1,16 @@
 import React from 'react';
-import {
-    View,
-    Text,
-    StyleSheet,
-    TouchableWithoutFeedback
-  } from 'react-native';
-import { Input, Button, FormControl, WarningOutlineIcon } from 'native-base';
-import { Card } from './Card';
+import { StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
+import { Input, Button, FormControl, WarningOutlineIcon, Text, Box } from 'native-base';
+import Card from './Card';
 
-export function InputNameCard({setValue, handleNext, handleGoToLogin}) {
+export default function InputNameCard({setValue, handleNext, handleGoToLogin}) {
 
     const [name, setName] = React.useState(null);
     const [isInvalid, setIsInvalid] = React.useState(false);
-    const [errorMessage, setErrorMessage] = React.useState(null);
+    const [errorMessage, setErrorMessage] = React.useState("Error");
 
-    const handleChange = function(value) {
+    function handleInput(value) {
         if (value.trim().length === 0) {
             setIsInvalid(true);
             setErrorMessage('O nome não pode estar em branco.');
@@ -27,7 +22,7 @@ export function InputNameCard({setValue, handleNext, handleGoToLogin}) {
         }
     }
 
-    const handleOnPress = function() {
+    function handleConfirm() {
         if (name == null || name.trim().length === 0) {
             setIsInvalid(true);
             setErrorMessage('O nome não pode estar em branco.');
@@ -39,19 +34,18 @@ export function InputNameCard({setValue, handleNext, handleGoToLogin}) {
 
     return (
         <Card>
-            <MaterialCommunityIcons name="account" size={48} color="#ff4444" marginTop={40}/>
-            <Text style={styles.cardTitle} marginTop={20}>Qual é o seu nome?</Text>
-            <FormControl isInvalid={isInvalid} w={'75%'} style={{marginTop: 35, height: 80}}>
-                <Input placeholder='Nome' color='#ffffff' onChangeText={(text) => handleChange(text)}/>
+            <MaterialCommunityIcons name="account" size={48} color="#ff4444" marginTop={20}/>
+            <Text style={styles.cardTitle}>Qual é o seu nome?</Text>
+            <FormControl isInvalid={isInvalid} style={styles.form}>
+                <Input style={styles.input} _focus={styles.inputFocus} placeholder='Nome' onChangeText={handleInput}/>
                 <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>{errorMessage}</FormControl.ErrorMessage>
             </FormControl>
-            <Button w='60%' variant='outline' borderColor='primary.400' _text={styles.confirmButtonText}
-                onPress={handleOnPress}>Confirmar</Button>
+            <Button w='60%' variant='outline' borderColor='primary.400' _text={styles.confirmButtonText} onPress={handleConfirm}>Confirmar</Button>
             <TouchableWithoutFeedback onPress={handleGoToLogin}>
-                <View style={{flex: 1, flexDirection: 'row'}}>
+                <Box style={styles.rowContainer}>
                     <Text style={styles.cardHasAccountText}>Já tem uma conta?</Text>
                     <Text style={styles.cardLoginText}>Login</Text>
-                </View>
+                </Box>
             </TouchableWithoutFeedback>
         </Card>
     );
@@ -69,19 +63,32 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: '#ffffff',
     },
+    rowContainer: {
+        flexDirection: 'row',
+        marginBottom: 20
+    },
     cardHasAccountText: {
         fontFamily: 'Roboto',
         fontWeight: 'bold',
         fontSize: 14,
         color: '#C0C0C0',
-        marginTop: 18
     },
     cardLoginText: {
         fontFamily: 'Roboto',
         fontWeight: 'bold',
         fontSize: 14,
         color: '#1C7793',
-        marginTop: 18,
         marginLeft: 3
     },
+    form: {
+        width: '75%'
+    },
+    input: {
+        color: '#fff'
+    },
+    inputFocus: {
+        borderColor: '#fca5a5',
+        selectionColor: "#ef4444",
+        background: "#fca5a5"
+    }
 });

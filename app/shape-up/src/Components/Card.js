@@ -1,19 +1,27 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+import { Box } from 'native-base';
 
-export function Card(props) {
+const screenWidth = Dimensions.get('window').width;
+const screenHeight = Dimensions.get('window').height;
+
+export default function Card(props) {
     return (
-        <View {...props} style={{
-            flex: 1,
-            flexDirection: 'column',
-            justifyContent: 'flex-start',
-            alignItems: 'center',
-            borderRadius: 20,
-            width: '75%',
-            height: '75%',
-            backgroundColor: '#2E2E2E',
-            height: 350,
-            width: 390
-        }}>{props.children}</View>
+        <Box {...props} style={styles.card}>
+            {props.children}
+        </Box>
     );
 }
+
+const styles = StyleSheet.create({
+    card: {
+        flex: 0,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        borderRadius: 20,
+        backgroundColor: '#2E2E2E',
+        height: screenWidth * .8,
+        width: screenWidth * .9
+    }
+});

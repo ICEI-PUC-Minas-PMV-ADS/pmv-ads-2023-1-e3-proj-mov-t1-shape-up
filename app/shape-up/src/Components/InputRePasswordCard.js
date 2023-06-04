@@ -4,47 +4,35 @@ import { MaterialCommunityIcons, MaterialIcons  } from '@expo/vector-icons';
 import { Text, Box, FormControl, Icon, Input, Button, Pressable, WarningOutlineIcon  } from 'native-base';
 import Card from './Card';
 
-export default function InputPasswordCard({setValue, handleNext, handleGoToLogin}) {
+export default function InputRePasswordCard({passwordCompare, handleNext, handleGoToLogin}) {
 
     const [show, setShow] = React.useState(false);
     const [isInvalid, setIsInvalid] = React.useState(false);
     const [errorMessage, setErrorMessage] = React.useState("Error");
-    const [password, setPassword] = React.useState(null);
-
-    const regexMaiuscula = /[A-Z]/;
-    const regexEspecial = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+    const [waitingResponse, setWaitingResponse] = React.useState(false);
+    const [input, setInput] = React.useState(null);
 
     function handleChangeInput(value) {
-        if (value.length < 8) {
+        if (passwordCompare(value) == false) {
             setIsInvalid(true);
-            setErrorMessage('A senha precisa ter no mínimo 8 caracteres.')
+            setErrorMessage('As senhas não são iguais.');
         }
-        else if (!regexMaiuscula.test(value)) {
-            setIsInvalid(true);
-            setErrorMessage('A senha precisa ter no mínimo uma letra maiúscula.')
-        }
-        else if (!regexEspecial.test(value)) {
-            setIsInvalid(true);
-            setErrorMessage('A senha precisa ter no mínimo um caracter especial.')
-        } else {
+        else {
             setIsInvalid(false);
             setErrorMessage(null);
-        }
+        } 
 
-        setPassword(value);
-        setValue(value);
+        setInput(value);
     }
 
     function handleConfirm() {
         if (isInvalid) {
             return;
-        } else if (password == null) {
+        } else if (input == null) {
             setIsInvalid(true);
-            setErrorMessage('É necessário informar a senha.');
-        } 
-        else {
-            setIsInvalid(false);
-            setErrorMessage(null);
+            setErrorMessage('É necessário confirmar a senha.');
+        } else {
+            setWaitingResponse(true);
             handleNext();
         }
     }
@@ -53,7 +41,7 @@ export default function InputPasswordCard({setValue, handleNext, handleGoToLogin
         <Card>
             
             <MaterialCommunityIcons name="lock" size={48} color="#ff4444" marginTop={20}/>
-            <Text style={styles.cardTitle}>Digite sua senha</Text>
+            <Text style={styles.cardTitle}>Confirme sua senha</Text>
 
             <FormControl isInvalid={isInvalid} style={styles.form}>
                 <Input onChangeText={handleChangeInput} style={styles.input} _focus={styles.inputFocus} type={show ? "text" : "password"} InputRightElement={
@@ -63,7 +51,7 @@ export default function InputPasswordCard({setValue, handleNext, handleGoToLogin
                     <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />}>{errorMessage}</FormControl.ErrorMessage>
             </FormControl>    
 
-            <Button variant='outline' style={styles.confirmButton} _text={styles.confirmButtonText} onPress={handleConfirm}>Confirmar</Button>
+            <Button variant='outline' isDisabled={waitingResponse} style={styles.confirmButton} _text={styles.confirmButtonText} onPress={handleConfirm}>Criar conta</Button>
             <TouchableWithoutFeedback onPress={handleGoToLogin}>
                 <Box style={styles.rowContainer}>
                     <Text style={styles.cardHasAccountText}>Já tem uma conta?</Text>

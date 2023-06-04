@@ -117,3 +117,31 @@ export async function getImageProfile() {
 
     return `data:image/jpeg;base64,${fileContent}`;
 }
+
+export async function getUserInfo() {
+
+    let username = null;
+    let name = null;
+    let profile = null;
+
+    await getUserEmail()
+        .then(function(response) {
+            username = response;
+    });
+
+    await getUserName()
+        .then(function(response) {
+            name = response;
+        });
+
+    await getImageProfile()
+        .then(function(response) {
+            profile = response;
+        })
+
+    return {
+        username: username,
+        name: name,
+        profile: profile
+    };
+}

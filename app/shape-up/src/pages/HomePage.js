@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, SafeAreaView, Image, ScrollView } from "react-native";
-import Lista from "../Components/Lista"
-
+import Lista from "../components/Lista"
+import TrainingContext from "../contexts/TrainingContext";
+import AuthContext from '../contexts/AuthContext';
 
 
 function Saudacao() {
@@ -13,7 +14,11 @@ function Saudacao() {
 
 
 export function HomePage() {
-    const name = "Marcos Alberto"
+
+    const { user } = React.useContext(AuthContext);
+    const { training } = React.useContext(TrainingContext);
+
+    const name = user.name;
 
     return (
 
@@ -64,4 +69,3 @@ const styles = StyleSheet.create({
     },
 
 })
-
