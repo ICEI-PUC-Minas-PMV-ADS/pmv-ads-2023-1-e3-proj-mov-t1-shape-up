@@ -8,7 +8,9 @@ import { LoginPage } from './src/pages/LoginPage';
 import { CadastrePage } from './src/pages/CadastrePage';
 import { WelcomePage } from './src/pages/WelcomePage';
 import { HomePage } from './src/pages/HomePage';
+import { TutorialsPage } from "./src/pages/TutorialsPage";
 import { SplashScreen } from './src/pages/SplashScreen';
+import { MainPage } from './src/pages/MainPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,12 +20,12 @@ export default function App() {
     <SafeAreaProvider>
       <NativeBaseProvider theme={theme}>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName={'Splash'} screenOptions={{headerShown: false,}}>
-            <Stack.Screen name="Splash" component={SplashScreen}/>
-            <Stack.Screen name="Login" component={LoginPage}/>
-            <Stack.Screen name="Cadastre" component={CadastrePage}/>
-            <Stack.Screen name="Welcome" component={WelcomePage}/>
-            <Stack.Screen name="Home" component={HomePage}/>
+          <Stack.Navigator initialRouteName={'Main'} screenOptions={{ headerShown: false, }}>
+            <Stack.Screen name="Splash" component={SplashScreen} />
+            <Stack.Screen name="Login" component={LoginPage} />
+            <Stack.Screen name="Cadastre" component={CadastrePage} />
+            <Stack.Screen name="Welcome" component={WelcomePage} />
+            <Stack.Screen name="Main" component={MainPage} />
           </Stack.Navigator>
         </NavigationContainer>
       </NativeBaseProvider>
