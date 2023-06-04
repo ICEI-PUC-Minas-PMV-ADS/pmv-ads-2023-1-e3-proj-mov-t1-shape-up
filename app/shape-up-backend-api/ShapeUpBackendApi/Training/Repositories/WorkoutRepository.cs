@@ -11,6 +11,10 @@ namespace ShapeUpBackendApi.Training.Repositories {
             _context.Workouts.Add(workout);
             _context.SaveChanges();
         }
+        public void AddRange(IEnumerable<Workout> workouts) {
+            _context.Workouts.AddRange(workouts);
+            _context.SaveChanges();
+        }
         public void Delete(Guid id) {
 
             var workout = _context.Workouts.FirstOrDefault(x => x.Id == id);
@@ -22,8 +26,8 @@ namespace ShapeUpBackendApi.Training.Repositories {
         public Workout? GetById(Guid id) {
             return _context.Workouts.FirstOrDefault(x => x.Id == id);
         }
-        public Workout? GetByUsername(string username) {
-            return _context.Workouts.FirstOrDefault(x => x.Username == username);
+        public IEnumerable<Workout> GetByUsername(string username) {
+            return _context.Workouts.Where(w => w.Username == username);
         }
         public IEnumerable<Workout> GetAll() {
             return _context.Workouts;
