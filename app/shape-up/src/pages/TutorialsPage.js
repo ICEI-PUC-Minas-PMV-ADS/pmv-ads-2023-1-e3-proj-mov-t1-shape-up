@@ -4,19 +4,29 @@ import { Box, Text } from "native-base";
 import ListaVideos from "../Components/ListaVideos"
 import TrainingContext from "../contexts/TrainingContext";
 
+export function levelConvert(level) {
+    switch (level) {
+        case 0:
+            return 'Fácil'
+        case 1:
+            return 'Média'
+        case 2:
+            return 'Difícil'
+        default:
+            break;
+    }
+}
 
 export function TutorialsPage() {
-    const { user } = React.useContext(AuthContext);
-    const { training } = React.useContext(TrainingContext);
-    const name = user.name;
+    const { exercises } = React.useContext(TrainingContext);
     return (
 
         <Box h='100%'>
             <Box bg="secondary.600" style={styles.containerGeral}>
                 <Text style={styles.propTxt}>Tutoriais de Exercícios:</Text>
                 <FlatList contentContainerStyle={{ alignItems: 'center', }}
-                    data={training}
-                    renderItem={({ item }) => <ListaVideos nomeex={item.name} nivel={"nivel: " + item.level} imagePath={item.imageData} />}
+                    data={exercises}
+                    renderItem={({ item }) => <ListaVideos nomeex={item.name} nivel={"Dificuldade: " + levelConvert(item.level)} imagePath={item.imageData} />}
                     keyExtractor={item => item.id}
                 />
             </Box>
