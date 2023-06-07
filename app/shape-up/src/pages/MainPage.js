@@ -5,7 +5,7 @@ import { Tabbar } from "../Components/Tabbar";
 import AuthContext from '../contexts/AuthContext';
 
 export default function MainPage() {
-    
+
     const { user } = React.useContext(AuthContext);
 
     return (

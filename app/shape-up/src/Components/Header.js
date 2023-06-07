@@ -2,19 +2,21 @@ import React from 'react';
 import { View, StyleSheet, Text, StatusBar, TouchableOpacity } from 'react-native';
 import { Avatar } from "native-base";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import AuthContext from '../contexts/AuthContext';
 
 const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 64;
 
-export function Header({ name }) {
+export function Header() {
+    const { user } = React.useContext(AuthContext);
     return (
         <View style={styles.container}>
             <View style={styles.content}>
                 <Avatar bg="indigo.500" source={{
-                    uri: "https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                    uri: user.profile
                 }}>
                     JB
                 </Avatar>
-                <Text style={styles.username}>{name}</Text>
+                <Text style={styles.username}>{user.name}</Text>
             </View>
             <View>
                 <TouchableOpacity style={styles.buttonStyle}>

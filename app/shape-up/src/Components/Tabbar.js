@@ -23,7 +23,7 @@ export function Tabbar({ navigation }) {
 
 
     return (
-        <BottomNavigation style={{ justifyContent: 'flex-start' }} barStyle={{ justifyContent: 'flex-start', backgroundColor: '#151515', height: 60, }} activeColor='#ff4444' inactiveColor='#ff4444'
+        <BottomNavigation style={{ justifyContent: 'flex-start', height: '100%' }} barStyle={{ justifyContent: 'flex-start', backgroundColor: '#151515', height: 60, }} activeColor='#ff4444' inactiveColor='#ff4444'
             navigationState={{ index, routes }}
             onIndexChange={setIndex}
             renderScene={renderScene}
