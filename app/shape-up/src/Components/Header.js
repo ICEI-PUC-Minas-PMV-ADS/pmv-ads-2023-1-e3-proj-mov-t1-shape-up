@@ -7,7 +7,7 @@ import AuthContext from '../contexts/AuthContext';
 const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 64;
 
 export function Header() {
-    const { user } = React.useContext(AuthContext);
+    const { user, handleLogout } = React.useContext(AuthContext);
     return (
         <View style={styles.container}>
             <View style={styles.content}>
@@ -19,7 +19,7 @@ export function Header() {
                 <Text style={styles.username}>{user.name}</Text>
             </View>
             <View>
-                <TouchableOpacity style={styles.buttonStyle}>
+                <TouchableOpacity style={styles.buttonStyle} onPress={handleLogout}>
                     <MaterialCommunityIcons name="logout-variant" size={25} color={'#FF4444'}></MaterialCommunityIcons>
                 </TouchableOpacity>
             </View>
