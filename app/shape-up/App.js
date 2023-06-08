@@ -16,6 +16,7 @@ import TrainingContext from './src/contexts/TrainingContext';
 import { isAuthenticated, logout } from './src/services/auth.services';
 import { generate, getTraining } from './src/services/training.services';
 import { getUserInfo } from './src/services/userdata.services';
+import { getExercises } from "./src/services/exercise.services";
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,7 @@ export default function App() {
     const [isSignedIn, setIsSignedIn] = React.useState(false);
     const [user, setUser] = React.useState(null);
     const [training, setTraining] = React.useState(null);
+    const [exercises, setExercices] = React.useState(null);
 
     React.useEffect(function () {
         isAuthenticated()
@@ -59,6 +61,14 @@ export default function App() {
             });
     }
 
+    if (isSignedIn && (exercises == null)) {
+
+        getExercises()
+            .then(function (response) {
+                setExercices(response);
+            });
+    }
+
     if (isSignedIn && (user == null)) {
 
         getUserInfo()
@@ -72,13 +82,14 @@ export default function App() {
         setIsSignedIn(false),
             setTraining(null);
         setUser(null);
+        setExercices(null);
     }
 
     return (
         <SafeAreaProvider>
             <NativeBaseProvider theme={Theme}>
                 <AuthContext.Provider value={{ handleLogout, setIsSignedIn, user }}>
-                    <TrainingContext.Provider value={{ training }}>
+                    <TrainingContext.Provider value={{ training, exercises }}>
                         <NavigationContainer>
                             <Stack.Navigator screenOptions={{ headerShown: false, }}>
                                 {isSignedIn ? (

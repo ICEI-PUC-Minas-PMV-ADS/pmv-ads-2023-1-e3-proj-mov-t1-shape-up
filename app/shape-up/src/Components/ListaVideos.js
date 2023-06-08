@@ -1,11 +1,11 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, Image, ImageBackground } from "react-native";
+import { StyleSheet, TouchableOpacity, Image, } from "react-native";
 import Icon from 'react-native-vector-icons/Entypo'
 import { Box, Text } from 'native-base';
 
 
+
 export default props => {
-    const imagePath = props.imagePath
     return (
         <Box bg='secondary.900' style={styles.container}>
             <Box style={styles.textView}>
