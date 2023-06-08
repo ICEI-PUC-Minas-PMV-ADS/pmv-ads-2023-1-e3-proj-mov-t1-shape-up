@@ -10,6 +10,49 @@
 
   <ItemGroup>
     <None Remove="Assets\training.jpg" />
+    <None Remove="Assets\training_1.jpeg" />
+    <None Remove="Assets\training_10.jpeg" />
+    <None Remove="Assets\training_2.jpeg" />
+    <None Remove="Assets\training_3.jpeg" />
+    <None Remove="Assets\training_4.jpeg" />
+    <None Remove="Assets\training_5.jpeg" />
+    <None Remove="Assets\training_6.jpeg" />
+    <None Remove="Assets\training_7.jpeg" />
+    <None Remove="Assets\training_8.jpeg" />
+    <None Remove="Assets\training_9.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\training_1.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\training_10.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\training_2.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\training_3.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\training_4.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\training_5.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\training_6.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\training_7.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\training_8.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\training_9.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
