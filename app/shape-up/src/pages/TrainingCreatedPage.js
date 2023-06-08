@@ -13,12 +13,12 @@ const screenWidth = Dimensions.get('window').width;
 const screenHeight = Dimensions.get('window').height;
 const imageBackground = require('../../assets/imgs/welcome-page-background.jpg');
 
-export default function TrainingCreatedPage({navigation}) {
+export default function TrainingCreatedPage() {
 
-    const { setIsSignedIn } = useContext(AuthContext);
+    const { authenticate } = useContext(AuthContext);
 
     function handleButton() {
-        setIsSignedIn(true);
+        authenticate();
     }
 
     return (

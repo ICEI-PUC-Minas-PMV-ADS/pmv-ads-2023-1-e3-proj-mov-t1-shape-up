@@ -27,7 +27,7 @@ export default function LoginPage({navigation}) {
     const [errorMessage, setErrorMessage] = React.useState(null);
     const [waitingResponse, setWaitingResponse] = React.useState(false);
 
-    const { setIsSignedIn } = useContext(AuthContext);
+    const { authenticate } = useContext(AuthContext);
 
     function handlePasswordInput(input) {
         setIsInvalid(false);
@@ -45,7 +45,7 @@ export default function LoginPage({navigation}) {
         login(email, password)
             .then(function(response) {
                 if (response.isAuthenticated) {
-                    setIsSignedIn(true);
+                    authenticate();
                 } else {
                     setErrorMessage(response.responseMessage);
                     setIsInvalid(true);

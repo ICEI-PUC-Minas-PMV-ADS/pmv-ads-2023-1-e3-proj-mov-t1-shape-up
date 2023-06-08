@@ -33,15 +33,11 @@ export default function App() {
             .then(async function (response) {
                 if (response.isAuthenticated) {
                     setIsSignedIn(true);
-                    await getUserInfo()
-                        .then(function (response) {
-                            setUser(response);
-                        })
+                    authenticate();
                 } else {
                     setIsSignedIn(false);
+                    setIsLoading(false);
                 }
-
-                setIsLoading(false);
             });
     }, []);
 
@@ -53,34 +49,36 @@ export default function App() {
         );
     }
 
-    if (isSignedIn && (training == null)) {
+    async function loadInformations() {
 
-        getTraining()
-            .then(function (response) {
-                setTraining(response);
-            });
+        var userInfo = await getUserInfo();
+        var trainingInfo = await getTraining();
+        var exercisesInfo = await getExercises();
+    
+        setUser(userInfo);
+        setExercices(exercisesInfo);
+        setTraining(trainingInfo);
     }
 
-    if (isSignedIn && (exercises == null)) {
+    function authenticate() {
 
-        getExercises()
-            .then(function (response) {
-                setExercices(response);
-            });
-    }
+        setIsLoading(true);
 
-    if (isSignedIn && (user == null)) {
-
-        getUserInfo()
-            .then(function (response) {
-                setUser(response);
-            })
+        loadInformations()
+            .then(function() {
+                setIsLoading(false);
+                setIsSignedIn(true);
+        })
+            .catch(function(error) {
+                console.error(error);
+                setIsLoading(false);
+        });
     }
 
     function handleLogout() {
         logout();
         setIsSignedIn(false),
-            setTraining(null);
+        setTraining(null);
         setUser(null);
         setExercices(null);
     }
@@ -88,7 +86,7 @@ export default function App() {
     return (
         <SafeAreaProvider>
             <NativeBaseProvider theme={Theme}>
-                <AuthContext.Provider value={{ handleLogout, setIsSignedIn, user }}>
+                <AuthContext.Provider value={{ handleLogout, authenticate, user }}>
                     <TrainingContext.Provider value={{ training, exercises }}>
                         <NavigationContainer>
                             <Stack.Navigator screenOptions={{ headerShown: false, }}>
@@ -104,7 +102,8 @@ export default function App() {
                                         <Stack.Screen name="GenerateTraining" component={GenerateTrainingPage} />
                                         <Stack.Screen name="TrainingCreated" component={TrainingCreatedPage} />
                                     </>
-                                )}
+                                )
+                                }
                             </Stack.Navigator>
                         </NavigationContainer>
                     </TrainingContext.Provider>
