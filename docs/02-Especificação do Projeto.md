@@ -323,32 +323,32 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
   </tr>
   <tr>
     <td align="center">RF-002</td>
-    <td align="left">Permitir que o usuário cadastre Treinos.</td>
+    <td align="left">Efetuar Login na plataforma .</td>
     <td align="center">ALTA</td>
   </tr>
   <tr>
     <td align="center">RF-003</td>
-    <td align="left">Permitir que o usuário cadastre exercicios em seus treinos.</td>
+    <td align="left">Permitir que o usuário navege na aplicação de acrodo com o fluxo correto de páginas desenvolvidas.</td>
     <td align="center">ALTA</td>
   </tr>
   <tr>
     <td align="center">RF-004</td>
-    <td align="left">Permitir que o usuário compartilhe exercícios entre treinos.</td>
+    <td align="left">Permitir que o usuário tenha acesso aos controles de navegação entre as páginas e de Logout da aplicação.</td>
     <td align="center">MÉDIA</td>
   </tr>
   <tr>
     <td align="center">RF-005</td>
-    <td align="left">Permitir que o usuário disponha de um cronômentro de descanso entre séries do exercício.</td>
+    <td align="left"> Permitir que o usuario vizualize suas informações de perfil como nome e foto cadastradas em seu perfil.</td>
     <td align="center">MÉDIA</td>
   </tr>
   <tr>
     <td align="center">RF-006</td>
-    <td align="left">Gerar relatórios de treinos concluídos.</td>
+    <td align="left">Permitir que o usuário disponha de um cronômentro de descanso entre séries do exercício .</td>
     <td align="center">BAIXA</td>
   </tr>
   <tr>
     <td align="center">RF-007</td>
-    <td align="left">Apresentar o avanço percentual do treino em execução.</td>
+    <td align="left">Apresentar uma forma de do usuário marcar seus treinos como concluidos ou não consluidos.</td>
     <td align="center">MÉDIA</td>
   </tr>
   <tr>
