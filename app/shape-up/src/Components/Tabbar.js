@@ -13,7 +13,7 @@ export function Tabbar({ navigation }) {
         { key: 'tutorial', focusedIcon: 'school', unfocusedIcon: 'school-outline' },
     ]);
 
-    const HomeRoute = () => <HomePage></HomePage>
+    const HomeRoute = () => <HomePage navigation={navigation}></HomePage>
     const TutorialRoute = () => <TutorialsPage></TutorialsPage>
 
 

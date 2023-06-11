@@ -18,11 +18,9 @@ export function Header() {
                 </Avatar>
                 <Text style={styles.username}>{user.name}</Text>
             </View>
-            <View>
-                <TouchableOpacity style={styles.buttonStyle} onPress={handleLogout}>
-                    <MaterialCommunityIcons name="logout-variant" size={25} color={'#FF4444'}></MaterialCommunityIcons>
-                </TouchableOpacity>
-            </View>
+            <TouchableOpacity onPress={handleLogout}>
+                <MaterialCommunityIcons name="logout-variant" size={25} color={'#FF4444'}></MaterialCommunityIcons>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -30,10 +28,15 @@ export function Header() {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#151515',
-        paddingTop: statusBarHeight,
         flexDirection: 'row',
-        paddingStart: 21,
-        paddingBottom: 21,
+        paddingTop: statusBarHeight,
+        paddingBottom: 10,
+        paddingLeft: 12,
+        paddingRight: 12,
+        flex: 0,
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
     },
 
     content: {
@@ -49,8 +52,4 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginLeft: 18
     },
-
-    buttonStyle: {
-        marginRight: 20
-    }
 })

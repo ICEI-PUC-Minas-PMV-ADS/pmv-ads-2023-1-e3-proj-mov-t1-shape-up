@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, Image, ScrollView, FlatList } from "react-native";
-import { Box, Text } from "native-base";
+import { StyleSheet, Image, ScrollView } from "react-native";
+import { Box, Text, FlatList } from "native-base";
 import ListaVideos from "../Components/ListaVideos"
 import TrainingContext from "../contexts/TrainingContext";
 
@@ -24,7 +24,7 @@ export function TutorialsPage() {
         <Box h='100%'>
             <Box bg="secondary.600" style={styles.containerGeral}>
                 <Text style={styles.propTxt}>Tutoriais de Exercícios:</Text>
-                <FlatList contentContainerStyle={{ alignItems: 'center', }}
+                <FlatList pr={3} pl={3} contentContainerStyle={{ alignItems: 'center', }}
                     data={exercises}
                     renderItem={({ item }) => <ListaVideos nomeex={item.name} nivel={"Dificuldade: " + levelConvert(item.level)} imagePath={item.imageData} />}
                     keyExtractor={item => item.id}
