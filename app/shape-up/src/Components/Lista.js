@@ -8,31 +8,32 @@ import { Image } from "native-base";
 
 
 
-export default props => {
+export default function Lista({training, handleGoToTraining}) {
     const [checked, setChecked] = React.useState(false);
-    const imagePath = props.imagePath
-    return (
 
-        <View style={styles.container}>
-            <View style={styles.checkContainer}>
-                <Checkbox
-                    status={checked ? 'checked' : 'unchecked'}
-                    onPress={() => {
-                        setChecked(!checked);
-                    }}
-                />
+    return (
+        <TouchableOpacity onPress={() => { handleGoToTraining(training) }}>
+            <View style={styles.container}>
+                <View style={styles.checkContainer}>
+                    <Checkbox
+                        status={checked ? 'checked' : 'unchecked'}
+                        onPress={() => {
+                            setChecked(!checked);
+                        }}
+                    />
+                </View>
+                <View style={styles.textView}>
+                    <Text style={styles.desc}>{training.name}</Text>
+                    <Text style={styles.numex}>{training.exercises.length + " exercícios"}</Text>
+                </View>
+                <View style={styles.imageView}>
+                    <Image style={styles.image} source={{ uri: training.imageData }} alt="Alternate Text" size="xl" />
+                </View>
+                <TouchableOpacity style={styles.buttonStyle}>
+                    <Icon name="fitness-center" size={15} color={'#FF4444'}></Icon>
+                </TouchableOpacity>
             </View>
-            <View style={styles.textView}>
-                <Text style={styles.desc}>{props.desc}</Text>
-                <Text style={styles.numex}>{props.numEx}</Text>
-            </View>
-            <View style={styles.imageView}>
-                <Image style={styles.image} source={{ uri: props.imagePath }} alt="Alternate Text" size="xl" />
-            </View>
-            <TouchableOpacity style={styles.buttonStyle}>
-                <Icon name="fitness-center" size={15} color={'#FF4444'}></Icon>
-            </TouchableOpacity>
-        </View>
+        </TouchableOpacity>
     )
 }
 
@@ -40,14 +41,14 @@ export default props => {
 const styles = StyleSheet.create({
     container: {
         height: 100,
-        width: '90%',
+        width: '100%',
         flexDirection: 'row',
         borderRadius: 15,
         borderColor: '#343434',//Alterar
         backgroundColor: '#151515',
         borderWidth: 1,
         alignItems: 'center',
-        marginBottom: 28
+        marginBottom: 20
 
     },
     checkContainer: {

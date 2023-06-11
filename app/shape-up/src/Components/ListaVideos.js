@@ -26,7 +26,7 @@ export default props => {
 const styles = StyleSheet.create({
     container: {
         height: 100,
-        width: '90%',
+        width: '100%',
         flexDirection: 'row',
         borderRadius: 15,
         borderColor: '#343434',//Alterar
