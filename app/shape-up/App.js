@@ -24,6 +24,7 @@ export default function App() {
 
     const [isLoading, setIsLoading] = React.useState(true);
     const [isSignedIn, setIsSignedIn] = React.useState(false);
+    const [hasTraining, setHasTraining] = React.useState(false);
     const [user, setUser] = React.useState(null);
     const [training, setTraining] = React.useState(null);
     const [exercises, setExercices] = React.useState(null);
@@ -58,6 +59,10 @@ export default function App() {
         setUser(userInfo);
         setExercices(exercisesInfo);
         setTraining(trainingInfo);
+
+        if (trainingInfo.length > 0) {
+            setHasTraining(true);
+        }
     }
 
     function authenticate() {
@@ -81,6 +86,7 @@ export default function App() {
         setTraining(null);
         setUser(null);
         setExercices(null);
+        setHasTraining(false);
     }
 
     return (
@@ -90,19 +96,25 @@ export default function App() {
                     <TrainingContext.Provider value={{ training, exercises }}>
                         <NavigationContainer>
                             <Stack.Navigator screenOptions={{ headerShown: false, }}>
-                                {isSignedIn ? (
+                                { isSignedIn && hasTraining ? 
                                     <>
-                                        <Stack.Screen name="Main" component={MainPage} />
-                                    </>
-                                ) : (
+                                    <Stack.Screen name="Main" component={MainPage}/>
+                                    </> 
+                                    :
+                                  isSignedIn && !hasTraining ?
                                     <>
-                                        <Stack.Screen name="Login" component={LoginPage} />
-                                        <Stack.Screen name="Cadastre" component={CadastrePage} />
-                                        <Stack.Screen name="Welcome" component={WelcomePage} />
-                                        <Stack.Screen name="GenerateTraining" component={GenerateTrainingPage} />
-                                        <Stack.Screen name="TrainingCreated" component={TrainingCreatedPage} />
+                                    <Stack.Screen name="Welcome" component={WelcomePage} />
+                                    <Stack.Screen name="GenerateTraining" component={GenerateTrainingPage} />
+                                    <Stack.Screen name="TrainingCreated" component={TrainingCreatedPage} />
                                     </>
-                                )
+                                    :
+                                    <>
+                                    <Stack.Screen name="Login" component={LoginPage} />
+                                    <Stack.Screen name="Cadastre" component={CadastrePage} />
+                                    <Stack.Screen name="Welcome" component={WelcomePage} />
+                                    <Stack.Screen name="GenerateTraining" component={GenerateTrainingPage} />
+                                    <Stack.Screen name="TrainingCreated" component={TrainingCreatedPage} />
+                                    </>
                                 }
                             </Stack.Navigator>
                         </NavigationContainer>
