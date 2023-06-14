@@ -26,7 +26,7 @@ export function TutorialsPage() {
                 <Text style={styles.propTxt}>Tutoriais de Exercícios:</Text>
                 <FlatList pr={3} pl={3} contentContainerStyle={{ alignItems: 'center', }}
                     data={exercises}
-                    renderItem={({ item }) => <ListaVideos nomeex={item.name} nivel={"Dificuldade: " + levelConvert(item.level)} imagePath={item.imageData} />}
+                    renderItem={({ item }) => <ListaVideos nomeex={item.name} nivel={"Dificuldade: " + levelConvert(item.level)} tutorialUrl={item.tutorialUrl} />}
                     keyExtractor={item => item.id}
                 />
             </Box>

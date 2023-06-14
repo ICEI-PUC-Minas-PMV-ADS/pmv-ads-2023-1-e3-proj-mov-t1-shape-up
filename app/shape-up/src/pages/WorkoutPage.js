@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, ImageBackground } from 'react-native';
-import { Box, Center, Fab, Icon, Text, FlatList } from 'native-base';
+import { Box, Center, Fab, Icon, Text, FlatList, Button } from 'native-base';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Dumbbell from '../Components/icons/Dumbbell';
 import Arm  from '../Components/icons/Arm';
@@ -8,7 +8,7 @@ import Serie from '../Components/icons/Serie';
 import Counter from '../Components/icons/Counter';
 import { Header } from '../Components/Header';
 
-export default function TrainingPage({navigation, route}) {
+export default function WorkoutPage({navigation, route}) {
 
     const { training } = route.params;
 
@@ -20,6 +20,10 @@ export default function TrainingPage({navigation, route}) {
         navigation.goBack();
     }
 
+    function handleRunTraining() {
+
+    }
+
     return (
         <Box w='100%' h='100%' background='secondary.600'>
             <Header></Header>
@@ -27,14 +31,16 @@ export default function TrainingPage({navigation, route}) {
                 width: '100%',
                 height: 200
             }}>
-                <Center w='100%' h='100%' bg='rgba(0,0,0,.8)' pl='6'>
-                    <Fab onPress={handleGoBack} shadow={2} size={42} colorScheme='secondary' placement='top-left' top='120' icon={
-                        <Icon as={MaterialCommunityIcons} name="arrow-left" color='primary.400' size={22}/>}></Fab>
-                    <Text w='100%' fontSize='2xl' color='#fff'>{training.name}</Text>
+                <Box w='100%' h='100%' bg='rgba(0,0,0,.8)' pl='6' alignItems='flex-start'>
+                    <Button mt={3} borderRadius={100} onPress={handleGoBack} shadow={2} colorScheme='secondary'>
+                        <MaterialCommunityIcons name="arrow-left" color='#ff4444' size={22}/>    
+                    </Button>
+                    <Text mt={5} w='100%' fontSize='2xl' color='#fff'>{training.name}</Text>
                     <Text w='100%' fontSize='sm' color='#d6d6d6'>{getLastRunDate()}</Text>
-                    <Fab shadow={2} size='sm' colorScheme='secondary' placement='top-left' top='270' left='40%' icon={
-                        <Dumbbell></Dumbbell>}></Fab>
-                </Center>
+                    <Button top={160} borderRadius={200} p={3} onPress={handleRunTraining} shadow={2} size='sm' colorScheme='secondary' position='absolute' left='40%'>
+                        <Dumbbell></Dumbbell>
+                    </Button>
+                </Box>
             </ImageBackground>
             <Text w='100%' mt={60} ml={3} fontSize='sm' color='#fff'>Exercícios</Text>
             <FlatList pr={3} pl={3} data={training.exercises} renderItem={renderItem}></FlatList>

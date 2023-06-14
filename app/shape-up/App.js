@@ -17,7 +17,7 @@ import { isAuthenticated, logout } from './src/services/auth.services';
 import { generate, getTraining } from './src/services/training.services';
 import { getUserInfo } from './src/services/userdata.services';
 import { getExercises } from "./src/services/exercise.services";
-import TrainingPage from './src/pages/TrainingPage';
+import WorkoutPage from './src/pages/WorkoutPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -100,7 +100,7 @@ export default function App() {
                                 { isSignedIn && hasTraining ? 
                                     <>
                                     <Stack.Screen name="Main" component={MainPage}/>
-                                    <Stack.Screen name='Training' component={TrainingPage}/>
+                                    <Stack.Screen name='Workout' component={WorkoutPage}/>
                                     </> 
                                     :
                                   isSignedIn && !hasTraining ?
