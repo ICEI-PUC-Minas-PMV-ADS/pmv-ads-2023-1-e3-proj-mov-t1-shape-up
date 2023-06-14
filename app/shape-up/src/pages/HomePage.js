@@ -20,7 +20,7 @@ export function HomePage({navigation}) {
     const { training } = React.useContext(TrainingContext);
 
     function handleGoToTraining(training) {
-        navigation.navigate('Training', {
+        navigation.navigate('Workout', {
             training: training
         });
     }
