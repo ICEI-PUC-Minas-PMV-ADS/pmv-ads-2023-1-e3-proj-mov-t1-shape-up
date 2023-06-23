@@ -36,27 +36,9 @@ Report:  O facilitador/observador fará todas as anotações pertinentes em rela
 
 |Caso de Teste | 02 - Verificar responsividade|
 |:--|:--|
-|**Objetivo do teste**| Avaliar se o sistema é de fácil utilização e responsivo para o usuário| 
+|**Objetivo do teste**| Avaliar se comporta de maneira correta em diferentes proporções de telas| 
 ||**Passos**|
-||1) Fazer Login com sua conta cadastrada|
-||2) Compartilhar um exercício em um treino|
-||3) Visualizar os vídeos dos exercícios selecionados|
-||4) Vizualizar o cronômetro de descanso entre exercícios|
-||5) Permitir que o usuário decida pular/pausar/resetar o cronômetro.|
-||6) Efetuar “LOGOUT”|
-|**Critérios de Êxito**|O usuário deve considerar o sistema intuitivo, de fácil utilização|
+||1) Acessar o app em mais de um dispositivo.|
+||2) Realizar Login.|
+|**Critérios de Êxito**|O usuário deve considerar a experiência fluida, performatica e assertiva em ambos os dispositivos|
 
-|Caso de Teste | 03 - Verificar responsividade|
-|:--|:--|
-|**Objetivo do teste**| Avaliar se o sistema é de fácil utilização e responsivo para o usuário| 
-||**Passos**|
-||1) Fazer Login com sua conta cadastrada|
-||2) Visualizar treinos e seus exercícios|
-||3) Marcar treinos como concluídos|
-||4) Visualizar a porcentagem de avanço até a conclusão dos treinos|
-||5) Gerar relatórios de performance de objetivos concluídos|
-||4) Efetuar “LOGOUT”|
-|**Critérios de Êxito**|O usuário deve considerar o sistema intuitivo, de fácil utilização|
-## Confecção e Analise do relatório ##
-
-O observador irá registrar o tempo para conclusão dos testes, a opinião do usuário em relação ao sistema, sugestões de melhorias e outras observações de utilização que julgar pertinente. A equipe de posse dos relatórios fará a avaliação e ajustes necessários.
