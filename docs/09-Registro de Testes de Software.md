@@ -167,4 +167,4 @@ Esse caso de teste não possui fluxo alternativo.
 
 ## Avaliação
 
-Os testes de software mostraram que os requisitos Acima Testados foram atendidos, funcionando como planejado. Para as próximas iterações, serão acrescentados os demais casos de testes dos demais requisitos já desenvolvidos e em processo de registro.
+Os testes de software mostraram que os requisitos Acima Testados foram atendidos, funcionando como planejado e comprovando a efetivididade e integridade do sistema de acordo com plano de seu desenvolvimento.
