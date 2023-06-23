@@ -77,7 +77,35 @@ Usuário foi capaz de visualizar os treinos cadastrados em seu perfil.
 ### Fluxo Alternativo
 Esse caso de teste não possui fluxo alternativo.
 
-## CT-07 – Exibir informações do usuário.
+## CT-04 – Acessar Página de informações individuais de cada treino.
+
+Objetivo principal deste teste é: Verificar se o usuário consegue acessar a página subsequente da home com as informações do treino escolhido pelo usuário.
+
+<table>
+  <tr>
+    <td width='330'>Página de informações do treino (Treino 01)</td>
+    <td width='330'>Página de informações do treino (Treino 02)</td>
+    <td width='330'>Página de informações do treino (Treino 03)</td>
+    <td width='330'>Página de informações do treino (Treino 04)</td>
+    <td width='330'>Página de informações do treino (Treino 05)</td>
+  </tr>
+  <tr>
+    <td><img src='https://github.com/brunosellas/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/102563767/27efe3d1-0ae2-41e8-ae6e-3190adc793d6'/></td>
+    <td><img src='https://github.com/brunosellas/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/102563767/5b707494-c849-4680-84aa-eb89887fd93b'/></td>
+    <td><img src='https://github.com/brunosellas/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/102563767/81dae677-53a7-45d5-a171-077d52f7a25e'/></td>
+    <td><img src='https://github.com/brunosellas/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/102563767/09fe740e-5faf-4b5d-836c-a331b0e10feb'/></td>
+    <td><img src='https://github.com/brunosellas/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/102563767/2dad9e9d-3d84-4682-954c-76ac6f08f2c6'/></td>
+  </tr>
+</table>
+
+### Critério de Exito: Sucesso
+
+Páginas acessadas e informações corretas exibidas com sucesso.
+
+### Fluxo Alternativo
+Esse caso de teste não possui fluxo alternativo.
+
+## CT-05 – Exibir informações do usuário.
 Objetivo principal deste teste é: Avaliar se as informações exibidas no Header de informações do usúario estão corretamente renderizadas e atualizadas.
 
 <table>
@@ -95,17 +123,19 @@ Informações exibidas com sucesso.
 ### Fluxo Alternativo
 Esse caso de teste não possui fluxo alternativo.
 
-## CT-08 – Controles de navegação.
+## CT-06 – Controles de navegação.
 Objetivo principal deste teste é: Verificar se o usuário consegue utilizar os controles de navegação (Páginas e Logout da aplicação) com êxito.
 
 <table>
   <tr>
     <td width='330'>Página Home</td>
     <td width='330'>Página de Tutoriais de Exercícios</td>
+    <td width='330'>Página Splash de Login após controle de Logout acionado</td>
   </tr>
   <tr>
     <td><img src='https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/102563767/e576adbd-fb35-4260-a0a8-e9a31a9fafd2'></td>
     <td><img src='https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/102563767/4f59a448-8365-49f0-8b79-8a0c6777808e'/></td>
+    <td><img src='https://github.com/brunosellas/pmv-ads-2023-1-e3-proj-mov-t1-shape-up/assets/102563767/2cb6dcc0-5715-46c2-a3ae-eea8e5eddd27'/></td>
   </tr>
 </table>
 
@@ -115,7 +145,7 @@ Controles funcionam com êxito.
 ### Fluxo Alternativo
 Esse caso de teste não possui fluxo alternativo.
 
-## CT-09 – Visualizar vídeos dos exercícios cadastrados.
+## CT-07 – Visualizar vídeos dos exercícios cadastrados.
 
 Objetivo principal deste teste é: Verificar se o usuário consegue visualizar os videos dos exercicios cadastrados nos treinos.
 
